@@ -1,0 +1,97 @@
+/* header */
+.header_btn {
+  float: right;
+  padding: 0px 315px 0px 315px;
+  size: 15px;
+}
+
+/* header home_btn */
+/*.home_btn {
+  background-color: #ffff;
+  border: none;
+  padding: 0px 145px;
+}*/
+
+/* header about_btn */
+/*.about_btn {
+  background-color: #ffff;
+  border: none;
+  padding: 0px 145px;
+}*/
+
+/* header memory_btn */
+/*.memory_btn {
+  background-color: #ffff;
+  border: none;
+  padding: 0px 145px;
+}*/
+
+/* header comment_btn */
+.comment_btn {
+  background-color: #ffff;
+  border: none;
+}
+
+/* 네비게이션 */
+.nv_btn {
+  background-color: #ffff;
+  border: none;
+  padding: 0px 145px 0px 0px;
+}
+
+main {
+  width: 1130px;
+  padding: 140px 395px 0px 395px;
+}
+
+/* 글 제목 */
+.title {
+  text-align: left;
+  padding: 44px 0px 44px 0px;
+  size: 20px;
+}
+
+.detail_content {
+  padding: 31px 0px 60px 0px;
+}
+/* 댓글 */
+.comment {
+  padding: 60px 0px 43px 0px;
+  color: #777777;
+  size: 24px;
+}
+
+/* 닉네임 */
+.nickname {
+  border: none;
+  outline: none;
+  width: 1092px;
+}
+input::placeholder {
+  color: #cbcbcb;
+}
+/* 내용 작성 */
+.comment_content {
+  border: none;
+  outline: none;
+  width: 1092px;
+}
+
+/* 등록 버튼 */
+.enroll_btn {
+  border: none;
+  float: right;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  padding: 16px 28px;
+  margin: 28px 0px;
+  font-size: 16px;
+}
+
+/* 등록된 댓글 */
+.e_comment {
+  border: 1px solid #e8e8e8;
+  margin-top: 160px;
+  padding: 24px 30px 21px;
+  border-radius: 20px;
+}
