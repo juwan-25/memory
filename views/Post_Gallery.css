@@ -1,0 +1,122 @@
+/* @media(min-width:479px) { */
+    #header {
+        width: 1920px;
+        height: 595px;
+        background-color: #F4F4F4;
+    }
+    /* 로고 */
+    #header .rectangle {
+        position: absolute;
+        width: 111px;
+        height: 39px;
+        left: 315px;
+        top: 16px;
+        background-color: #727272;
+    }
+
+    /* 줄 */
+    #header .rectangleLine {
+        position: absolute;
+        width: 159px;
+        height: 0px;
+        left: 315px;
+        top: 158px;
+        border: 1px solid #000000;
+    }
+
+    /* 순위 제목 */
+    .rankTitle {
+        position: absolute;
+        width: 357px;
+        height: 28px;
+        left: 315px;
+        top: 201px;
+
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    /* 게시판 순위 */
+    .postRank {
+        position: absolute;
+        height: 395px;
+        top: 335px;
+        left: 265px;
+    }
+    .postRank li {
+        width: 410px;
+        height: 320px;
+        padding-right: 30px;
+        float: left;
+        display: block;
+    }
+
+    /* 갤러리 제목 */
+    .mainTitle {
+        position: absolute;
+        font-size: 20px;
+        top: 962px;
+        right: 900px;
+    }
+
+    /* 게시판 갤러리 */
+    .postGallery {
+        position: absolute;
+        width: 1360px;
+        top: 1074px;
+        margin-left: 265px;
+    }
+
+    .postGallery li {
+        width: 410px;
+        height: 320px;
+        float: left;
+        padding: 0px 30px 88px 0px;
+        display: block;
+    }
+
+    .postGallery p.thumb {
+        margin-bottom: 12px;
+    }
+
+    .postGallery li a {
+        text-decoration-line: none;
+        color: black;
+    }
+
+    .postGallery li a strong {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 18px;
+    }
+
+    /* 더보기 버튼 */
+    .more {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    button {
+        position: absolute;
+        width: 93px;
+        height: 43px;
+        left: 914px;
+        top: 2346px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+    }
+
+    #footer {
+        position: absolute;
+        width: 1920px;
+        height: 300px;
+        left: 0px;
+        top: 2489px;
+
+        background: #D9D9D9;
+    }
+/* } */
