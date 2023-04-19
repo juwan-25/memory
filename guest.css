@@ -1,11 +1,12 @@
-@media (min-width : 479px){
+@media(min-width:479px) {
+	
 	body {
 		background-color: #f2f2f2;
 	}
 	h1 {
 		text-align: center;
 	}
-	.form-group {
+	.form-group { /* 흰 배경 */
 		margin: 0 auto;
 		width: 300px;
 		height: 300px;
@@ -15,25 +16,22 @@
 		display: inline-block;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 	}
-	.form-group label {
-		font-weight: bold;
-	}
-	.form-group input[type="text"], .form-group textarea {
-		width: 300px;
+	.form-group input[type="text"], .form-group textarea { /* 텍스트 */
+		width: 300%;
 		padding: 10px;
 		border: 0px solid #ccc;
 		box-sizing: border-box;
 
 	}
 	.form-group textarea {
-		height: 260px;
+		height: 300%;
 	}
 	.form-group .submit-button {
 		background-color: #2f4f4f;
 		color: #fff;
 		padding: 10px 20px;
 		border: none;
-		border-radius: 3px;
+		border-radius: 80px;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 	}

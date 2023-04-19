@@ -1,0 +1,55 @@
+/* 제목, 내용 */
+.Post_Write input{
+    border: none;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+
+/* 제목 */
+#title{
+    height: 64px;
+    margin-bottom: 2%;
+}
+
+/* 내용 */
+#content{
+    height: 487px;     
+}
+
+/* 사진 첨부 글씨 */
+.Post_Img p{
+    color: #585858;
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+
+/* 임시 img */
+.Post_Img img{
+    margin-bottom: 10%;
+}
+
+/* 게시 button */
+.post_btn{
+    border: none;
+    float: right;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+    padding: 16px 28px;
+    margin: 28px 0px;
+    font-size: 16px;
+    word-break: keep-all;
+}
+
+/* 임시 footer */
+#footer {
+    position: absolute;
+    width: 1920px;
+    height: 300px;
+    left: 0px;
+    top: 2489px;
+
+    background: #D9D9D9;
+}
+
