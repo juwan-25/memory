@@ -1,25 +1,28 @@
 /* 제목, 내용 */
-.Post_Write input{
+.Post_Write input {
     border: none;
     margin: 0 auto;
-    width: 80%;
+    width: 65%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
 }
 
 /* 제목 */
 #title{
+    margin-left: 17%;
     height: 64px;
     margin-bottom: 2%;
 }
 
 /* 내용 */
 #content{
+    margin-left: 17%;
     height: 487px;     
 }
 
 /* 사진 첨부 글씨 */
 .Post_Img p{
+    margin-left: 17%;
     color: #585858;
     font-size: 18px;
     margin-bottom: 2%;
@@ -27,6 +30,7 @@
 
 /* 임시 img */
 .Post_Img img{
+    margin-left: 17%;
     margin-bottom: 10%;
 }
 
@@ -44,9 +48,10 @@
 
 /* 임시 footer */
 #footer {
-    position: absolute;
+    position: relative;
     width: 1920px;
     height: 300px;
+    margin-right: 17%;
     left: 0px;
     top: 2489px;
 
