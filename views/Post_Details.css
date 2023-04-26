@@ -1,30 +1,28 @@
 /* header */
-.header_btn {
-  float: right;
-  padding: 0px 315px 0px 315px;
-  size: 15px;
+header {
+  /* width: 1920px; */
+  margin: 0px 315px 0px 315px;
+}
+/* header 960px */
+@media (max-width: 960px) {
+  header {
+    /* width: 360px; */
+    margin: 0px 157.5px 0px 157.5px;
+  }
+}
+/* header 360px */
+@media (max-width: 360px) {
+  header {
+    /* width: 960px; */
+    margin: 0px 157.5px 0px 157.5px;
+  }
 }
 
-/* header home_btn */
-/*.home_btn {
-  background-color: #ffff;
-  border: none;
-  padding: 0px 145px;
-}*/
-
-/* header about_btn */
-/*.about_btn {
-  background-color: #ffff;
-  border: none;
-  padding: 0px 145px;
-}*/
-
-/* header memory_btn */
-/*.memory_btn {
-  background-color: #ffff;
-  border: none;
-  padding: 0px 145px;
-}*/
+.header_btn {
+  float: right;
+  /* padding: 0px 315px 0px 315px; */
+  size: 15px;
+}
 
 /* header comment_btn */
 .comment_btn {
@@ -39,21 +37,48 @@
   padding: 0px 145px 0px 0px;
 }
 
+@media (max-width: 960px) {
+  .nv_btn {
+    padding: 0px 72.5px 0px 0px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nv_btn {
+    padding: 0px 36.25px 0px 0px;
+  }
+}
+
 main {
-  width: 1130px;
-  padding: 140px 395px 0px 395px;
+  width: 1090px;
+  padding: 140px 415px 0px 415px;
+}
+
+@media (max-width: 960px) {
+  main {
+    padding: 140px 207.5px 0px 207.5px;
+    width: 545px;
+  }
+}
+
+@media (max-width: 660px) {
+  main {
+    padding: 140px 103.75px 0px 103.75px;
+    width: 272.5px;
+  }
 }
 
 /* 글 제목 */
 .title {
   text-align: left;
-  padding: 44px 0px 44px 0px;
+  padding: 32px 0px 58px 0px;
   size: 20px;
 }
 
 .detail_content {
   padding: 31px 0px 60px 0px;
 }
+
 /* 댓글 */
 .comment {
   padding: 60px 0px 43px 0px;
@@ -65,8 +90,8 @@ main {
 .nickname {
   border: none;
   outline: none;
-  width: 1092px;
 }
+
 input::placeholder {
   color: #cbcbcb;
 }
@@ -74,7 +99,6 @@ input::placeholder {
 .comment_content {
   border: none;
   outline: none;
-  width: 1092px;
 }
 
 /* 등록 버튼 */
@@ -83,15 +107,28 @@ input::placeholder {
   float: right;
   background-color: #d9d9d9;
   border-radius: 30px;
-  padding: 16px 28px;
-  margin: 28px 0px;
+  padding: 12px 24px;
+  margin: 32px 0px 64px 0px;
   font-size: 16px;
 }
 
 /* 등록된 댓글 */
 .e_comment {
   border: 1px solid #e8e8e8;
-  margin-top: 160px;
+  margin-top: 20px;
   padding: 24px 30px 21px;
   border-radius: 20px;
+  width: 1090px;
+}
+
+@media (max-width: 960px) {
+  .e_comment {
+    width: 545px;
+  }
+}
+
+@media (max-width: 360px) {
+  .e_comment {
+    width: 272.5px;
+  }
 }
