@@ -2,7 +2,7 @@
 .Post_Write input {
     border: none;
     margin: 0 auto;
-    width: 65%;
+    width: 50%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
 }
@@ -15,20 +15,21 @@
 
 /* 제목 */
 #title{
-    margin-left: 17%;
+    margin-left: 22%;
     height: 64px;
     margin-bottom: 2%;
 }
 
 /* 내용 */
 #content{
-    margin-left: 17%;
+    margin-left: 22%;
+    margin-bottom: 5%;
     height: 487px;     
 }
 
 /* 사진 첨부 글씨 */
 .Post_Img p{
-    margin-left: 17%;
+    margin-left: 22%;
     color: #585858;
     font-size: 18px;
     margin-bottom: 2%;
@@ -36,20 +37,23 @@
 
 /* 임시 img */
 .Post_Img img{
-    margin-left: 17%;
+    margin-left: 22%;
     margin-bottom: 10%;
 }
 
 /* 게시 button */
 .post_btn{
-    border: none;
-    background-color: #d9d9d9;
-    border-radius: 30px;
+    border-color: #9D9D9D;
+    color: #424242;
+    background: #F5F5F5;
+    border-radius: 5px;
     padding: 16px 25px;
     margin: 28px 0px;
     font-size: 16px;
-    margin-left: 80%;
+    margin-left: 75%;
 }
+
+
 
 /* 임시 footer */
 #footer {
