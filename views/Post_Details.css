@@ -14,6 +14,7 @@ header {
 @media (max-width: 360px) {
   header {
     /* width: 960px; */
+    
     margin: 0px 157.5px 0px 157.5px;
   }
 }
@@ -79,13 +80,6 @@ main {
   padding: 31px 0px 60px 0px;
 }
 
-/* 댓글 */
-.comment {
-  padding: 60px 0px 43px 0px;
-  color: #777777;
-  size: 24px;
-}
-
 /* 닉네임 */
 .nickname {
   border: none;
@@ -105,8 +99,8 @@ input::placeholder {
 .enroll_btn {
   border: none;
   float: right;
-  background-color: #d9d9d9;
-  border-radius: 30px;
+  background-color: #dfdfdf;
+  border-radius: 5px;
   padding: 12px 24px;
   margin: 32px 0px 64px 0px;
   font-size: 16px;
@@ -115,10 +109,9 @@ input::placeholder {
 /* 등록된 댓글 */
 .e_comment {
   border: 1px solid #e8e8e8;
-  margin-top: 20px;
+  margin-top: 159px;
   padding: 24px 30px 21px;
-  border-radius: 20px;
-  width: 1090px;
+  border-radius: 5px;
 }
 
 @media (max-width: 960px) {

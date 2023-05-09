@@ -15,9 +15,11 @@
 
 /* 제목 */
 #title{
+    margin-top: 5%;
     margin-left: 22%;
     height: 64px;
     margin-bottom: 2%;
+    font-family: 'Pretendard';
 }
 
 /* 내용 */
@@ -25,6 +27,7 @@
     margin-left: 22%;
     margin-bottom: 5%;
     height: 487px;     
+    font-family: 'Pretendard';
 }
 
 /* 사진 첨부 글씨 */
@@ -33,13 +36,35 @@
     color: #585858;
     font-size: 18px;
     margin-bottom: 2%;
+    font-family: 'Pretendard';
 }
 
-/* 임시 img */
-.Post_Img img{
-    margin-left: 22%;
-    margin-bottom: 10%;
-}
+li {
+    list-style: none;
+  }
+
+  img {
+    width: 10%;
+    height: 210%;
+  }
+
+  .real-upload {
+    display: none;
+  }
+
+  .upload {
+    width: 10%;
+    height: 10%;
+    background-color: #424242;
+  }
+
+  .image-preview {
+    width: 10%;
+    height: 10%;
+    background-color: aquamarine;
+    display: flex;
+    gap: 20px;
+  }
 
 /* 게시 button */
 .post_btn{
@@ -51,19 +76,36 @@
     margin: 28px 0px;
     font-size: 16px;
     margin-left: 75%;
+    font-family: 'Pretendard';
 }
 
 
+.navbar-nav {
+    margin-left: 40%;
+	font-family: 'Pretendard';
+  }
 
-/* 임시 footer */
-#footer {
-    position: relative;
-    width: 1920px;
-    height: 300px;
-    margin-right: 17%;
-    left: 0px;
-    top: 2489px;
 
-    background: #D9D9D9;
+.nav-link {
+	margin-right: 100px;
+	margin-left: 50px;
+	font-family: 'Pretendard';
 }
 
+@media(min-width:479px) {
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 200px;
+		background-color: #a8a8a8;
+		color: white;
+		text-align: center;
+		padding: 10px;
+		top: 3000px;
+		font-family: 'Pretendard';
+	  }
+      .navbar-brand {
+        margin-left: 15%;
+    }
+}
