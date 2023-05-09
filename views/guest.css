@@ -1,3 +1,4 @@
+/* body */
 @media(min-width:479px) {
 	body {
 		background-color: #f2f2f2;
@@ -15,7 +16,7 @@
 		}
 	}
 
-
+/* comment h2 */
 	@media(min-width:479px){
 		h2 {
 			position: absolute;
@@ -44,8 +45,8 @@
 
 @media(min-width:480px) {
 	.form-group input[type="text"], .form-group textarea { /* 텍스트 */
-		width: 200%;
-		height: 200%;
+		width: auto;
+		height: auto;
 		padding: 10px;
 		border: 0px solid #ccc;
 		box-sizing: border-box;
@@ -54,23 +55,29 @@
 	}
 }
 @media(min-width:479px) {
-	.form-group textarea {
+	.form-group textarea { /* 텍스트 사이즈 */
 		width: 260px;
 		height: 210px;
-
+		font-size: 16px;
 	}
 }
+textarea {
+	/* outline: none; */
+}
+
+/* button */
 @media(min-width:479px) {
 	.form-group .submit-button {
-		background-color: #2f4f4f;
-		color: #fff;
+		background-color: rgba(124, 124, 124, 0);
+		color: #979797;
 		padding: 10px 20px;
-		border: none;
-		border-radius: 80px;
+		border: 1px solid #cccccc; /* 테두리 두께와 색상 지정 */
+		border-radius: 60px;
 		cursor: pointer;
-		transition: background-color 0.3s ease;
 	}
 }
+
+/* button 위치 */
 @media(min-width:479px) {
 	.form-group .submit-button-container {
 		float: right;
@@ -79,6 +86,7 @@
 	}
 }
 
+/* navbar */
 .navbar-nav {
 	margin-left: auto;
 	font-family: 'Pretendard';
@@ -89,8 +97,12 @@
 	margin-left: 50px;
 	font-family: 'Pretendard';
 }
+.navbar-brand {
+	margin-left: 7%;
+}
 
-@media(min-width:479px) {
+/* footer */
+/* @media(min-width:479px) {
 	footer {
 		position: absolute;
 		bottom: 0;
@@ -100,9 +112,7 @@
 		color: white;
 		text-align: center;
 		padding: 10px;
-		top: 3000px;
+		top: 100%;
 		font-family: 'Pretendard';
 	  }
-.navbar-brand {
-	margin-left: 7%;
-}
+	} */
