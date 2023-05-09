@@ -16,7 +16,7 @@
 /* 제목 */
 #title{
     margin-top: 5%;
-    margin-left: 22%;
+    margin-left: 25%;
     height: 64px;
     margin-bottom: 2%;
     font-family: 'Pretendard';
@@ -24,7 +24,7 @@
 
 /* 내용 */
 #content{
-    margin-left: 22%;
+    margin-left: 25%;
     margin-bottom: 5%;
     height: 487px;     
     font-family: 'Pretendard';
@@ -32,7 +32,7 @@
 
 /* 사진 첨부 글씨 */
 .Post_Img p{
-    margin-left: 22%;
+    margin-left: 25%;
     color: #585858;
     font-size: 18px;
     margin-bottom: 2%;
@@ -49,18 +49,21 @@ li {
   }
 
   .real-upload {
+    margin-left: 25%;
     display: none;
   }
 
   .upload {
-    width: 10%;
-    height: 10%;
+    margin-left: 25%;
+    width: 100px;
+    height: 100px;
     background-color: #424242;
   }
 
   .image-preview {
-    width: 10%;
-    height: 10%;
+    margin-left: 25%;
+    width: 100px;
+    height: 100px;
     background-color: aquamarine;
     display: flex;
     gap: 20px;
@@ -80,18 +83,23 @@ li {
 }
 
 
+/* navbar */
 .navbar-nav {
-    margin-left: 40%;
+	margin-left: auto;
 	font-family: 'Pretendard';
   }
-
 
 .nav-link {
 	margin-right: 100px;
 	margin-left: 50px;
 	font-family: 'Pretendard';
 }
+.navbar-brand {
+	margin-left: 7%;
+}
 
+
+/* footer */
 @media(min-width:479px) {
 	footer {
 		position: absolute;
@@ -103,9 +111,5 @@ li {
 		text-align: center;
 		padding: 10px;
 		top: 3000px;
-		font-family: 'Pretendard';
 	  }
-      .navbar-brand {
-        margin-left: 15%;
-    }
 }
