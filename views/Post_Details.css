@@ -1,28 +1,38 @@
 /* header */
-header {
-  /* width: 1920px; */
+/* header {
   margin: 0px 315px 0px 315px;
-}
+} */
 /* header 960px */
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   header {
-    /* width: 360px; */
     margin: 0px 157.5px 0px 157.5px;
   }
-}
+} */
 /* header 360px */
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   header {
-    /* width: 960px; */
-    
     margin: 0px 157.5px 0px 157.5px;
   }
+} */
+
+/* .header_btn {
+  float: right;
+  size: 15px;
+} */
+
+/* navbar */
+.navbar-nav {
+  margin-left: auto;
+  font-family: "Pretendard";
 }
 
-.header_btn {
-  float: right;
-  /* padding: 0px 315px 0px 315px; */
-  size: 15px;
+.nav-link {
+  margin-right: 100px;
+  margin-left: 50px;
+  font-family: "Pretendard";
+}
+.navbar-brand {
+  margin-left: 7%;
 }
 
 /* header comment_btn */
@@ -32,7 +42,7 @@ header {
 }
 
 /* 네비게이션 */
-.nv_btn {
+/* .nv_btn {
   background-color: #ffff;
   border: none;
   padding: 0px 145px 0px 0px;
@@ -48,25 +58,11 @@ header {
   .nv_btn {
     padding: 0px 36.25px 0px 0px;
   }
-}
+} */
 
 main {
-  width: 1090px;
-  padding: 140px 415px 0px 415px;
-}
-
-@media (max-width: 960px) {
-  main {
-    padding: 140px 207.5px 0px 207.5px;
-    width: 545px;
-  }
-}
-
-@media (max-width: 660px) {
-  main {
-    padding: 140px 103.75px 0px 103.75px;
-    width: 272.5px;
-  }
+  width: 56.77%;
+  padding: 140px 21.61% 0px 21.61%;
 }
 
 /* 글 제목 */
@@ -112,16 +108,4 @@ input::placeholder {
   margin-top: 159px;
   padding: 24px 30px 21px;
   border-radius: 5px;
-}
-
-@media (max-width: 960px) {
-  .e_comment {
-    width: 545px;
-  }
-}
-
-@media (max-width: 360px) {
-  .e_comment {
-    width: 272.5px;
-  }
 }
