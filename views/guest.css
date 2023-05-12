@@ -45,8 +45,8 @@
 
 @media(min-width:480px) {
 	.form-group input[type="text"], .form-group textarea { /* 텍스트 */
-		width: auto;
-		height: auto;
+		width: 300px;
+		height: 300px;
 		padding: 10px;
 		border: 0px solid #ccc;
 		box-sizing: border-box;
@@ -98,7 +98,7 @@ textarea {
 	font-family: 'Pretendard';
 }
 .navbar-brand {
-	margin-left: 7%;
+	margin-left: 12%;
 }
 
 /* footer */
