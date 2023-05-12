@@ -41,10 +41,12 @@
 
     <!-- 사진첨부 -->
     <div class="Post_Img">
-        <p class="imgtext">사진 첨부</p>
+        <p class="imgtext" >사진 첨부</p>
         <input type="file" class="real-upload" accept="image/*" required multiple>
-        <div class="upload"></div>
-        <ul class="image-preview"></ul>
+        <img class="upload" src="upload.png"></img>
+        <div class="image-preview"></div>
+        <div class="image-preview"></div>
+        <div class="image-preview"></div>
         <script>
             function getImageFiles(e) {
                 const uploadFiles =  [];
@@ -61,7 +63,7 @@
                 [...files].forEach(file => {
                     if (!file.type.match("image/.*")) {
                         alert('이미지 파일만 업로드가 가능합니다.');
-                        return
+                        return;
                     }
 
                     // 파일 갯수 검사
@@ -100,7 +102,9 @@
     <div>
         <button type="submit" class="post_btn">게시</button>
     </div>
+
+    <footer id="footer"></footer>
 </body>
-<footer id="footer"></footer>
+
 
 </html>
