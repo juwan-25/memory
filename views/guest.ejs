@@ -32,6 +32,26 @@
 	<div class = "form-group-1">
 		<h2>COMMENT</h2>
 		<div class="form-group">
+		  <form action="/guest/insert" method="post">
+			<textarea id="message" name="message" rows="10" cols="50" maxlength='150' placeholder="방명록을 작성해주세요"></textarea>
+			<div class="submit-button-container">
+			  <input type="submit" class="submit-button" value="등록">
+			</div>
+		  </form>
+		</div>
+		<% if(data){ %>
+		  <% for(let i=0;i<data.length;i++){ %>
+			<div class="form-group">
+			  <textarea id="message" name="message" rows="10" cols="40" maxlength='150' readonly style="pointer-events: none;"><%= data[i].content %></textarea>
+			</div>
+		  <% } %>
+		<% } %>
+	  </div>
+	  
+	
+	<!-- <div class = "form-group-1">
+		<h2>COMMENT</h2>
+		<div class="form-group">
 			<form action="/guest/insert" method="post">
 				<textarea id="message" name="message" rows="10" cols="50" maxlength='150' placeholder="방명록을 작성해주세요"></textarea>
 				<div class="submit-button-container">
@@ -39,14 +59,33 @@
 				</div>
 			</form>
 		</div>
-		<% if(locals.data){ %>
-			<% for(let i=0;i<data.length;i++){ %>
-				<div class="form-group">
-					<textarea id="message" name="message" rows="10" cols="40" maxlength = '150' readonly style="pointer-events: none;"><%= data[i].content %></textarea>
-				</div>
-			<% } %>
-		<% } %>
+	
+		
 
+	</div> -->
+
+	<div class="pagination-container">
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<% if(page == 1) { %>
+					<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+				<% } else { %>
+					<li class="page-item"><a class="page-link" href="/guest?page=<%= page - 1 %>">Previous</a></li>
+				<% } %>
+				<% for(let i = 1; i <= totalPage; i++) { %>
+					<% if(i == page) { %>
+						<li class="page-item active"><a class="page-link" href="#"><%= i %></a></li>
+					<% } else { %>
+						<li class="page-item"><a class="page-link" href="/guest?page=<%= i %>"><%= i %></a></li>
+					<% } %>
+				<% } %>
+				<% if(page == totalPage) { %>
+					<li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+				<% } else { %>
+					<li class="page-item"><a class="page-link" href="/guest?page=<%= page + 1 %>">Next</a></li>
+				<% } %>
+			</ul>
+		</nav>
 	</div>
 </body>
 <footer>

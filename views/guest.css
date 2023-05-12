@@ -61,9 +61,6 @@
 		font-size: 16px;
 	}
 }
-textarea {
-	/* outline: none; */
-}
 
 /* button */
 @media(min-width:479px) {
