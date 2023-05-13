@@ -5,157 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="Post_Gallery.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+    <link rel="stylesheet" href="Post_Gallery_Mobile.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>게시물 나열 페이지</title>
 </head>
 
 <body style="overflow-x:hidden">
-    <div class="rectangle"></div>
-    <div class="line"></div>
-    <p class="rankingTitle">BEST MEMORY</p>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">HOME</a>
+                    <a class="nav-link" href="#">ABOUT</a>
+                    <a class="nav-link" href="gallery">MEMORY</a>
+                    <a class="nav-link" href="guest">COMMENT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <div id="wrapper">
+        <div class="line"></div>
+        <p class="rankingTitle">BEST MEMORY</p>
 
-    <!--스와이프 갤러리 구현-->
-    <div class="ranking">
-        <ul>
-            <li>
-                <a href="">
-                    <div class="numberRectangle">1</div>
-                    <img src="" alt="">
-                    <div class="preview">
-                        <p class=title>생애 첫 비행기의 기억</p>
-                        <p class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                            번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                            같이 여행이나 가자고 한 게 시작이었어요...</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <div class="numberRectangle">2</div>
-                    <img src="" alt="">
-                    <div class="preview">
-                        <p class=title></p>
-                        <p class="detail"></p>
-                    </div>
+        <!--스와이프 갤러리 구현-->
+        <div class="ranking">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="numberRectangle">1</div>
+                        <img src="" alt="">
+                        <div class="preview">
+                            <p class=title>생애 첫 비행기의 기억</p>
+                            <p class="detail">제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                                번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                                같이 여행이나 가자고 한 게 시작이었어요...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="numberRectangle">2</div>
+                        <img src="" alt="">
+                        <div class="preview">
+                            <p class=title></p>
+                            <p class="detail"></p>
+                        </div>
 
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <div class="numberRectangle">3</div>
-                    <img src="" alt="">
-                    <div class="preview">
-                        <p class=title></p>
-                        <p class="detail"></p>
-                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="numberRectangle">3</div>
+                        <img src="" alt="">
+                        <div class="preview">
+                            <p class=title></p>
+                            <p class="detail"></p>
+                        </div>
 
-                </a>
-            </li>
-            <!-- <li>
-                <a href="">
-                    <div class="numberRectangle">4</div>
-                    <img src="" alt="">
-                    <div class="preview">
-                        <p class=title></p>
-                        <p class="detail"></p>
-                    </div>
-                </a>
-            </li> -->
-        </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </div>
-
-    </div>
-    <div class="galleryTitle">기억 저장소</div>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
+    <div class="galleryTitle">· 기억 저장소 ·</div>
     <div class="postGallery">
-        <ul>
-            <li>
-                <a href="">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <div class="title">생애 첫 비행기의 기억</div>
-                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                                번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                                같이 여행이나 가자고 한 게 시작이었어요...</div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li class="double">
-                <a href="">
-                    <figure>
-                        <img src="" alt="" class="double">
-                        <figcaption>
-                            <div class="titleDouble">생애 첫 비행기의 기억</div>
-                            <div class="detailDouble">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.
-                                번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                                같이 여행이나 가자고 한 게 시작이었어요...</div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <div class="title"></div>
-                            <div class="detail"></div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <div class="title"></div>
-                            <div class="detail"></div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <div class="title"></div>
-                            <div class="detail"></div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li class="double">
-                <a href="">
-                    <figure>
-                        <img src="" alt="" class="double">
-                        <figcaption>
-                            <div class="titleDouble"></div>
-                            <div class="detailDouble"></div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <div class="title"></div>
-                            <div class="detail"></div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-        </ul>
+        <% let index = -2; %>
+        <% for (let i = 1; i <= 7; i++) { %> <!-- 배열로 -->
+            <% if (i == index + 4) { %>
+                <div class="itemLarge">
+                    <a href="">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>
+                                <div class="title">생애 첫 비행기의 기억</div>
+                                <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                                    번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                                    같이 여행이나 가자고 한 게 시작이었어요...</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <% index = i %>
+            <% } else { %>
+                <div class="item">
+                    <a href="">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>
+                                <div class="title">생애 첫 비행기의 기억</div>
+                                <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                                    번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                                    같이 여행이나 가자고 한 게 시작이었어요...</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            <% } %>
+        <% } %>
     </div>
     <button class="more">더보기</button>
-    <footer id="footer"></footer>
+    <footer></footer>
+    </div>
 </body>
 
 </html>
