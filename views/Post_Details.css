@@ -1,20 +1,43 @@
 /* header */
-header {
-  /* width: 1920px; */
+/* header {
   margin: 0px 315px 0px 315px;
+<<<<<<< HEAD
 }
 
-/* header 360px */
-@media (max-width: 360px) {
+=======
+} */
+/* header 960px */
+/* @media (max-width: 960px) {
   header {
     margin: 0px 157.5px 0px 157.5px;
   }
+} */
+>>>>>>> 0fad77b7c4322cf5dc75a6170865cba891a992d5
+/* header 360px */
+/* @media (max-width: 360px) {
+  header {
+    margin: 0px 157.5px 0px 157.5px;
+  }
+} */
+
+/* .header_btn {
+  float: right;
+  size: 15px;
+} */
+
+/* navbar */
+.navbar-nav {
+  margin-left: auto;
+  font-family: "Pretendard";
 }
 
-.header_btn {
-  float: right;
-  /* padding: 0px 315px 0px 315px; */
-  size: 15px;
+.nav-link {
+  margin-right: 100px;
+  margin-left: 50px;
+  font-family: "Pretendard";
+}
+.navbar-brand {
+  margin-left: 7%;
 }
 
 /* header comment_btn */
@@ -24,7 +47,7 @@ header {
 }
 
 /* 네비게이션 */
-.nv_btn {
+/* .nv_btn {
   background-color: #ffff;
   border: none;
   padding: 0px 145px 0px 0px;
@@ -47,6 +70,7 @@ a#menu {
   }
 } */
 
+<<<<<<< HEAD
 @media screen and(max-width: 360px) {
   #nav {
     display: none;
@@ -75,6 +99,11 @@ main {
     width: 328px;
     padding: 24px 16px 72px 16px;
   }
+=======
+main {
+  width: 56.77%;
+  padding: 140px 21.61% 0px 21.61%;
+>>>>>>> 0fad77b7c4322cf5dc75a6170865cba891a992d5
 }
 
 /* 글 제목 */
@@ -133,9 +162,12 @@ input::placeholder {
   padding: 24px 30px 21px;
   border-radius: 5px;
 }
+<<<<<<< HEAD
 
 @media (max-width: 360px) {
   footer {
     width: 360px;
   }
 }
+=======
+>>>>>>> 0fad77b7c4322cf5dc75a6170865cba891a992d5
