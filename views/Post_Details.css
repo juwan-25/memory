@@ -3,18 +3,10 @@ header {
   /* width: 1920px; */
   margin: 0px 315px 0px 315px;
 }
-/* header 960px */
-@media (max-width: 960px) {
-  header {
-    /* width: 360px; */
-    margin: 0px 157.5px 0px 157.5px;
-  }
-}
+
 /* header 360px */
 @media (max-width: 360px) {
   header {
-    /* width: 960px; */
-    
     margin: 0px 157.5px 0px 157.5px;
   }
 }
@@ -37,47 +29,69 @@ header {
   border: none;
   padding: 0px 145px 0px 0px;
 }
-
-@media (max-width: 960px) {
-  .nv_btn {
-    padding: 0px 72.5px 0px 0px;
-  }
+a#back {
+  text-decoration: none;
+  display: none;
+}
+#memory {
+  display: none;
+}
+a#menu {
+  text-decoration: none;
+  display: none;
 }
 
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   .nv_btn {
     padding: 0px 36.25px 0px 0px;
   }
-}
+} */
 
-main {
-  width: 1090px;
-  padding: 140px 415px 0px 415px;
-}
-
-@media (max-width: 960px) {
-  main {
-    padding: 140px 207.5px 0px 207.5px;
-    width: 545px;
+@media screen and(max-width: 360px) {
+  #nav {
+    display: none;
+  }
+  a#menu {
+    display: inline;
+  }
+  a#menu:hover + #nav {
+    display: inline;
+  }
+  a#back {
+    display: inline;
+  }
+  #memory {
+    display: inline;
   }
 }
+/* ---------------------------------------------------------------- */
+main {
+  width: 1090px;
+  padding: 140px 395px 0px 395px;
+}
 
-@media (max-width: 660px) {
+@media (max-width: 360px) {
   main {
-    padding: 140px 103.75px 0px 103.75px;
-    width: 272.5px;
+    width: 328px;
+    padding: 24px 16px 72px 16px;
   }
 }
 
 /* 글 제목 */
 .title {
   text-align: left;
-  padding: 32px 0px 58px 0px;
+  padding: 44px 20px 43px 0px;
   size: 20px;
+}
+@media (max-width: 360px) {
+  .title {
+    width: 328px;
+    padding: 24px 16px 72px 16px;
+  }
 }
 
 .detail_content {
-  padding: 31px 0px 60px 0px;
+  padding: 32px 20px 60px 0px;
 }
 
 /* 닉네임 */
@@ -105,6 +119,12 @@ input::placeholder {
   margin: 32px 0px 64px 0px;
   font-size: 16px;
 }
+@media (max-width: 360px) {
+  .enroll_btn {
+    padding: 8px 20px;
+    margin: 20px 0px 48px 0px;
+  }
+}
 
 /* 등록된 댓글 */
 .e_comment {
@@ -114,14 +134,8 @@ input::placeholder {
   border-radius: 5px;
 }
 
-@media (max-width: 960px) {
-  .e_comment {
-    width: 545px;
-  }
-}
-
 @media (max-width: 360px) {
-  .e_comment {
-    width: 272.5px;
+  footer {
+    width: 360px;
   }
 }
