@@ -1,6 +1,8 @@
 /* header */
 /* header {
   margin: 0px 315px 0px 315px;
+
+}
 } */
 /* header 960px */
 /* @media (max-width: 960px) {
@@ -8,6 +10,7 @@
     margin: 0px 157.5px 0px 157.5px;
   }
 } */
+
 /* header 360px */
 /* @media (max-width: 360px) {
   header {
@@ -47,18 +50,53 @@
   border: none;
   padding: 0px 145px 0px 0px;
 }
-
-@media (max-width: 960px) {
-  .nv_btn {
-    padding: 0px 72.5px 0px 0px;
-  }
+a#back {
+  text-decoration: none;
+  display: none;
+}
+#memory {
+  display: none;
+}
+a#menu {
+  text-decoration: none;
+  display: none;
 }
 
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   .nv_btn {
     padding: 0px 36.25px 0px 0px;
   }
 } */
+
+@media screen and(max-width: 360px) {
+  #nav {
+    display: none;
+  }
+  a#menu {
+    display: inline;
+  }
+  a#menu:hover + #nav {
+    display: inline;
+  }
+  a#back {
+    display: inline;
+  }
+  #memory {
+    display: inline;
+  }
+}
+/* ---------------------------------------------------------------- */
+main {
+  width: 1090px;
+  padding: 140px 395px 0px 395px;
+}
+
+@media (max-width: 360px) {
+  main {
+    width: 328px;
+    padding: 24px 16px 72px 16px;
+  }
+}
 
 main {
   width: 56.77%;
@@ -68,12 +106,18 @@ main {
 /* 글 제목 */
 .title {
   text-align: left;
-  padding: 32px 0px 58px 0px;
+  padding: 44px 20px 43px 0px;
   size: 20px;
+}
+@media (max-width: 360px) {
+  .title {
+    width: 328px;
+    padding: 24px 16px 72px 16px;
+  }
 }
 
 .detail_content {
-  padding: 31px 0px 60px 0px;
+  padding: 32px 20px 60px 0px;
 }
 
 /* 닉네임 */
@@ -100,6 +144,12 @@ input::placeholder {
   padding: 12px 24px;
   margin: 32px 0px 64px 0px;
   font-size: 16px;
+}
+@media (max-width: 360px) {
+  .enroll_btn {
+    padding: 8px 20px;
+    margin: 20px 0px 48px 0px;
+  }
 }
 
 /* 등록된 댓글 */
