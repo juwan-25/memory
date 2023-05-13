@@ -82,9 +82,14 @@
     </div>
     <div class="galleryTitle">· 기억 저장소 ·</div>
     <div class="postGallery">
-        <% let index = -2; %>
+        <% let index = -4, plus = 6; %>
         <% for (let i = 1; i <= 7; i++) { %> <!-- 배열로 -->
-            <% if (i == index + 4) { %>
+            <% if (i == index + plus) { %>
+                <% if (plus == 6) { %>
+                    <% plus = 4 %>
+                <% } else if (plus == 4) {  %>
+                    <% plus = 6 %>
+                <% } %>
                 <div class="itemLarge">
                     <a href="">
                         <figure>
