@@ -148,7 +148,6 @@
 
 
 /* 갤러리 제목 */
-@media(min-width:361px) {
     .galleryTitle {
         box-sizing: border-box;
     
@@ -173,7 +172,6 @@
     
         color: #000000;
     }
-}
 
 /* 게시판 갤러리 */
 .postGallery {
@@ -203,7 +201,7 @@
     /* absolute의 기본 기준은 body로 처리 -> relative로 현재 요소로 기준 변경 */
 }
 
-.postGallery .item .figure {
+.postGallery .figure {
     width: 100%;
     height: 100%;
     margin-bottom: 0px;
@@ -225,12 +223,17 @@
     transition: 0.3s;
 }
 
-.postGallery figcaption .title {
+/* item 설정 */
+.postGallery .item figcaption .title {
     position: absolute;
-    width: 354px;
+    width: 88%;
     height: 28px;
-    margin-left: 28px;
+    margin-left: 6%;
     top: 28px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     font-family: 'Pretendard';
     font-style: normal;
@@ -241,11 +244,58 @@
     color: #F2F2F2;
 }
 
-.postGallery figcaption .detail {
+.postGallery .item figcaption .detail {
     position: absolute;
-    width: 354px;
+    width: 88%;
     height: 84px;
-    margin-left: 28px;
+    margin-left: 6%;
+    top: 68px;
+
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /* 세 줄 기준 생략 */
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+
+    color: #F2F2F2;
+}
+
+/* itemLarge 설정 */
+.postGallery .itemLarge figcaption .title {
+    position: absolute;
+    width: 92%;
+    height: 28px;
+    margin-left: 3.5%;
+    top: 28px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: #F2F2F2;
+}
+
+.postGallery .itemLarge figcaption .detail {
+    position: absolute;
+    /* width: 788px; */
+    width: 92%;
+    height: 84px;
+    /* margin-left: 28px; */
+    margin-left: 3.5%;
     top: 68px;
 
     text-overflow: ellipsis;
