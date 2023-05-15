@@ -6,26 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게시물 상세 페이지</title>
     <link rel="stylesheet" href="Post_Details.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
-    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
   <body>
     <header>
       <div class="header_btn">
-      <!-- <div class="header_btn">
-        <button
-          class="square_btn"
-          type="submit"
-        <button class="nv_btn" type="submit">ABOUT</button>
-        <button class="nv_btn" type="submit">MEMORY</button>
-        <button class="comment_btn" type="submit">COMMENT</button>
-
-      </div>
-
-      </div> -->
 
       <!-- nav바 -->
       <nav class="navbar navbar-expand-lg bg-white">
@@ -79,6 +65,13 @@
         질투일지도 몰라 잘 하고 있는 건 나 So keep it down 네가 원하는 건 뭘까
         Quiet please 비행기 모드로 편히 앉아
       </div>
+      <img src="./Details_img.png" width="56.77%" height="586" class="img">
+      <div class="modal">
+        <span class="close">&times;</span>
+        <img class="modal_content" id="img01">
+      </div>
+      
+      
       <hr style="color: #464646; border: 1px solid" />
 
       <!-- 댓글 -->
@@ -131,7 +124,7 @@
       style="
         margin-top: 126px;
         background-color: #d9d9d9;
-        width: 1960px;
+        width: 100%;
         height: 300px;
       "
     ></footer>

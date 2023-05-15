@@ -34,9 +34,9 @@
   margin-left: 50px;
   font-family: "Pretendard";
 }
-.navbar-brand {
+/* .navbar-brand {
   margin-left: 7%;
-}
+} */
 
 /* header comment_btn */
 .comment_btn {
@@ -44,58 +44,10 @@
   border: none;
 }
 
-/* 네비게이션 */
-/* .nv_btn {
-  background-color: #ffff;
-  border: none;
-  padding: 0px 145px 0px 0px;
-}
-a#back {
-  text-decoration: none;
-  display: none;
-}
-#memory {
-  display: none;
-}
-a#menu {
-  text-decoration: none;
-  display: none;
-}
-
-/* @media (max-width: 360px) {
-  .nv_btn {
-    padding: 0px 36.25px 0px 0px;
-  }
-} */
-
-@media screen and(max-width: 360px) {
-  #nav {
-    display: none;
-  }
-  a#menu {
-    display: inline;
-  }
-  a#menu:hover + #nav {
-    display: inline;
-  }
-  a#back {
-    display: inline;
-  }
-  #memory {
-    display: inline;
-  }
-}
 /* ---------------------------------------------------------------- */
 main {
   width: 1090px;
   padding: 140px 395px 0px 395px;
-}
-
-@media (max-width: 360px) {
-  main {
-    width: 328px;
-    padding: 24px 16px 72px 16px;
-  }
 }
 
 main {
@@ -109,21 +61,17 @@ main {
   padding: 44px 20px 43px 0px;
   size: 20px;
 }
-@media (max-width: 360px) {
-  .title {
-    width: 328px;
-    padding: 24px 16px 72px 16px;
-  }
-}
 
 .detail_content {
   padding: 32px 20px 60px 0px;
+  font-family: "Pretendard";
 }
 
 /* 닉네임 */
 .nickname {
   border: none;
   outline: none;
+  font-family: "Pretendard";
 }
 
 input::placeholder {
@@ -133,6 +81,7 @@ input::placeholder {
 .comment_content {
   border: none;
   outline: none;
+  font-family: "Pretendard";
 }
 
 /* 등록 버튼 */
@@ -144,12 +93,7 @@ input::placeholder {
   padding: 12px 24px;
   margin: 32px 0px 64px 0px;
   font-size: 16px;
-}
-@media (max-width: 360px) {
-  .enroll_btn {
-    padding: 8px 20px;
-    margin: 20px 0px 48px 0px;
-  }
+  font-family: "Pretendard";
 }
 
 /* 등록된 댓글 */
@@ -158,4 +102,5 @@ input::placeholder {
   margin-top: 159px;
   padding: 24px 30px 21px;
   border-radius: 5px;
+  font-family: "Pretendard";
 }
