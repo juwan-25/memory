@@ -44,38 +44,82 @@
 
 /* 게시판 순위 */
 .ranking {
+    position: relative;
+    margin-left: 16.6%;
+    margin-top: 268px;
+}
+
+.controller span {
     position: absolute;
-    /* height: 396px; */
-    width: 1760px;
-    left: 16.6%;
-    top: 335px;
+    padding: 5px 20px;
+
+    top: 50%;
+
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 46px;
+
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
 }
 
-.ranking ul {
+.controller span:hover {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px rgba(101, 101, 103, 0.2);
+}
+
+.prev {
+    margin-top: 180px;
+    left: -40px;
+}
+
+.prev:hover {
+    transition: 0.3s;
+}
+
+.next {
+    margin-top: 180px;
+    right: 260px;
+}
+
+.next:hover{
+    transition: 0.3s;
+}
+
+.slides {
+    position: absolute;
+    width: 4400px;
+    transition: left 0.5s ease-out;
+
     padding-left: 0;
+    margin-bottom: 0;
+    left: 0;
 }
 
-.ranking li {
+.slides li {
     width: 410px;
     /* width: 23.3%; */
     height: 396px;
     /* height: 25%; */
     display: block;
     float: left;
-    /* margin-right: 30px; */
-    margin-right: 1.7%;
+    margin-right: 30px;
+    /* margin-right: 1.7%; */
 
     background: #FBFBFD;
 
-    box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-    border-radius: 0px 0px 5px 5px;
+    box-shadow: 3px 3px 20px rgba(101, 101, 103, 0.2);
+    border-radius: 5px;
 }
 
-.ranking li a {
+.slides li a {
     text-decoration-line: none;
 }
 
-.ranking li .numberRectangle {
+.slides li .numberRectangle {
     position: absolute;
     width: 42px;
     height: 39px;
@@ -83,36 +127,34 @@
     text-align: center;
 
     background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(1.5px);
 
     border-radius: 0px 5px 5px 0px;
 
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 21px;
     line-height: 35px;
     letter-spacing: -0.02em;
 
-    color: #000000;
+    color: #e2e2e2;
 }
 
-.ranking li img {
-    width: 410px;
+.slides li img {
+    width: 100%;
     height: 260px;
-
     object-fit: cover;
-    /* 비율 유지, 요소 콘텐츠 박스 채우기 */
 
     background: #D9D9D9;
     border-radius: 5px 5px 0px 0px;
+    
 }
 
-.ranking li .preview {
+.slides li .preview {
     padding: 20px;
 }
 
-.ranking li .preview .title {
+.slides li .preview .title {
     margin-top: 0;
     margin-bottom: 0;
 
@@ -125,14 +167,13 @@
     color: #363636;
 }
 
-.ranking li .preview .detail {
+.slides li .preview .detail {
     height: 56px;
     margin: 12px 0 0 0;
     text-overflow: ellipsis;
     word-break: break-word;
     overflow: hidden;
     /* 넘치는 요소 숨기기 */
-    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     /* 두 줄 기준 생략 */
@@ -148,30 +189,30 @@
 
 
 /* 갤러리 제목 */
-    .galleryTitle {
-        box-sizing: border-box;
+.galleryTitle {
+    box-sizing: border-box;
     
-        position: absolute;
-        width: 198px;
-        height: 68px;
-        /* left: 861px; */
-        margin-left: 45.4%;
-        top: 919px;
+    position: absolute;
+    width: 198px;
+    height: 68px;
+    /* left: 861px; */
+    margin-left: 45.4%;
+    top: 919px;
     
-        background: #FBFBFD;
-        box-shadow: 0px 0px 20px rgba(174, 174, 192, 0.3);
-        border-radius: 100px;
+    background: #FBFBFD;
+    box-shadow: 0px 0px 20px rgba(174, 174, 192, 0.3);
+    border-radius: 100px;
     
-        font-family: 'Pretendard';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 65px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 65px;
     
-        text-align: center;
+    text-align: center;
     
-        color: #000000;
-    }
+    color: #000000;
+}
 
 /* 게시판 갤러리 */
 .postGallery {
