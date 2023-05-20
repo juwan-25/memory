@@ -1,3 +1,4 @@
+
 /* 메뉴 바 */
 .navbar-nav {
     margin-left: auto;
@@ -55,11 +56,18 @@
 
     top: 50%;
 
-    background-color: transparent;
-    color: black;
+    background-color: #FFFFFF;
+    color: #424242;
+
     text-align: center;
     font-size: 1.4rem;
     line-height: 46px;
+
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 
     border-radius: 50%;
     cursor: pointer;
@@ -67,7 +75,6 @@
 }
 
 .controller span:hover {
-    background-color: #ffffff;
     box-shadow: 3px 3px 20px rgba(101, 101, 103, 0.2);
 }
 
