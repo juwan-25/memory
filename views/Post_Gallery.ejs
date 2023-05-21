@@ -46,7 +46,7 @@
                     <li>
                         <a href="">
                             <div class="numberRectangle"><%= i + 1 %></div>
-                            <img src="" alt="">
+                            <img src="ff.jpg" alt="">
                             <div class="preview">
                                 <p class=title>생애 첫 비행기의 기억</p>
                                 <p class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
@@ -65,15 +65,27 @@
                     const slides = document.querySelector('.slides'); //전체 슬라이드 컨테이너
                     const slideImg = document.querySelectorAll('.slides li'); //모든 슬라이드
                     let currentIdx = 0; //현재 슬라이드 index
+                    let slideWidth = 440;   //슬라이드 너비 초기값
                     const slideCount = slideImg.length; // 슬라이드 개수
                     const prev = document.querySelector('.prev'); //이전 버튼
                     const next = document.querySelector('.next'); //다음 버튼
 
+                    function setSlideWidth() {
+                        const windowWidth = window.innerWidth;  //현재 창의 너비
+
+                        if(windowWidth <= 479) {
+                            slideWidth = 314;   //모바일 화면에서의 너비
+                        } else {
+                            slideWidth = 440;   //PC 화면에서의 너비
+                            slideCount = slideCount - 2;
+                        }
+                    }
+
                     //전체 슬라이드 컨테이너 넓이 설정
-                    slides.style.width = 440 * slideCount + 'px';
+                    slides.style.width = slideWidth * slideCount + 'px';
 
                     function moveSlide(num) {
-                        slides.style.left = -num * 440 + 'px';
+                        slides.style.left = -num * slideWidth + 'px';
                         currentIdx = num;
                     }
 
@@ -84,8 +96,12 @@
 
                     next.addEventListener('click', function () {
                         // 마지막 슬라이드는 다음 버튼 눌러도 아무런 반응 없도록
-                        if (currentIdx !== slideCount - 3) moveSlide(currentIdx + 1);
+                        if (currentIdx !== slideCount - 1) moveSlide(currentIdx + 1);
                     });
+
+                    window.addEventListener('resize', setSlideWidth);
+
+                    setSlideWidth();
                 </script>
         </div>
     <div class="galleryTitle">· 기억 저장소 ·</div>
