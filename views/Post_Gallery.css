@@ -1,4 +1,3 @@
-
 /* 메뉴 바 */
 .navbar-nav {
     margin-left: auto;
@@ -44,77 +43,28 @@
 }
 
 /* 게시판 순위 */
-.ranking {
+#ranking {
     position: relative;
+    width: 100%;
     margin-left: 16.6%;
     margin-top: 268px;
 }
 
-.controller span {
+#slides{
     position: absolute;
-    padding: 5px 20px;
-
-    top: 50%;
-
-    background-color: #FFFFFF;
-    color: #424242;
-
-    text-align: center;
-    font-size: 1.4rem;
-    line-height: 46px;
-
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-
-    border-radius: 50%;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-.controller span:hover {
-    box-shadow: 3px 3px 20px rgba(101, 101, 103, 0.2);
-}
-
-.prev {
-    margin-top: 180px;
-    left: -40px;
-}
-
-.prev:hover {
-    transition: 0.3s;
-}
-
-.next {
-    margin-top: 180px;
-    right: 260px;
-}
-
-.next:hover{
-    transition: 0.3s;
-}
-
-.slides {
-    position: absolute;
-    width: 4400px;
-    transition: left 0.5s ease-out;
-
     padding-left: 0;
     margin-bottom: 0;
     left: 0;
 }
 
-.slides li {
-    width: 410px;
-    /* width: 23.3%; */
+#slides li {
+    flex-shrink: 0;
+    flex: 0 0 410px;
     height: 396px;
-    /* height: 25%; */
     display: block;
     float: left;
     margin-right: 30px;
-    /* margin-right: 1.7%; */
+    /* margin-right: 0.6%; */
 
     background: #FBFBFD;
 
@@ -122,11 +72,11 @@
     border-radius: 5px;
 }
 
-.slides li a {
+#slides li a {
     text-decoration-line: none;
 }
 
-.slides li .numberRectangle {
+#slides li .numberRectangle {
     position: absolute;
     width: 42px;
     height: 39px;
@@ -147,7 +97,7 @@
     color: #e2e2e2;
 }
 
-.slides li img {
+#slides li img {
     width: 100%;
     height: 260px;
     object-fit: cover;
@@ -157,11 +107,11 @@
     
 }
 
-.slides li .preview {
+#slides li .preview {
     padding: 20px;
 }
 
-.slides li .preview .title {
+#slides li .preview .title {
     margin-top: 0;
     margin-bottom: 0;
 
@@ -174,7 +124,7 @@
     color: #363636;
 }
 
-.slides li .preview .detail {
+#slides li .preview .detail {
     height: 56px;
     margin: 12px 0 0 0;
     text-overflow: ellipsis;
@@ -249,7 +199,7 @@
     /* absolute의 기본 기준은 body로 처리 -> relative로 현재 요소로 기준 변경 */
 }
 
-.postGallery .figure {
+.postGallery figure {
     width: 100%;
     height: 100%;
     margin-bottom: 0px;
