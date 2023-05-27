@@ -173,25 +173,24 @@
 
 /* 게시판 갤러리 */
 .postGallery {
-    position: absolute;
+    position: relative;
     width: 69.5%;
     margin-left: 16.6%;
-    top: 1051px;
+    margin-top: 1051px;
 
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(3, 1fr);
 }
 
 .postGallery .item {
     margin-right: 30px;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
 }
 
 .postGallery .itemLarge {
     grid-column: span 2;
     margin-right: 30px;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
 }
 
 .postGallery a {
@@ -335,9 +334,9 @@
     position: absolute;
     width: 120px;
     height: 55px;
-    /* margin-left: 900px; */
-    margin-left: 46.7%;
-    top: 2255px;
+    /* margin-left: 585px; */
+    margin-left: 44%;
+    bottom: -137px;
 
     background: #FBFBFD;
     border: 1px solid #D5D5D5;

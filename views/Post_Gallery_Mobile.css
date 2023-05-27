@@ -1,4 +1,4 @@
-@media(max-width:479px) {
+@media(max-width:390px) {
     .line {
         position: absolute;
         width: 112px;
@@ -10,7 +10,7 @@
     }
 }
 
-@media(max-width:479px) {
+@media(max-width:390px) {
     .rankingTitle {
         position: absolute;
         width: 112px;
@@ -29,73 +29,25 @@
 }
 
 /* 게시판 순위 */
-@media(max-width:479px) {
-    .ranking {
+@media(max-width:390px) {
+    #ranking {
         position: relative;
+        width: 100%;
         /* margin-left: 16px; */
         margin-left: 3.5%;
-        margin-top: 166px;
+        margin-top: 118px;
     }
 
-    .controller span {
+    #slides {
         position: absolute;
-        padding: 1px 20px;
-
-        top: 50%;
-
-        background-color: #FFFFFF;
-        color: #424242;
-
-        text-align: center;
-        font-size: 1rem;
-        line-height: 46px;
-
-        /* 드래그 안 되게 */
-        -ms-user-select: none;
-        -moz-user-select: -moz-none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-
-        border-radius: 50%;
-        cursor: pointer;
-        transform: translateY(-50%);
-    }
-
-    .controller span:hover {
-        box-shadow: 3px 3px 20px rgba(101, 101, 103, 0.2);
-    }
-
-    .prev {
-        margin-top: 140px;
-        left: -20px;
-    }
-
-    .prev:hover {
-        transition: 0.3s;
-    }
-
-    .next {
-        margin-top: 140px;
-        right: 115px;
-    }
-
-    .next:hover {
-        transition: 0.3s;
-    }
-
-    .slides {
-        position: absolute;
-        width: 3180px;
-        transition: left .5s ease-out;
-
         margin: 0;
         padding-left: 0;
         left: 0;
     }
 
-    .slides li {
-        width: 302px;
+    #slides li {
+        flex-shrink: 0;
+        flex: 0 0 302px;
         height: 258px;
         display: block;
         float: left;
@@ -107,11 +59,11 @@
         border-radius: 10px;
     }
 
-    .slides li a {
+    #slides li a {
         text-decoration-line: none;
     }
 
-    .slides li .numberRectangle {
+    #slides li .numberRectangle {
         position: absolute;
         width: 30px;
         height: 30px;
@@ -133,7 +85,7 @@
         color: #FFFFFF;
     }
 
-    .slides li img {
+    #slides li img {
         width: 100%;
         height: 154px;
         object-fit: cover;
@@ -144,13 +96,13 @@
         border-radius: 10px 10px 0px 0px;
     }
 
-    .slides li .preview {
+    #slides li .preview {
         margin-top: 0;
         padding: 12px 16px 16px 16px;
 
     }
 
-    .slides li .preview .title {
+    #slides li .preview .title {
         font-family: 'Pretendard';
         font-style: normal;
         font-weight: 600;
@@ -160,7 +112,7 @@
         color: #363636;
     }
 
-    .slides li .preview .detail {
+    #slides li .preview .detail {
         height: 44px;
         margin-top: 4px;
         text-overflow: ellipsis;
@@ -182,16 +134,15 @@
     }
 }
 
-@media(max-width:479px) {
-
+@media(max-width:390px) {
     /* 갤러리 제목 */
     .galleryTitle {
         position: absolute;
         width: 94px;
         height: 28px;
-        left: 200px;
+        left: 133px;
         /* left: 143px; */
-        top: 540px;
+        top: 476px;
         /* top: 476px; */
 
         margin: 0;
@@ -212,21 +163,21 @@
     }
 }
 
-@media(max-width:479px) {
+@media(max-width:390px) {
 
     /* 게시판 갤러리 */
     .postGallery {
-        position: absolute;
-        /* width: 535px; */
-        width: 95%;
+        position: relative;
+        /* width: 328px; */
+        width: 80%;
 
         left: 16px;
-        right: 0;
-        top: 600px;
+        top: 358px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 8px;
 
-        margin-left: 0;
+        margin: 0;
     }
 
     /* .postGallery ul {
@@ -245,13 +196,14 @@
     } */
 
     .postGallery .item {
-        margin-right: 8px;
-        margin-bottom: 8px;
+        width: 160px;
+        margin: 0;
     }
 
     .postGallery .itemLarge {
         grid-column: span 2;
-        margin-bottom: 8px;
+        width: 328px;
+        margin: 0;
     }
 
     .postGallery a {
@@ -286,8 +238,8 @@
         position: absolute;
         width: 88%;
         height: 28px;
-        margin-left: 6%;
-        top: 28px;
+        margin-left: 6.8%;
+        top: 10px;
 
         text-overflow: ellipsis;
         overflow: hidden;
@@ -296,7 +248,7 @@
         font-family: 'Pretendard';
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 14px;
         line-height: 28px;
 
         color: #F2F2F2;
@@ -305,9 +257,9 @@
     .postGallery .item figcaption .detail {
         position: absolute;
         width: 88%;
-        height: 84px;
-        margin-left: 6%;
-        top: 68px;
+        height: 85px;
+        margin-left: 6.8%;
+        top: 40px;
 
         text-overflow: ellipsis;
         word-break: break-word;
@@ -320,8 +272,8 @@
         font-family: 'Pretendard';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
+        font-size: 10px;
+        line-height: 20px;
 
         color: #F2F2F2;
     }
@@ -332,7 +284,7 @@
         width: 92%;
         height: 28px;
         margin-left: 3.5%;
-        top: 28px;
+        top: 10px;
 
         text-overflow: ellipsis;
         overflow: hidden;
@@ -341,7 +293,7 @@
         font-family: 'Pretendard';
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 14px;
         line-height: 28px;
 
         color: #F2F2F2;
@@ -354,7 +306,7 @@
         height: 84px;
         /* margin-left: 28px; */
         margin-left: 3.5%;
-        top: 68px;
+        top: 40px;
 
         text-overflow: ellipsis;
         word-break: break-word;
@@ -367,8 +319,8 @@
         font-family: 'Pretendard';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
+        font-size: 10px;
+        line-height: 20px;
 
         color: #F2F2F2;
     }
@@ -389,7 +341,7 @@
     }
 }
 
-@media(max-width:479px) {
+@media(max-width:390px) {
 
     /* 더보기 버튼 */
     .more {
@@ -398,9 +350,8 @@
         position: absolute;
         width: 77px;
         height: 40px;
-        /* margin-left: 142px; */
-        margin-left: 180px;
-        top: 1136px;
+        margin-left: 127px;
+        bottom: -50px;
         
         border: 1px solid #D4D4D4;
         border-radius: 4px;

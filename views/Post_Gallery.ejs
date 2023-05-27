@@ -68,56 +68,122 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        //화면 크기 변경 시 새로고침 해야 됨
         new Swiper('#ranking', {
-            slidesPerView: 4.3,
+            slidesPerView: window.innerWidth <= 390 ? 1.17 : 4, 
+            freeMode: true, // 스냅 이동 효과 비활성화
             pagination: {
                 clickable: true,
-            },
+            }
         });
+        
+        
     </script>
 
     <div class="galleryTitle">· 기억 저장소 ·</div>
     <div class="postGallery">
-        <% let index = -4, plus = 6; %>
-        <% for (let i = 1; i <= 7; i++) { %> <!-- 배열로 -->
-            <% if (i == index + plus) { %>
-                <% if (plus == 6) { %>
-                    <% plus = 4 %>
-                <% } else if (plus == 4) {  %>
-                    <% plus = 6 %>
-                <% } %>
-                <div class="itemLarge">
-                    <a href="">
+        <script>
+            const galleryContainer = document.querySelector('.postGallery');
+
+            if (window.innerWidth <= 390) {
+                for (let i = 1; i <= 8; i++) {
+                    if (i % 3 == 0) {
+                        const itemLarge = document.createElement('div');
+                        itemLarge.classList.add('itemLarge');
+
+                        itemLarge.innerHTML = `
+                      <a href="">
                         <figure>
-                            <img src="" alt="">
-                            <figcaption>
-                                <div class="title">생애 첫 비행기의 기억</div>
-                                <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                                    번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                                    같이 여행이나 가자고 한 게 시작이었어요...</div>
-                            </figcaption>
+                          <img src="" alt="">
+                          <figcaption>
+                            <div class="title">생애 첫 비행기의 기억</div>
+                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                          </figcaption>
                         </figure>
-                    </a>
-                </div>
-                <% index = i %>
-            <% } else { %>
-                <div class="item">
-                    <a href="">
+                      </a>
+                    `;
+                        galleryContainer.appendChild(itemLarge);
+                    } else {
+                        const item = document.createElement('div');
+                        item.classList.add('item');
+
+                        item.innerHTML = `
+                      <a href="">
                         <figure>
-                            <img src="" alt="">
-                            <figcaption>
-                                <div class="title">생애 첫 비행기의 기억</div>
-                                <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                                    번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                                    같이 여행이나 가자고 한 게 시작이었어요...</div>
-                            </figcaption>
+                          <img src="" alt="">
+                          <figcaption>
+                            <div class="title">생애 첫 비행기의 기억</div>
+                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                          </figcaption>
                         </figure>
-                    </a>
-                </div>
-            <% } %>
-        <% } %>
+                      </a>
+                    `;
+                        galleryContainer.appendChild(item);
+                    }
+                }
+            } else {
+                let index = -4;
+                let plus = 6;
+
+                for (let i = 1; i <= 7; i++) {
+                    if (i == index + plus) {
+                        if (plus == 6) {
+                            plus = 4;
+                        } else if (plus == 4) {
+                            plus = 6;
+                        }
+
+                        const itemLarge = document.createElement('div');
+                        itemLarge.classList.add('itemLarge');
+
+                        itemLarge.innerHTML = `
+                      <a href="">
+                        <figure>
+                          <img src="" alt="">
+                          <figcaption>
+                            <div class="title">생애 첫 비행기의 기억</div>
+                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    `;
+
+                        galleryContainer.appendChild(itemLarge);
+
+                        index = i;
+                    } else {
+                        const item = document.createElement('div');
+                        item.classList.add('item');
+
+                        item.innerHTML = `
+                      <a href="">
+                        <figure>
+                          <img src="" alt="">
+                          <figcaption>
+                            <div class="title">생애 첫 비행기의 기억</div>
+                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
+                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
+                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    `;
+
+                        galleryContainer.appendChild(item);
+                    }
+                }
+            }
+
+
+        </script>
+        <button class="more">더보기</button>
     </div>
-    <button class="more">더보기</button>
     <footer></footer>
     </div>
 </body>
