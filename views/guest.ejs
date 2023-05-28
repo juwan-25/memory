@@ -44,6 +44,7 @@
 				</div>
 			<% } %>
         <% } else { %> <!-- 나머지 페이지인 경우 -->
+			<h2>COMMENT</h2>
             <% if(data){ %>
                 <% for(let i=0;i<data.length;i++){ %>
                     <div class="form-group">
@@ -64,40 +65,33 @@
 					<input type="submit" class="submit-button" value="등록">
 				</div>
 			</form>
-		</div>
-	<% } %>
-
-	<% if (data) { %>
-		<div class="form-group">
-			<% for (let i = 0; i < data.length; i++) { %>
-				<textarea id="message" name="message" rows="10" cols="40" maxlength='150' readonly style="pointer-events: none;"><%= data[i].content %></textarea>
-			<% } %>
-		</div>
-	<% } %>
+		</div> -->
 	  
-	<div class="pagination-container">
-		<nav aria-label="Page navigation example">
-			<ul class="pagination">
-				<% if(page == 1) { %>
-					<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-				<% } else { %>
-					<li class="page-item"><a class="page-link" href="/guest?page=<%= page - 1 %>">Previous</a></li>
-				<% } %>
-				<% for(let i = 1; i <= totalPage; i++) { %>
-					<% if(i == page) { %>
-						<li class="page-item active"><a class="page-link" href="#"><%= i %></a></li>
+		<!-- 페이지 수-->
+		<div class="pagination-container">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<% if(page == 1) { %>
+						<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>
 					<% } else { %>
-						<li class="page-item"><a class="page-link" href="/guest?page=<%= i %>"><%= i %></a></li>
+						<li class="page-item"><a class="page-link" href="/guest?page=<%= page - 1 %>"><span aria-hidden="true">&laquo;</span></a></li>
 					<% } %>
-				<% } %>
-				<% if(page == totalPage) { %>
-					<li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
-				<% } else { %>
-					<li class="page-item"><a class="page-link" href="/guest?page=<%= page + 1 %>">Next</a></li>
-				<% } %>
-			</ul>
-		</nav>
-	</div>
+					<% for(let i = 1; i <= totalPage; i++) { %>
+						<% if(i == page) { %>
+							<li class="page-item active"><a class="page-link" href="#"><%= i %></a></li>
+						<% } else { %>
+							<li class="page-item"><a class="page-link" href="/guest?page=<%= i %>"><%= i %></a></li>
+						<% } %>
+					<% } %>
+					<% if(page == totalPage) { %>
+						<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>
+					<% } else { %>
+						<li class="page-item"><a class="page-link" href="/guest?page=<%= page + 1 %>"><span aria-hidden="true">&raquo;</span></a></li>
+					<% } %>
+				</ul>
+			</nav>
+		</div>
+		
 </body>
 <footer>
 	<p>우우우하하...</p>

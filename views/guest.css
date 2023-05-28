@@ -13,6 +13,8 @@
 		.form-group-1 {
 			text-align: center;
 			margin-top: 10%;
+			margin: 10%;
+			margin-bottom: 50px;
 		}
 	}
 
@@ -21,7 +23,7 @@
 		h2 {
 			position: absolute;
 			top: 120px;
-			margin-left: 7.5%;
+			margin-left: 7.3%;
 			text-decoration-line: overline;
 			font-family: 'Pretendard';
 		}
@@ -101,6 +103,33 @@
 	margin-left: 17%;
  }
 
+/* 페이지 선택바 */
+ .pagination-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li.page-item a.page-link {
+    border: none;
+}
+
+.pagination li.page-item a.page-link {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(160, 160, 160, 0.8); /* 선택되지 않은 숫자의 색상 */
+    outline: none; /* 클릭 시 테두리 제거 */
+}
+
+.pagination li.page-item.active a.page-link,
+.pagination li.page-item a.page-link:hover,
+.pagination li.page-item a.page-link:focus,
+.pagination li.page-item a.page-link:active {
+    color: black; /* 선택된 숫자의 색상 */
+	outline: none; /* 클릭 시 테두리 제거 */
+    box-shadow: none; /* 클릭 시 박스 그림자 제거 */
+}
+
+
 /* footer */
 /* @media(min-width:479px) {
 	footer {
@@ -116,7 +145,7 @@
 		font-family: 'Pretendard';
 	  }
 	} */
-
+/* 
 .Page {
 	background-color: #ccc;
-}
+} */
