@@ -87,16 +87,19 @@
 .navbar-nav {
 	margin-left: auto;
 	font-family: 'Pretendard';
-  }
-
-.nav-link {
+   }
+ 
+ .navbar-collapse {
+   margin-right: 10%;
+ }
+   .nav-link {
 	margin-right: 100px;
 	margin-left: 50px;
 	font-family: 'Pretendard';
-}
-.navbar-brand {
-	margin-left: 12%;
-}
+ }
+ .navbar-brand {
+	margin-left: 17%;
+ }
 
 /* footer */
 /* @media(min-width:479px) {
