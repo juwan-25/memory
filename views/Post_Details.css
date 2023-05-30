@@ -54,22 +54,52 @@ main {
   width: 56.77%;
   padding: 140px 21.61% 0px 21.61%;
 }
+@media screen and (max-width: 360px) {
+  main {
+    padding: 0px 16px 0px 16px;
+  }
+}
 
 /* 글 제목 */
+
+@media screen and (max-width: 360px) {
+  #title_line1 {
+    display: none;
+  }
+}
+
 .title {
   text-align: left;
   padding: 44px 20px 43px 0px;
   size: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 360px) {
   .title {
-    padding: 44px 20px 43px 0px;
+    padding: 24px 0px 20px 0px;
+    font-size: 16px;
   }
 }
 
 .detail_content {
   padding: 32px 20px 60px 0px;
   font-family: "Pretendard";
+}
+
+@media screen and (max-width: 360px) {
+  .detail_content {
+    padding: 20px 0px 18px 0px;
+    font-size: 14px;
+  }
+}
+
+#main_line {
+  margin-top: 75px;
+}
+
+@media screen and (max-width: 360px) {
+  #main_line {
+    margin-top: 28px;
+  }
 }
 
 #modal.modal-overlay {
@@ -104,8 +134,15 @@ input::placeholder {
   font-family: "Pretendard";
 }
 
+@media screen and (max-width: 360px) {
+  .comment_enter {
+    margin-top: 28px;
+    padding: 16px 16px 24px;
+  }
+}
+
 /* 등록 버튼 */
-.enroll_btn {
+.enter_btn {
   border: none;
   float: right;
   background-color: #dfdfdf;
@@ -116,6 +153,12 @@ input::placeholder {
   font-family: "Pretendard";
 }
 
+@media screen and (max-width: 360px) {
+  .enter_btn {
+    margin: 20px 0px;
+  }
+}
+
 /* 등록된 댓글 */
 .e_comment {
   border: 1px solid #e8e8e8;
@@ -123,4 +166,10 @@ input::placeholder {
   padding: 24px 30px 21px;
   border-radius: 5px;
   font-family: "Pretendard";
+}
+
+@media screen and (max-width: 360px) {
+  .e_comment {
+    margin-top: 98px;
+  }
 }
