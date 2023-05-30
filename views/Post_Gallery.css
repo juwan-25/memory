@@ -43,39 +43,40 @@
 }
 
 /* 게시판 순위 */
-.ranking {
+#ranking {
+    position: relative;
+    width: 100%;
+    margin-left: 16.6%;
+    margin-top: 268px;
+}
+
+#slides{
     position: absolute;
-    /* height: 396px; */
-    width: 1760px;
-    left: 16.6%;
-    top: 335px;
-}
-
-.ranking ul {
     padding-left: 0;
+    margin-bottom: 0;
+    left: 0;
 }
 
-.ranking li {
-    width: 410px;
-    /* width: 23.3%; */
+#slides li {
+    flex-shrink: 0;
+    flex: 0 0 410px;
     height: 396px;
-    /* height: 25%; */
     display: block;
     float: left;
-    /* margin-right: 30px; */
-    margin-right: 1.7%;
+    margin-right: 30px;
+    /* margin-right: 0.6%; */
 
     background: #FBFBFD;
 
-    box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-    border-radius: 0px 0px 5px 5px;
+    box-shadow: 3px 3px 20px rgba(101, 101, 103, 0.2);
+    border-radius: 5px;
 }
 
-.ranking li a {
+#slides li a {
     text-decoration-line: none;
 }
 
-.ranking li .numberRectangle {
+#slides li .numberRectangle {
     position: absolute;
     width: 42px;
     height: 39px;
@@ -83,36 +84,34 @@
     text-align: center;
 
     background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(1.5px);
 
     border-radius: 0px 5px 5px 0px;
 
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 21px;
     line-height: 35px;
     letter-spacing: -0.02em;
 
-    color: #000000;
+    color: #e2e2e2;
 }
 
-.ranking li img {
-    width: 410px;
+#slides li img {
+    width: 100%;
     height: 260px;
-
     object-fit: cover;
-    /* 비율 유지, 요소 콘텐츠 박스 채우기 */
 
     background: #D9D9D9;
     border-radius: 5px 5px 0px 0px;
+    
 }
 
-.ranking li .preview {
+#slides li .preview {
     padding: 20px;
 }
 
-.ranking li .preview .title {
+#slides li .preview .title {
     margin-top: 0;
     margin-bottom: 0;
 
@@ -125,14 +124,13 @@
     color: #363636;
 }
 
-.ranking li .preview .detail {
+#slides li .preview .detail {
     height: 56px;
     margin: 12px 0 0 0;
     text-overflow: ellipsis;
     word-break: break-word;
     overflow: hidden;
     /* 넘치는 요소 숨기기 */
-    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     /* 두 줄 기준 생략 */
@@ -148,52 +146,51 @@
 
 
 /* 갤러리 제목 */
-    .galleryTitle {
-        box-sizing: border-box;
+.galleryTitle {
+    box-sizing: border-box;
     
-        position: absolute;
-        width: 198px;
-        height: 68px;
-        /* left: 861px; */
-        margin-left: 45.4%;
-        top: 919px;
+    position: absolute;
+    width: 198px;
+    height: 68px;
+    /* left: 861px; */
+    margin-left: 45.4%;
+    top: 919px;
     
-        background: #FBFBFD;
-        box-shadow: 0px 0px 20px rgba(174, 174, 192, 0.3);
-        border-radius: 100px;
+    background: #FBFBFD;
+    box-shadow: 0px 0px 20px rgba(174, 174, 192, 0.3);
+    border-radius: 100px;
     
-        font-family: 'Pretendard';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 65px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 65px;
     
-        text-align: center;
+    text-align: center;
     
-        color: #000000;
-    }
+    color: #000000;
+}
 
 /* 게시판 갤러리 */
 .postGallery {
-    position: absolute;
+    position: relative;
     width: 69.5%;
     margin-left: 16.6%;
-    top: 1051px;
+    margin-top: 1051px;
 
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(3, 1fr);
 }
 
 .postGallery .item {
     margin-right: 30px;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
 }
 
 .postGallery .itemLarge {
     grid-column: span 2;
     margin-right: 30px;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
 }
 
 .postGallery a {
@@ -201,7 +198,7 @@
     /* absolute의 기본 기준은 body로 처리 -> relative로 현재 요소로 기준 변경 */
 }
 
-.postGallery .figure {
+.postGallery figure {
     width: 100%;
     height: 100%;
     margin-bottom: 0px;
@@ -337,9 +334,9 @@
     position: absolute;
     width: 120px;
     height: 55px;
-    /* margin-left: 900px; */
-    margin-left: 46.7%;
-    top: 2255px;
+    /* margin-left: 585px; */
+    margin-left: 44%;
+    bottom: -137px;
 
     background: #FBFBFD;
     border: 1px solid #D5D5D5;

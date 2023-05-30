@@ -34,16 +34,20 @@
 
     <!-- 내용작성 -->
     <div class="Post_Write">
-        <input type="text" id="title" placeholder="제목을 작성해주세요." required>
+        <div class="Po_outer">
+            <input type="text" id="title" placeholder="제목을 작성해주세요." required>
+        </div>
         <br />
-        <input type="text" id="content" placeholder="내용을 작성해주세요" required>
+        <div class="Po_outer">
+            <input type="text" id="content" placeholder="내용을 작성해주세요" required>
+        </div>
     </div>
 
     <!-- 사진첨부 -->
     <div class="Post_Img">
         <p class="imgtext" >사진 첨부</p>
         <input type="file" class="real-upload" accept="image/*" required multiple>
-        <img class="upload" src="upload.png"></img>
+        <img class="upload" src="Write_upload.png"></img>
         <div class="image-preview"></div>
         <div class="image-preview"></div>
         <div class="image-preview"></div>

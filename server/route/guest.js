@@ -3,7 +3,7 @@ const router = express.Router();
 const con = require('../db/index');
 
 router.get('/', (req, res) => {
-    let perPage = 10; // 한 페이지에 보여줄 게시물 수
+    let perPage = 15; // 한 페이지에 보여줄 게시물 수
     let page = req.query.page || 1; // 현재 페이지 번호 (쿼리스트링으로 전달)
     let sql = "SELECT COUNT(*) AS count FROM guestTbl;";
     con.query(sql, (err, result) => {
