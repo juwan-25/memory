@@ -1,3 +1,38 @@
+/* navbar */
+@media(max-width:390px) {
+    .navbar-nav {
+        margin-left: auto;
+        font-family: 'Pretendard';
+        text-align: right;
+    }
+}
+
+@media(max-width:390px) {
+    .navbar-collapse {
+        margin-right: 5%;
+    }
+}
+
+@media(max-width:390px) {
+    .nav-link {
+        margin-right: 2svh;
+        /* margin-left: 50px; */
+        font-family: 'Pretendard';
+    }
+}
+
+@media(max-width:390px) {
+    .navbar-brand {
+        margin-left: 2svh;
+    }
+}
+
+@media(max-width:390px) {
+    .navbar-toggler {
+        margin-right: 2svh;
+    }
+}
+
 @media(max-width:390px) {
     .line {
         position: absolute;
@@ -257,7 +292,7 @@
     .postGallery .item figcaption .detail {
         position: absolute;
         width: 88%;
-        height: 85px;
+        height: 60px;
         margin-left: 6.8%;
         top: 40px;
 
@@ -303,7 +338,7 @@
         position: absolute;
         /* width: 788px; */
         width: 92%;
-        height: 84px;
+        height: 65px;
         /* margin-left: 28px; */
         margin-left: 3.5%;
         top: 40px;

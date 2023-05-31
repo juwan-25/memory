@@ -4,6 +4,10 @@
     font-family: 'Pretendard';
 }
 
+.navbar-collapse {
+    margin-right: 10%;
+}
+
 .nav-link {
     margin-right: 100px;
     margin-left: 50px;
@@ -11,8 +15,9 @@
 }
 
 .navbar-brand {
-    margin-left: 16.6%;
+    margin-left: 17%;
 }
+    
 
 /* 줄 */
 .line {
