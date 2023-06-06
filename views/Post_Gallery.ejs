@@ -48,18 +48,16 @@
 
     <div class="swiper-container" id="ranking">
         <ul class="swiper-wrapper" id="slides">
-            <% for(let i=0; i < 10; i++) { %>
+            <% for(let i=0; i < data.length; i++) { %>
                 <li class="swiper-slide">
                     <a href="">
                         <div class="numberRectangle">
                             <%= i + 1 %>
                         </div>
-                        <img src="" alt="">
+                        <img src="<%= data[i].mimage %>" alt=""/>
                         <div class="preview">
-                            <p class=title>생애 첫 비행기의 기억</p>
-                            <p class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                                번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                                같이 여행이나 가자고 한 게 시작이었어요...</p>
+                            <p class="title"><%= data[i].title %></p>
+                            <p class="detail"><%= data[i].content %></p>
                         </div>
                     </a>
                 </li>

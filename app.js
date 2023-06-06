@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //router 사용
 const guestRouter = require('./server/route/guest');
 const writeRouter = require('./server/route/write');
+const galleryRouter = require('./server/route/gallery');
 
 app.get('/', (req, res) => {
     res.render('index', {});
@@ -32,10 +33,7 @@ app.get('/details', (req, res) => {
 
 });
 
-app.get('/gallery', (req, res) => {
-  res.render('Post_Gallery', {});
-
-});
+app.use('/gallery', galleryRouter);
 
 app.use('/write', writeRouter);
 

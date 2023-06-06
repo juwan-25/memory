@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/')
+        cb(null, 'views/uploads/')
     },
     //파일이름 설정
     filename: function (req, file, cb) {
