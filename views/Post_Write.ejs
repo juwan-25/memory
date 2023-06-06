@@ -33,80 +33,81 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <!-- 내용작성 -->
-    <div class="Post_Write">
-        <div class="Po_outer">
-            <input type="text" id="title" placeholder="제목을 작성해주세요." required>
+    <form action="/write/insert" method="post" enctype="multipart/form-data">
+        <div class="Post_Write">
+            <div class="Po_outer">
+                <input type="text" id="title" name="title" placeholder="제목을 작성해주세요." required>
+            </div>
+            <br />
+            <div class="Po_outer">
+                <input type="text" id="content" name="content" placeholder="내용을 작성해주세요" required>
+            </div>
         </div>
-        <br />
-        <div class="Po_outer">
-            <input type="text" id="content" placeholder="내용을 작성해주세요" required>
-        </div>
-    </div>
 
-    <!-- 사진첨부 -->
-    <div class="Post_Img">
-        <p class="imgtext" >사진 첨부</p>
-        <input type="file" class="real-upload" accept="image/*" required multiple>
-        <img class="upload" src="Write_upload.png"></img>
-        <div class="image-preview"></div>
-        <div class="image-preview"></div>
-        <div class="image-preview"></div>
-        <script>
-            function getImageFiles(e) {
-                const uploadFiles =  [];
-                const files = e.currentTarget.files;
-                const imagePreview = document.querySelector('.image-preview');
-                const docFrag = new DocumentFragment();
+        <!-- 사진첨부 -->
+        <div class="Post_Img">
+            <p class="imgtext" >사진 첨부</p>
+            <input type="file" id="img" name="img" class="real-upload" accept="image/*" required multiple>
+            <img class="upload" src="Write_upload.png"></img>
+            <div class="image-preview"></div>
+            <div class="image-preview"></div>
+            <div class="image-preview"></div>
+            <script>
+                function getImageFiles(e) {
+                    const uploadFiles =  [];
+                    const files = e.currentTarget.files;
+                    const imagePreview = document.querySelector('.image-preview');
+                    const docFrag = new DocumentFragment();
 
-                if ([...files].length >= 3) {
-                    alert('이미지는 최대 2개 까지 업로드가 가능합니다.');
-                    return;
-                }
-
-                // 파일 타입 검사
-                [...files].forEach(file => {
-                    if (!file.type.match("image/.*")) {
-                        alert('이미지 파일만 업로드가 가능합니다.');
+                    if ([...files].length >= 3) {
+                        alert('이미지는 최대 2개 까지 업로드가 가능합니다.');
                         return;
                     }
 
-                    // 파일 갯수 검사
-                    if ([...files].length < 3) {
-                        uploadFiles.push(file);
-                        const reader = new FileReader();
-                        reader.onload = (e) => {
-                            const preview = createElement(e, file);
-                            imagePreview.appendChild(preview);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                });
-            }
+                    // 파일 타입 검사
+                    [...files].forEach(file => {
+                        if (!file.type.match("image/.*")) {
+                            alert('이미지 파일만 업로드가 가능합니다.');
+                            return;
+                        }
 
-            function createElement(e, file) {
-                const li = document.createElement('li');
-                const img = document.createElement('img');
-                img.setAttribute('src', e.target.result);
-                img.setAttribute('data-file', file.name);
-                li.appendChild(img);
+                        // 파일 갯수 검사
+                        if ([...files].length < 3) {
+                            uploadFiles.push(file);
+                            const reader = new FileReader();
+                            reader.onload = (e) => {
+                                const preview = createElement(e, file);
+                                imagePreview.appendChild(preview);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                }
 
-                return li;
-            }
+                function createElement(e, file) {
+                    const li = document.createElement('li');
+                    const img = document.createElement('img');
+                    img.setAttribute('src', e.target.result);
+                    img.setAttribute('data-file', file.name);
+                    li.appendChild(img);
 
-            const realUpload = document.querySelector('.real-upload');
-            const upload = document.querySelector('.upload');
+                    return li;
+                }
 
-            upload.addEventListener('click', () => realUpload.click());
+                const realUpload = document.querySelector('.real-upload');
+                const upload = document.querySelector('.upload');
 
-            realUpload.addEventListener('change', getImageFiles);
-        </script>
-    </div>
+                upload.addEventListener('click', () => realUpload.click());
 
-    <!-- 버튼 -->
-    <div>
-        <button type="submit" class="post_btn">게시</button>
-    </div>
+                realUpload.addEventListener('change', getImageFiles);
+            </script>
+        </div>
 
+        <!-- 버튼 -->
+        <div>
+            <button type="submit" class="post_btn">게시</button>
+        </div>
+    </form>
     <footer id="footer"></footer>
 </body>
 

@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //router 사용
 const guestRouter = require('./server/route/guest');
-
+const writeRouter = require('./server/route/write');
 
 app.get('/', (req, res) => {
     res.render('index', {});
@@ -37,10 +37,7 @@ app.get('/gallery', (req, res) => {
 
 });
 
-app.get('/write', (req, res) => {
-  res.render('Post_Write', {});
-
-});
+app.use('/write', writeRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
