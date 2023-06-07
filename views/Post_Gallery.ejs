@@ -48,16 +48,16 @@
 
     <div class="swiper-container" id="ranking">
         <ul class="swiper-wrapper" id="slides">
-            <% for(let i=0; i < data.length; i++) { %>
+            <% for(let i=0; i < data1.length; i++) { %>
                 <li class="swiper-slide">
                     <a href="">
                         <div class="numberRectangle">
                             <%= i + 1 %>
                         </div>
-                        <img src="<%= data[i].mimage %>" alt=""/>
+                        <img src="<%= data1[i].mimage %>" alt=""/>
                         <div class="preview">
-                            <p class="title"><%= data[i].title %></p>
-                            <p class="detail"><%= data[i].content %></p>
+                            <p class="title"><%= data1[i].title %></p>
+                            <p class="detail"><%= data1[i].content %></p>
                         </div>
                     </a>
                 </li>
@@ -85,20 +85,22 @@
             const galleryContainer = document.querySelector('.postGallery');
 
             if (window.innerWidth <= 390) {
-                for (let i = 1; i <= 23; i++) {  //배열로
-                    if (i % 3 == 0) {
+                "<% for (let i = 0; i < data2.length; i++) { %>" //배열로
+                    var img = "<%= data2[i].mimage %>";
+                    var tit = "<%= data2[i].title %>";
+                    var cont = "<%= data2[i].content %>";
+
+                    if ((parseInt("<%= i %>")+1) % 3 == 0) {
                         const itemLarge = document.createElement('div');
                         itemLarge.classList.add('itemLarge');
 
                         itemLarge.innerHTML = `
                       <a href="">
                         <figure>
-                          <img src="" alt="">
+                          <img src="${img}" alt="">
                           <figcaption>
-                            <div class="title">생애 첫 비행기의 기억</div>
-                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                            <div class="title">${tit}</div>
+                            <div class="detail">${cont}</div>
                           </figcaption>
                         </figure>
                       </a>
@@ -111,25 +113,27 @@
                         item.innerHTML = `
                       <a href="">
                         <figure>
-                          <img src="" alt="">
+                          <img src="${img}" alt="">
                           <figcaption>
-                            <div class="title">생애 첫 비행기의 기억</div>
-                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                            <div class="title">${tit}</div>
+                            <div class="detail">${cont}</div>
                           </figcaption>
                         </figure>
                       </a>
                     `;
                         galleryContainer.appendChild(item);
                     }
-                }
+                "<% } %>"
             } else {
                 let index = -4;
                 let plus = 6;
 
-                for (let i = 1; i <= 22; i++) {  //배열로
-                    if (i == index + plus) {
+                "<% for (let i = 0; i <data2.length; i++) { %>" //배열로
+                    var img = "<%= data2[i].mimage %>";
+                    var tit = "<%= data2[i].title %>";
+                    var cont = "<%= data2[i].content %>";
+
+                    if (parseInt("<%= i %>")+1 == index + plus) {
                         if (plus == 6) {
                             plus = 4;
                         } else if (plus == 4) {
@@ -142,12 +146,10 @@
                         itemLarge.innerHTML = `
                       <a href="">
                         <figure>
-                          <img src="" alt="">
+                          <img src="${img}" alt="">
                           <figcaption>
-                            <div class="title">생애 첫 비행기의 기억</div>
-                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                            <div class="title">${tit}</div>
+                            <div class="detail">${cont}</div>
                           </figcaption>
                         </figure>
                       </a>
@@ -155,7 +157,7 @@
 
                         galleryContainer.appendChild(itemLarge);
 
-                        index = i;
+                        index = parseInt("<%= i %>")+1;
                     } else {
                         const item = document.createElement('div');
                         item.classList.add('item');
@@ -163,12 +165,10 @@
                         item.innerHTML = `
                       <a href="">
                         <figure>
-                          <img src="" alt="">
+                          <img src="${img}" alt="">
                           <figcaption>
-                            <div class="title">생애 첫 비행기의 기억</div>
-                            <div class="detail">그 때는 제가 처음 가족들과 여행을 갔던 때였어요.<br>
-                              번아웃이 와서 정말 힘들었었는데, 언니가 직접 표를 끊고
-                              같이 여행이나 가자고 한 게 시작이었어요...</div>
+                            <div class="title">${tit}</div>
+                            <div class="detail">${cont}</div>
                           </figcaption>
                         </figure>
                       </a>
@@ -176,7 +176,7 @@
 
                         galleryContainer.appendChild(item);
                     }
-                }
+                "<% } %>"
             }
 
             var status; //추가할 개수 임시 판별 변수
