@@ -50,7 +50,7 @@
         <ul class="swiper-wrapper" id="slides">
             <% for(let i=0; i < data1.length; i++) { %>
                 <li class="swiper-slide">
-                    <a href="">
+                    <a href="/details/<%= data1[i].boardId %>">
                         <div class="numberRectangle">
                             <%= i + 1 %>
                         </div>
@@ -86,6 +86,7 @@
 
             if (window.innerWidth <= 390) {
                 "<% for (let i = 0; i < data2.length; i++) { %>" //배열로
+                    var idx = "<%= data2[i].boardId %>";
                     var img = "<%= data2[i].mimage %>";
                     var tit = "<%= data2[i].title %>";
                     var cont = "<%= data2[i].content %>";
@@ -95,7 +96,7 @@
                         itemLarge.classList.add('itemLarge');
 
                         itemLarge.innerHTML = `
-                      <a href="">
+                      <a href="/details/${idx}">
                         <figure>
                           <img src="${img}" alt="">
                           <figcaption>
@@ -111,7 +112,7 @@
                         item.classList.add('item');
 
                         item.innerHTML = `
-                      <a href="">
+                      <a href="/details/${idx}">
                         <figure>
                           <img src="${img}" alt="">
                           <figcaption>
@@ -129,6 +130,7 @@
                 let plus = 6;
 
                 "<% for (let i = 0; i <data2.length; i++) { %>" //배열로
+                    var idx = "<%= data2[i].boardId %>";
                     var img = "<%= data2[i].mimage %>";
                     var tit = "<%= data2[i].title %>";
                     var cont = "<%= data2[i].content %>";
@@ -144,7 +146,7 @@
                         itemLarge.classList.add('itemLarge');
 
                         itemLarge.innerHTML = `
-                      <a href="">
+                      <a href="/details/${idx}">
                         <figure>
                           <img src="${img}" alt="">
                           <figcaption>
@@ -163,7 +165,7 @@
                         item.classList.add('item');
 
                         item.innerHTML = `
-                      <a href="">
+                      <a href="/details/${idx}">
                         <figure>
                           <img src="${img}" alt="">
                           <figcaption>

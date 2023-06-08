@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const guestRouter = require('./server/route/guest');
 const writeRouter = require('./server/route/write');
 const galleryRouter = require('./server/route/gallery');
+const detailsRouter = require('./server/route/detail');
 
 app.get('/', (req, res) => {
     res.render('index', {});
@@ -27,11 +28,7 @@ app.get('/', (req, res) => {
 
 app.use('/guest', guestRouter);
 
-
-app.get('/details', (req, res) => {
-  res.render('Post_Details', {});
-
-});
+app.use('/details', detailsRouter);
 
 app.use('/gallery', galleryRouter);
 
