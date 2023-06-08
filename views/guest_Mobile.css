@@ -1,36 +1,56 @@
 /* body */
-@media(max-width:390px) {
+@media(max-width:414px) {
 	body {
 		background-color: #f2f2f2;
 		padding-bottom: 10%;
 	}
 }
 
-	@media(max-width:390px){
+	@media(max-width:414px){
 		.form-group-1 {
-			margin-top: 10%;
+			margin-top: 30%;
 			margin-bottom: 50px;
 		}
 	}
-	@media(max-width:390px){
+	@media(max-width:414px){
 		.form-group {
 			margin-right: 5svh;
 			margin-bottom: 3svh;
 		}
 	}
 
+/* comment */
+@media(max-width:414px) {
+    .line {
+        position: absolute;
+        width: 9.5svh;
+        height: 0px;
+        margin-left: 3svh;
+        top: 12svh;
 
-/* comment h2 */
-	@media(max-width:390px){
-		h2 {
-			position: absolute;
-			top: 120px;
-			text-decoration-line: overline;
-			font-family: 'Pretendard';
-		}
-	}
+        border: 0.5px solid #424242;
+    }
+}
 
-@media(max-width:390px) {
+@media(max-width:414px) {
+    .rankingTitle {
+        position: absolute;
+        width: 9.5svh;
+        height: 26px;
+        margin-left: 3svh;
+        top: 13svh;
+
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+
+        color: #424242;
+    }
+}
+
+@media(max-width:414px) {
 	.form-group-2 { /* 흰 배경 */
 		margin-left: 3svh;
 		width: 	40svh;
@@ -45,7 +65,8 @@
 	}
 }
 
-@media(max-width:390px) {
+
+@media(max-width:414px) {
 	.form-group-2 input[type="text"], .form-group-2 textarea { /* 텍스트 */
 		padding: 10px;
 		border: 0px solid #ccc;
@@ -55,7 +76,7 @@
 }
 
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 	.form-group-2 textarea { /* 텍스트 사이즈 */
 		width: 	40svh;
 		height: 11svh;
@@ -64,7 +85,7 @@
 	}
 }
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 	.write { /* 흰 배경 */
 		margin-left: 3svh;
 		width: 	40svh;
@@ -80,7 +101,7 @@
 	}
 }
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 	.write input[type="text"], .write textarea { /* 텍스트 */
 		width: 	40svh;
 		height: 16svh;
@@ -92,7 +113,7 @@
 }
 
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 	.write textarea { /* 텍스트 사이즈 */
 		width: 	40svh;
 		height: 16svh;
@@ -102,7 +123,7 @@
 }
 
 /* button */
-@media(max-width:390px) {
+@media(max-width:414px) {
 	.write .submit-button {
 		background-color: rgba(124, 124, 124, 0);
 		color: #979797;
@@ -114,7 +135,7 @@
 }
 
 /* button 위치 */
-@media(max-width:390px) {
+@media(max-width:414px) {
     .write .submit-button-container { /* 수정된 부분 */
         position: absolute;
         bottom: 10px;
@@ -124,32 +145,32 @@
 }
 
 /* navbar */
-@media(max-width:390px) {
+@media(max-width:414px) {
 .navbar-nav {
 	margin-left: auto;
 	font-family: 'Pretendard';
 	text-align: right;
    }
 }
-@media(max-width:390px) {
+@media(max-width:414px) {
  .navbar-collapse {
    margin-right: 5%;
  }
 }
-@media(max-width:390px) {
+@media(max-width:414px) {
    .nav-link {
 	margin-right: 2svh;
 	/* margin-left: 50px; */
 	font-family: 'Pretendard';
  }
 }
-@media(max-width:390px) {
+@media(max-width:414px) {
  .navbar-brand {
 	margin-left: 2svh;
  }
 }
 
-@media(max-width:390px){
+@media(max-width:414px){
  .navbar-toggler {
 	margin-right: 2svh;
  }
@@ -158,20 +179,20 @@
 
 
 /* 페이지 선택바 */
-@media(max-width:390px) {
+@media(max-width:414px) {
  .pagination-container {
     display: flex;
     justify-content: center;
 }
 }
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 .pagination li.page-item a.page-link {
     border: none;
 }
 }
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 .pagination li.page-item a.page-link {
     background-color: transparent;
     text-decoration: none;
@@ -180,7 +201,7 @@
 }
 }
 
-@media(max-width:390px) {
+@media(max-width:414px) {
 .pagination li.page-item.active a.page-link,
 .pagination li.page-item a.page-link:hover,
 .pagination li.page-item a.page-link:focus,

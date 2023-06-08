@@ -8,60 +8,52 @@
 	@media(min-width:479px){
 		.form-group-1 {
 			text-align: center;
-			margin-top: 10%;
+			margin-top: 50%;
 			margin: 10%;
 			margin-bottom: 50px;
 		}
 	}
 
-/* comment h2 */
 	@media(min-width:479px){
-		h2 {
-			position: absolute;
-			top: 120px;
-			margin-left: 7.3%;
-			text-decoration-line: overline;
-			font-family: 'Pretendard';
+		.every {
+			text-align: center;
+			margin-top: 15%;
 		}
 	}
 
-	
-/* @media(min-width:479px) {
-	.write { 흰 배경
-		margin-left: 30px;
-		width: 	300px;
-		height: 300px;
-		padding: 20px;
-		background-color: #fff;
-		border-radius: 5px;	
-		display: inline-block;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-		margin-bottom: 30px;
-		text-align: center;
-		font-family: 'Pretendard';
-	}
-} */
+/* 줄 */
+@media(min-width:479px){
+.line {
+    position: absolute;
+    width: 120px;
+    height: 0%;
+    margin-left: 16.6%;
+    top: 170px;
 
-/* @media(min-width:480px) {
-	.write input[type="text"], .write textarea { 텍스트
-		width: 300px;
-		height: 300px;
-		padding: 10px;
-		border: 0px solid #ccc;
-		box-sizing: border-box;
-		resize: none;
-		font-family: 'Pretendard';
-	}
-} */
-
-/* @media(min-width:479px) {
-	.write textarea { 텍스트 사이즈
-		width: 260px;
-		height: 210px;
-		font-size: 16px;
-	}
+    border: 1px solid #424242;
 }
-	 */
+}
+
+
+/* 순위 제목 */
+@media(min-width:479px){
+.rankingTitle {
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin-left: 16.6%;
+    top: 186px;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+
+    color: #424242;
+}
+}
+
 
 @media(min-width:479px) {
 	.form-group { /* 흰 배경 */
