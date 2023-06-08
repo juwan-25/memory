@@ -32,8 +32,8 @@
             <div class="navbar-nav">
               <a class="nav-link" href="#">HOME</a>
               <a class="nav-link" href="#">ABOUT</a>
-              <a class="nav-link" href="gallery">MEMORY</a>
-              <a class="nav-link" href="guest">COMMENT</a>
+              <a class="nav-link" href="/gallery">MEMORY</a>
+              <a class="nav-link" href="/guest">COMMENT</a>
             </div>
           </div>
         </div>
@@ -42,12 +42,12 @@
 
     <main>
       <hr style="color: #464646; border: 2px solid" id="title_line1"/>
-      <div class="title" style="font-size: 20px;"><%= data[0]?.title %></div>
+      <div class="title" style="font-size: 20px;"><%= data1[0]?.title %></div>
       <hr style="color: #e0e0e0; border: 1px solid" />
 
       <!-- 글 내용 -->
       <div class="detail_content" style="font-size: 16px;">
-        <%= data[0]?.content %>
+        <%= data1[0]?.content %>
       </div>
       
       <div class="modal">
@@ -56,13 +56,13 @@
       </div>
 
       <div id="container">
-        <button id="btn-modal"><img src="<%= data[0]?.mimage %>" width="100%" height="20.93%" class="img"></button>
+        <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="img"></button>
         <div id="lorem-ipsum"></div>
     </div>
 
     <div id="modal" class="modal-overlay">
         <div class="content">
-          <img src="<%= data[0]?.mimage %>" width="100%" height="20.93%" class="modal_img">
+          <img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="modal_img">
         </div>
     </div>
 
@@ -86,7 +86,8 @@
 
       <!-- 댓글 -->
       <div>
-        <form class="comment_enter"
+        <form method="post" action="/details/<%= data1[0]?.boardId %>/insert">
+        <div class="comment_enter" 
           style="
             margin-top: 80px;
             border: 1px solid;
@@ -94,9 +95,8 @@
             border-radius: 5px;
             color: #f1f1f1;
             box-shadow: 1px 1px 2px 2px #f1f1f1;
-          "
-        >
-          <input class="nickname" type="text" placeholder="닉네임" /><br />
+          ">
+          <input class="nickname" type="text" id="name" name="name" placeholder="닉네임" /><br />
           <hr
             style="
               background-color: #f1f1f1;
@@ -108,26 +108,26 @@
           <input
             class="comment_content"
             type="text"
+            id="content" 
+            name="content" 
             placeholder="내용을 작성주세요"
           />
+          </div>
+          <button class="enter_btn"><font color="#BABABA">등록</font></button>
         </form>
-
-        <button class="enter_btn"><font color="#BABABA">등록</font></button>
       </div>
       <br />
 
       <!-- 등록된 댓글 -->
+      <% for(let i=0;i<data2.length;i++){ %>
       <div class="e_comment">
-        <div class="e_nickname">안녕하세요</div>
+        <div class="e_nickname"><%= data2[i].writer %></div>
         <hr style="color: #f1f1f1; border: 1px solid" />
         <div class="e_content">
-          우와 너무 부럽다~ 우와 너무 부럽다~ 우와 너무 부럽다~ 우와 너무
-          부럽다~ 우와 너무 부럽다~ 우와 너무 부럽다~ 우와 너무 부럽다~ 우와
-          너무 부럽다~ 우와 너무 부럽다~ 우와 너무 부럽다~ 우와 너무 부럽다~
-          우와 너무 부럽다~ 우와 너무 부럽다~ 우와 너무 부럽다~ 우와 너무
-          부럽다~ 우와 너무 부럽다~
+          <%= data2[i].content %>
         </div>
       </div>
+      <% } %>
     </main>
 
     <footer
