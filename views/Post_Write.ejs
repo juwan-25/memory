@@ -36,11 +36,11 @@
     <form action="/write/insert" method="post" enctype="multipart/form-data">
         <div class="Post_Write">
             <div class="Po_outer">
-                <input type="text" id="title" name="title" placeholder="제목을 작성해주세요." required>
+                <input type="text" id="title" name="title" placeholder="제목을 작성해주세요. " required>
             </div>
             <br />
             <div class="Po_outer">
-                <input type="text" id="content" name="content" placeholder="내용을 작성해주세요" required>
+                <textarea id="content" name="content" cols="50" rows="10" placeholder="내용을 작성해주세요. " required></textarea>
             </div>
         </div>
 
@@ -49,9 +49,8 @@
             <p class="imgtext" >사진 첨부</p>
             <input type="file" id="img" name="img" class="real-upload" accept="image/*" required multiple>
             <img class="upload" src="Write_upload.png"></img>
-            <div class="image-preview"></div>
-            <div class="image-preview"></div>
-            <div class="image-preview"></div>
+            <ul class="image-preview"></ul>
+        
             <script>
                 function getImageFiles(e) {
                     const uploadFiles =  [];
