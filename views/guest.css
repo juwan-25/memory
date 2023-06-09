@@ -172,6 +172,16 @@
  }
 }
 
+@media(min-width:479px) {
+	.closep {
+		display: none;
+	}
+
+	.closeclose {
+		display: none;
+	}
+}
+
 /* 페이지 선택바 */
 @media(min-width:479px) {
  .pagination-container {
