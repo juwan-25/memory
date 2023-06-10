@@ -266,3 +266,9 @@
 		/* 클릭 시 테두리 제거 */
 	}
 }
+
+@media(max-width:414px){
+	.footer {
+		display: none;
+	}
+}
