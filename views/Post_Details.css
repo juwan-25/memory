@@ -4,16 +4,39 @@ header {
 }
 
 /* navbar */
-.navbar-nav {
-  margin-left: auto;
-  font-family: "Pretendard";
-}
-
-.nav-link {
-  margin-right: 100px;
-  margin-left: 50px;
-  font-family: "Pretendard";
-}
+@media(min-width:479px) {
+  .navbar-nav {
+    margin-left: auto;
+    font-family: 'Pretendard';
+     }
+  }
+  @media(min-width:479px) {
+   .navbar-collapse {
+     margin-right: 10%;
+   }
+  }
+  @media(min-width:479px) {
+     .nav-link {
+    margin-right: 100px;
+    margin-left: 50px;
+    font-family: 'Pretendard';
+   }
+  }
+  @media(min-width:479px) {
+   .navbar-brand {
+    margin-left: 17%;
+   }
+  }
+  
+  @media(min-width:479px) {
+    .closep {
+      display: none;
+    }
+  
+    .closeclose {
+      display: none;
+    }
+  }
 /* .navbar-brand {
   margin-left: 7%;
 } */
@@ -227,4 +250,58 @@ input::placeholder {
   background-color: #ffffff;
   color: #c2c2c2;
   margin-left: 5px;
+}
+
+/* 푸터 */
+#footer {
+  position: relative;
+  transform: translatY(100%);
+margin-top: 5%;
+  height: 213px;
+
+  background: #F6F6FA;
+}
+
+@media(min-width:479px) {
+.logo-bottom {
+  width: 3%; /* 원하는 너비 값으로 변경 */
+  height: 3%; /* 높이는 자동으로 조정됨 */
+  margin-left: 18.5%;
+  margin-top: 2%;
+}
+
+
+.navbar-nav-bottom {
+margin-left: auto;
+font-family: 'Pretendard';
+float: right;
+margin-right: 10%;
+margin-top: 2%;
+ }
+
+ .nav-link-b {
+margin-right: 100px;
+margin-left: 50px;
+font-family: 'Pretendard';
+  color: #676769b9;
+  text-decoration: none;
+}
+
+.line-bottom {
+width: 67%;
+margin-left: 18%;
+margin-top: 1%;
+border: 1px solid #67676930;
+}
+
+.nav-link-b-b {
+margin-left: 18.5%;
+font-family: 'Pretendard';
+color: #676769ac;
+text-decoration: none;
+}
+
+.navbar-bottom-bottom{
+margin-top: 1%;
+}
 }
