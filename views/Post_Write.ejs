@@ -11,6 +11,17 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="Post_Write.css">
     <link rel="stylesheet" href="Post_Write_Mobile.css">
+    <script>
+		document.addEventListener("DOMContentLoaded", function () {
+			var closeButton = document.querySelector(".closep");
+			var navbarCollapse = document.querySelector(".navbar-collapse");
+
+			closeButton.addEventListener("click", function () {
+				navbarCollapse.classList.toggle("show");
+			});
+		});
+
+	</script>
     <title>게시물 작성 페이지</title>
 </head>
 
