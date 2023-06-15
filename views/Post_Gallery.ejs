@@ -88,22 +88,58 @@
     <script>
         //화면 크기 변경 시 새로고침 해야 됨
         new Swiper('#ranking', {
-            slidesPerView: window.innerWidth <= 390 ? 1.17 : 4,
+            slidesPerView: window.innerWidth <= 479 ? 1.5 : 4,
             freeMode: true, // 스냅 이동 효과 비활성화
             pagination: {
                 clickable: true,
             }
         });
-
-
     </script>
 
     <div class="galleryTitle">· 기억 저장소 ·</div>
+    <div class="addMemory"></div>
+    <script>
+        var addButton = document.querySelector('.addMemory');
+
+        if (window.innerWidth > 479) {  //PC화면에서의 설정
+            window.onscroll = function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > 100) { // 스크롤이 일정 위치 이상 내려갔을 때
+                    addButton.style.position = 'fixed';
+                    addButton.style.bottom = '30px';
+                } else {
+                    addButton.style.position = 'absolute';
+                    addButton.style.bottom = '-78px';
+                }
+            }
+        } else {    //모바일 화면에서의 설정
+            window.onscroll = function () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > 0.01) {
+                    addButton.style.position = 'fixed';
+                    addButton.style.bottom = '30px';
+                } else {
+                    addButton.style.position = 'absolute';
+                    addButton.style.bottom = '-78px';
+                }
+            }
+        }
+        addButton.addEventListener('mouseover', function () {
+            this.classList.add('hovered');
+        });
+
+        addButton.addEventListener('mouseout', function () {
+            this.classList.remove('hovered');
+        });
+    </script>
+
     <div class="postGallery">
         <script>
             const galleryContainer = document.querySelector('.postGallery');
 
-            if (window.innerWidth <= 390) {
+            if (window.innerWidth <= 479) {
                 "<% for (let i = 0; i < data2.length; i++) { %>" //배열로
                     var idx = "<%= data2[i].boardId %>";
                     var img = "<%= data2[i].mimage %>";
@@ -204,7 +240,7 @@
             var add = 0;    //index에 추가할 개수
             var totalElements = $(".postGallery>div").length;   //div 총 개수
 
-            if (window.innerWidth <= 390) {
+            if (window.innerWidth <= 479) {
                 index = 8;
                 status = 1;
             } else {
