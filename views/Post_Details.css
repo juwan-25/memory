@@ -345,51 +345,52 @@ input::placeholder {
 #footer {
   position: relative;
   transform: translatY(100%);
-  margin-top: 5%;
+margin-top: 5%;
   height: 213px;
 
-  background: #f6f6fa;
+  background: #F6F6FA;
 }
 
-@media (max-width: 530px) {
-  .logo-bottom {
-    width: 3%; /* 원하는 너비 값으로 변경 */
-    height: 3%; /* 높이는 자동으로 조정됨 */
-    margin-left: 18.5%;
-    margin-top: 2%;
-  }
+@media(min-width:479px) {
+.logo-bottom {
+  width: 3%; /* 원하는 너비 값으로 변경 */
+  height: 3%; /* 높이는 자동으로 조정됨 */
+  margin-left: 18.5%;
+  margin-top: 2%;
+}
 
-  .navbar-nav-bottom {
-    margin-left: auto;
-    font-family: "Pretendard";
-    float: right;
-    margin-right: 10%;
-    margin-top: 2%;
-  }
 
-  .nav-link-b {
-    margin-right: 100px;
-    margin-left: 50px;
-    font-family: "Pretendard";
-    color: #676769b9;
-    text-decoration: none;
-  }
+.navbar-nav-bottom {
+margin-left: auto;
+font-family: 'Pretendard';
+float: right;
+margin-right: 10%;
+margin-top: 2%;
+ }
 
-  .line-bottom {
-    width: 67%;
-    margin-left: 18%;
-    margin-top: 1%;
-    border: 1px solid #67676930;
-  }
+ .nav-link-b {
+margin-right: 100px;
+margin-left: 50px;
+font-family: 'Pretendard';
+  color: #676769b9;
+  text-decoration: none;
+}
 
-  .nav-link-b-b {
-    margin-left: 18.5%;
-    font-family: "Pretendard";
-    color: #676769ac;
-    text-decoration: none;
-  }
+.line-bottom {
+width: 67%;
+margin-left: 18%;
+margin-top: 1%;
+border: 1px solid #67676930;
+}
 
-  .navbar-bottom-bottom {
-    margin-top: 1%;
-  }
+.nav-link-b-b {
+margin-left: 18.5%;
+font-family: 'Pretendard';
+color: #676769ac;
+text-decoration: none;
+}
+
+.navbar-bottom-bottom{
+margin-top: 1%;
+}
 }
