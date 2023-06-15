@@ -1,4 +1,4 @@
-@media(max-width:390px) {
+@media(max-width:479px) {
 	/* navbar  다 복사해주세요*/
 	.navbar {
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -80,7 +80,7 @@
 		right: 0%;
 	}
 }
-@media(max-width:390px) {
+@media(max-width:479px) {
     .line {
         position: absolute;
         width: 112px;
@@ -92,7 +92,7 @@
     }
 }
 
-@media(max-width:390px) {
+@media(max-width:479px) {
     .rankingTitle {
         position: absolute;
         width: 112px;
@@ -111,7 +111,7 @@
 }
 
 /* 게시판 순위 */
-@media(max-width:390px) {
+@media(max-width:479px) {
     #ranking {
         position: relative;
         width: 100%;
@@ -216,16 +216,15 @@
     }
 }
 
-@media(max-width:390px) {
+@media(max-width:479px) {
     /* 갤러리 제목 */
     .galleryTitle {
         position: absolute;
         width: 94px;
         height: 28px;
-        left: 133px;
-        /* left: 143px; */
+        /* left: 133px; */
+        left: 40%;
         top: 476px;
-        /* top: 476px; */
 
         margin: 0;
 
@@ -245,15 +244,53 @@
     }
 }
 
-@media(max-width:390px) {
+@media(max-width:479px) {
+
+    /* 게시물 추가 */
+    .addMemory {
+        position: fixed;
+        width: 46px;
+        height: 46px;
+        right: 10%;
+        top: 682px;
+        z-index: 100;
+
+        margin-top: 0;
+
+        background: #FBFBFD;
+        box-shadow: 8px 8px 12px rgba(174, 174, 192, 0.4);
+        border-radius: 200px;
+
+        pointer-events: none;
+
+        cursor: pointer;
+    }
+
+    .addMemory::before {
+        content: "+";
+        font-size: 30px;
+        font-weight: 400;
+
+        position: absolute;
+        left: 27%;
+        bottom: 7%;
+        /* bottom: 20.83%; */
+        /* transform: translate(-50%, -54%); */
+
+        color: #363636;
+    }
+}
+
+@media(max-width:479px) {
 
     /* 게시판 갤러리 */
     .postGallery {
         position: relative;
         /* width: 328px; */
-        width: 80%;
+        width: 92%;
 
         left: 16px;
+        right: 16px;
         top: 358px;
 
         margin-top: 0;
@@ -262,18 +299,20 @@
         margin-bottom: 500px;
 
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
         gap: 8px;
     }
 
     .postGallery .item {
-        width: 160px;
+        /* width: 160px; */
+        width: 100%;
         margin: 0;
     }
 
     .postGallery .itemLarge {
         grid-column: span 2;
-        width: 328px;
+        /* width: 328px; */
+        width: 100%;
         margin: 0;
     }
 
@@ -412,7 +451,7 @@
     }
 }
 
-@media(max-width:390px) {
+@media(max-width:479px) {
 
     /* 더보기 버튼 */
     .more {
@@ -422,7 +461,7 @@
         width: 77px;
         height: 40px;
         bottom: -50px;
-        margin-left: 127px;
+        margin-left: 41%;
         
         border: 1px solid #D4D4D4;
         border-radius: 4px;

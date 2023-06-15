@@ -201,6 +201,73 @@ body::-webkit-scrollbar {
     color: #000000;
 }
 
+/* 게시물 추가 */
+.addMemory {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    /* left: 1630px; */
+    left: 86%;
+    /* right: 210px; */
+    /* right: 9%; */
+    margin-top: 910px;
+    z-index: 100;
+
+    background: #FBFBFD;
+    box-shadow: 8px 8px 12px rgba(174, 174, 192, 0.4);
+    border-radius: 200px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.addMemory::before {
+    content: "+";
+    font-size: 42px;
+    font-weight: 500;
+    /* transform: translate(-50%, -54%); */
+
+    position: absolute;
+    bottom: 12px;
+    left: 27px;
+
+    color: #363636;
+}
+
+.addMemory:hover {
+    /* transform: translateX(71%); */
+    width: 242px;
+    height: 80px;
+    box-shadow: 8px 8px 12px rgba(174, 174, 192, 0.4);
+    border-radius: 40px;
+}
+
+.addMemory:hover::before {
+    content: "+";
+    font-size: 42px;
+    font-weight: 500;
+    left: 27px;
+    /* transform: translate(-325%, -54%); */
+    /* transition: none; */
+    /* transition: all 0.2s ease; */
+}
+
+.addMemory.hovered::after {
+    content: " add memory";
+    white-space: nowrap;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 500;
+
+    position: absolute;
+
+    left: calc(30%); /* + 다음에 추가되는 텍스트의 위치 */
+    transform: translateY(60%);
+}
+
+
 /* 게시판 갤러리 */
 .postGallery {
     position: relative;
