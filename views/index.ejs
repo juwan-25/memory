@@ -7,6 +7,7 @@
     <title>MEMORY</title> 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index_Mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Pretendard 폰트 -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
@@ -31,9 +32,9 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg">
+	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"> <img src="imgs/main_lg.png"></a>
+			<a class="navbar-brand" href="/"> <img src="imgs/main_lg.png"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
 				style="border:none">
@@ -45,53 +46,78 @@
 							style="width: 2svh; height: 2svh; display: flex;"></button>
 				</div>
 				<div class="navbar-nav">
-					<a class="nav-link" href="#">HOME</a>
+					<a class="nav-link" href="/">HOME</a>
 					<!-- <a class="nav-link" href="#">ABOUT</a> -->
-					<a class="nav-link" href="gallery">MEMORY</a>
-					<a class="nav-link" href="guest">COMMENT</a>
+					<a class="nav-link" href="/gallery">MEMORY</a>
+					<a class="nav-link" href="/guest">COMMENT</a>
 				</div>
 			</div>
 		</div>
 	</nav>
+
     <!-- navbar -->
 
     <!-- content -->
     <div class="content">
+        <img src="./imgs/back.png" class="backgorund"/>
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
+
+                <!-- 메인 텍스트 변수 -->
+                <% let arr = [['W','A','T','E','R','G','U','N',' ','G','A','M','E'], 
+                    ['C','L','A','S','S','I','C','A','L',' ','C','O','N','C','E','R','T'],
+                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
+                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
+                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
+                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
+                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E']];%>
+
                 <% for(let i=0; i<7; i++) { %>
                 <div class="swiper-slide">
-                    <img class="back" src="./imgs/back.png" />
-
-                    <p class="sub_txt1">
+                    <!-- 배경 3D 비디오 -->
+                    <video class="video" autoplay loop muted playsinline preload="auto">
+                        <source src="./video/test_video.mp4" type="video/mp4">
+                     </video>
+                    
+                     <p class="sub_txt1">
                         미림인의 낭만이 모인<br>
                         기억 전시 바로가기
                     </p>
+                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    
                     <p class="sub_txt2">
                         MSG 동아리 부원들이<br>
                         학교에서 모은 소중한 기억들
-                    </p>
-                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    </p>            
+                    
+                    <span class="main_txt">
+                        <% for(let j=0; j<arr[i].length; j++) { %>
+                            <%if(arr[i][j]==' ') {%>
+                                <br>
+                            <% } else {%>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[i][j] %></span>
+                            <% }%>
+                        <% }%>
+                    </span>
+
                     <p class="num_txt1">
                         0<%= i+1 %>
                     </p>
                     <p class="num_txt2">
                         07
                     </p>
-                    <p class="main_txt">
-                        WATERGUN <br>
-                        GAME
-                    </p>
+
                     <img src="./imgs/play_btn.png" class="btn_pause"/>
                 </div>
                 <% } %>
             </div>
 
-            <!-- If we need scrollbar -->
+            <!-- swiper scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
+
     </div>
     <!-- content -->    
 
@@ -123,9 +149,11 @@
             slideToClickedSlide : true,
             allowTouchMove : true,
             mousewheel: true,
+            speed : 1000,
+            threshold:100,
 
             autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-                delay : 3000,   // 시간 설정
+                delay : 11000,   // 시간 설정
                 disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
             },
 
@@ -134,7 +162,19 @@
                 draggable: true,
                 clickable: true,
             },
+            
+            
+            on :{
+                slideChange: function(){
+                    var target = $('.animate__animated');
+
+                    target.removeClass("animate__fadeInUp"),
+                    void target.outerWidth(),
+                    target.addClass("animate__fadeInUp");
+                }
+            },
         });
+
 
         var sw = 0;
         $('.btn_pause').click(function(){
