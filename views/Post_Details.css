@@ -132,7 +132,7 @@ main {
 }
 
 .modal_img {
-  margin: 6.81% 0% 67.54% 0%;
+  /* margin: 6.81% 0% 67.54% 0%; */
 }
 
 #btn-modal {
@@ -142,49 +142,15 @@ main {
   height: 20.93%;
 }
 
-/* 이미지 슬라이드 */
+#container {
+  width: 100%;
+}
 
-/* li {
-  list-style: none;
+.write_img {
+  width: 100%;
 }
-.kind_wrap {
-  border: 2px solid black;
-  width: 50%;
-  max-width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  white-space: nowrap;
-  cursor: pointer;
-}
-.kind_wrap > .kind_slider {
-  overflow: hidden;
-}
-.kind_wrap > .kind_slider .slider {
-  position: relative;
- 
-}
-.kind_wrap > .kind_slider .slider li {
-  float: left;
-}
-.kind_wrap > .kind_slider img {
-  vertical-align: top;
-}
-.kind_wrap .arrow > a.prev {
-  position: absolute;
-  left: -10%;
-  top: 200px;
-  text-decoration: none;
-  color: #e2e2e2;
-  font-size: 40px;
-}
-.kind_wrap .arrow > a.next {
-  position: absolute;
-  right: -10%;
-  top: 200px;
-  text-decoration: none;
-  color: #e2e2e2;
-  font-size: 40px;
-} */
+
+/* 이미지 슬라이드 */
 
 .slideshow-container {
   position: relative;
@@ -196,8 +162,9 @@ main {
 
 @media screen and (max-width: 530px) {
   .slideshow-container {
-    height: 150px;
+    height: 202px;
     margin-top: -1300px;
+    width: 312px;
   }
 }
 
@@ -324,7 +291,13 @@ input::placeholder {
 }
 
 .page {
-  margin: 87.52px 0% 0px 45%;
+  margin: 87.52px 0% 0% 50%;
+}
+
+@media screen and (max-width: 530px) {
+  .page {
+    display: none;
+  }
 }
 
 .page_left {
