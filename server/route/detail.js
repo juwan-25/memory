@@ -24,7 +24,17 @@ router.use(
 );
 
 router.get('/:idx', (req, res) => {
-    let sql = "SELECT boardId, title, content, mimage, simage FROM boardTbl WHERE boardId = ?";
+    let s = 'heart'+req.params.idx;
+
+    var begin, end;
+    var cook = req.headers.cookie + ";";
+    var sidx = cook.indexOf(s, 0);
+
+    cook = cook.substring(sidx, cook.length);     // 문자열 “키2=값2; 키3=값3;” 을 추출한다.
+    begin = cook.indexOf('=', 0) + 1;     // 첫번째 “=” 의 위치값 + 1 함으로써                                                                                    //얻고자 하는 값의 시작위치를 가져온다.
+    end = cook.indexOf(';', begin);
+
+    let sql = "SELECT boardId, title, content, mimage, simage, reaction FROM boardTbl WHERE boardId = ? ";
     let params = [req.params.idx];
     con.query(sql, params, (err, result1) => {
         if (err) throw err;
@@ -36,7 +46,8 @@ router.get('/:idx', (req, res) => {
                 else {
                     res.render('Post_Details', {
                         data1: result1,
-                        data2: result2
+                        data2: result2,
+                        hearted: cook.substring(begin, end)
                     });
                 }
             });
@@ -65,7 +76,7 @@ router.post('/:idx/heart', (req, res) => {
     cook = cook.substring(sidx, cook.length);     // 문자열 “키2=값2; 키3=값3;” 을 추출한다.
     begin = cook.indexOf('=', 0) + 1;     // 첫번째 “=” 의 위치값 + 1 함으로써                                                                                    //얻고자 하는 값의 시작위치를 가져온다.
     end = cook.indexOf(';', begin);
-    
+
     console.log(cook.substring(begin, end));
     
     if(cook.substring(begin, end)=='true'){ //쿠키 존재 > 이미 좋아요를 누름 > 좋아요 취소 

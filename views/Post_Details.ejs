@@ -48,10 +48,6 @@
         <%= data1[0]?.content %>
       </div>
 
-      <form action="/details/<%= data1[0]?.boardId %>/heart" method="post">
-        <input type="image" src="../imgs/heart.png">
-      </form>
-
       <!-- 이미지 -->
       <div id="container" style="white-space:nowrap; z-index: 0;">
         <%if(data1[0].simage == null){%>
@@ -144,6 +140,20 @@
       })
       </script>
 
+      <!-- 좋아요 기능 -->
+      <form class="hearted" action="/details/<%= data1[0]?.boardId %>/heart" method="post">
+        <p class="heart_txt"><%= data1[0]?.reaction %></p>
+        <% if( hearted == 'true' ) {%>
+          <input class="heart_img" type="image" src="../imgs/heart.png">
+        <% } else { %>
+          <input class="heart_img" type="image" src="../imgs/emptyheart.png">
+        <% } %>
+      </form>
+      
+      <!-- 댓글 수 -->
+      <div class="comment_cnt">
+        <p class="comment_txt"><%= data1[0]?.reaction %></p>
+      </div>
 
       <hr style="color: #dcdcdc; border: 0.5px solid" id="main_line"/>
 
