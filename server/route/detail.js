@@ -34,7 +34,11 @@ router.get('/:idx', (req, res) => {
     begin = cook.indexOf('=', 0) + 1;     // 첫번째 “=” 의 위치값 + 1 함으로써                                                                                    //얻고자 하는 값의 시작위치를 가져온다.
     end = cook.indexOf(';', begin);
 
-    let sql = "SELECT boardId, title, content, mimage, simage, reaction FROM boardTbl WHERE boardId = ? ";
+    let sql = `SELECT boardTbl.boardId, title, boardTbl.content, mimage, simage, reaction, COUNT(commentId) cnt
+                FROM boardTbl 
+                    JOIN commentTbl
+                    ON boardTbl.boardId = commentTbl.boardId
+                WHERE boardTbl.boardId = ?`;
     let params = [req.params.idx];
     con.query(sql, params, (err, result1) => {
         if (err) throw err;
