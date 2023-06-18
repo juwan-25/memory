@@ -145,6 +145,7 @@
                     var img = "<%= data2[i].mimage %>";
                     var tit = "<%= data2[i].title %>";
                     var cont = "<%= data2[i].content %>";
+                    var heart = "<%= data2[i].reaction %>";
 
                     if ((parseInt("<%= i %>")+1) % 3 == 0) {
                         const itemLarge = document.createElement('div');
@@ -157,6 +158,7 @@
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
+                            <div class="heart">${heart}</div>
                           </figcaption>
                         </figure>
                       </a>
@@ -173,6 +175,7 @@
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
+                            <div class="heart">${heart}</div>
                           </figcaption>
                         </figure>
                       </a>
@@ -189,6 +192,7 @@
                     var img = "<%= data2[i].mimage %>";
                     var tit = "<%= data2[i].title %>";
                     var cont = "<%= data2[i].content %>";
+                    var heart = "<%= data2[i].reaction %>";
 
                     if (parseInt("<%= i %>")+1 == index + plus) {
                         if (plus == 6) {
@@ -207,6 +211,7 @@
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
+                            <div class="heart">${heart}</div>
                           </figcaption>
                         </figure>
                       </a>
@@ -226,6 +231,7 @@
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
+                            <div class="heart">${heart}</div>
                           </figcaption>
                         </figure>
                       </a>
