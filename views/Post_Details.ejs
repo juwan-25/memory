@@ -48,6 +48,10 @@
         <%= data1[0]?.content %>
       </div>
 
+      <form action="/details/<%= data1[0]?.boardId %>/heart" method="post">
+        <input type="image" src="../imgs/heart.png">
+      </form>
+
       <!-- 이미지 -->
       <div id="container" style="white-space:nowrap; z-index: 0;">
         <%if(data1[0].simage == null){%>
