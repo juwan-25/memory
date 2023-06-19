@@ -50,30 +50,30 @@
 
       <!-- 이미지 -->
       <div id="container" style="white-space:nowrap; z-index: 0;">
-        <%if(data1[0].simage == null){%>
-          <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="img" style="margin-left: 50%;"></button>
+        <%if(data1.length=1){%>
+          <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img" style="margin-left: 50%;"></button>
         <%}%>
-        <%if(data1[0].simage != null){%>
-          <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="img"></button>
-          <button id="btn-modal"><img src="<%= data1[0].simage %>" width="100%" height="20.93%" class="img"></button>
+        <%if(data1.length>1){%>
+          <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img"></button>
+          <button id="btn-modal"><img src="<%= data1[0].simage %>" width="100%" height="20.93%" class="write_img"></button>
         <%}%>
       </div>
 
       <!-- 오버레이 -->
       <div id="modal" class="modal-overlay">
-        <div class="slideshow-container">
+        <div class="slideshow-container"> 
           <img class="slide" src="<%= data1[0]?.mimage %>" alt="Image 1">
-          <%if(data1[0].simage != null){%>
+          <%if(data1.length>1){%>
             <img class="slide" src="<%= data1[0].simage %>" alt="Image 2">
           <%}%>
         </div>
         
-        <%if(data1[0].simage != null){%>
+
           <div class="button-container">
             <button id="prevButton">&#10094;</button>
             <button id="nextButton">&#10095;</button>
           </div>
-          <%}%>
+
 
       </div>
 
@@ -126,50 +126,54 @@
       // 오버레이
       const modal = document.getElementById("modal")
       const btnModal = document.getElementById("btn-modal")
+      const body = document.body;
       btnModal.addEventListener("click", e => {
         modal.style.display = "flex"
-        
+        body.style.overflow="hidden"
+        modal.style.height="280%"
       })
 
       modal.addEventListener("click", e => {
       const evTarget = e.target
         if(evTarget.classList.contains("modal-overlay")) {
           modal.style.display = "none"
+          body.style.overflow = "auto";
           
         }
+        
       })
       </script>
+  
+        
+        <div class="heart_comment">
+          <!-- 댓글 수 -->
+          <p class="comment_txt">
+            <input class="comment_img" type="image" src="../imgs/comment.png">
+            <%= data1[0]?.cnt %>
+          </p>
 
-      <!-- 좋아요 기능 -->
-      <form class="hearted" action="/details/<%= data1[0]?.boardId %>/heart" method="post">
-        <p class="heart_txt"><%= data1[0]?.reaction %></p>
-        <% if( hearted == 'true' ) {%>
-          <input class="heart_img" type="image" src="../imgs/heart.png">
-        <% } else { %>
-          <input class="heart_img" type="image" src="../imgs/emptyheart.png">
-        <% } %>
-      </form>
-      
-      <!-- 댓글 수 -->
-      <div class="comment_cnt">
-        <p class="comment_txt"><%= data1[0]?.cnt %></p>
-        <input class="comment_img" type="image" src="../imgs/comment.png">
-      </div>
+          <!-- 좋아요 기능 -->
+          <form class="hearted" action="/details/<%= data1[0]?.boardId %>/heart" method="post" class="heart">
+            <p class="heart_txt">
+              <% if( hearted == 'true' ) {%>
+                <input class="heart_img" type="image" src="../imgs/heart.png">
+              <% } else { %>
+                <input class="heart_img" type="image" src="../imgs/emptyheart.png">
+              <% } %>
+              <%= data1[0]?.reaction %>
+            </p>
+          
+          </form>
+
+        </div>
+
 
       <hr style="color: #dcdcdc; border: 0.5px solid" id="main_line"/>
 
       <!-- 댓글 -->
       <div>
         <form method="post" action="/details/<%= data1[0]?.boardId %>/insert">
-        <div class="comment_enter" 
-          style="
-            margin-top: 80px;
-            border: 1px solid;
-            padding: 24px 28px 54px;
-            border-radius: 5px;
-            color: #f1f1f1;
-            box-shadow: 1px 1px 2px 2px #f1f1f1;
-          ">
+        <div class="comment_enter">
           <input class="nickname" type="text" id="name" name="name" placeholder="닉네임"/><br />
           <hr
             style="
@@ -219,7 +223,7 @@
 
     <footer id="footer">
       <nav class="navbar navbar-expand-lg">
-        <img src="../imgs/main_lg.png" class="logo-bottom" href="/"></a>
+        <img src="../imgs/main_lg.png" class="logo-bottom" href="#"></a>
       <div class="navbar-nav-bottom">
         <a class="nav-link-b" href="/">HOME</a>
         <!-- <a class="nav-link" href="#">ABOUT</a> -->
