@@ -97,9 +97,10 @@
     </script>
 
     <div class="galleryTitle">· 기억 저장소 ·</div>
-    <div class="addMemory"></div>
+    <a id="addMemory" href="/write"><div class="addMemory"></div></a>
     <script>
         var addButton = document.querySelector('.addMemory');
+        var link = addButton.getAttribute('href'); // 링크 URL 저장
 
         if (window.innerWidth > 479) {  //PC화면에서의 설정
             window.onscroll = function () {
@@ -126,6 +127,12 @@
                 }
             }
         }
+        addButton.addEventListener('click', function (event) {
+            if (addButton.style.pointerEvents === 'none') {
+                event.preventDefault(); // 기본 클릭 이벤트 중지
+                window.location.href = link; // 링크로 이동
+            }
+        });
         addButton.addEventListener('mouseover', function () {
             this.classList.add('hovered');
         });
@@ -140,7 +147,7 @@
             const galleryContainer = document.querySelector('.postGallery');
 
             if (window.innerWidth <= 479) {
-                "<% for (let i = 0; i < data2.length; i++) { %>" //배열로
+                "<% for (let i = 0; i < data2.length; i++) { %>"
                     var idx = "<%= data2[i].boardId %>";
                     var img = "<%= data2[i].mimage %>";
                     var tit = "<%= data2[i].title %>";
@@ -154,7 +161,7 @@
                         itemLarge.innerHTML = `
                       <a href="/details/${idx}">
                         <figure>
-                          <img src="${img}" alt="">
+                          <img src="${img}" alt="" class="galleryImg">
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
@@ -171,7 +178,7 @@
                         item.innerHTML = `
                       <a href="/details/${idx}">
                         <figure>
-                          <img src="${img}" alt="">
+                          <img src="${img}" alt="" class="galleryImg">
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
@@ -187,7 +194,7 @@
                 let index = -4;
                 let plus = 6;
 
-                "<% for (let i = 0; i <data2.length; i++) { %>" //배열로
+                "<% for (let i = 0; i <data2.length; i++) { %>"
                     var idx = "<%= data2[i].boardId %>";
                     var img = "<%= data2[i].mimage %>";
                     var tit = "<%= data2[i].title %>";
@@ -207,10 +214,11 @@
                         itemLarge.innerHTML = `
                       <a href="/details/${idx}">
                         <figure>
-                          <img src="${img}" alt="">
+                          <img src="${img}" alt="" class="galleryImg">
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
+                            <img src="imgs/like.png" class="heartLargeImg"></img>
                             <div class="heart">${heart}</div>
                           </figcaption>
                         </figure>
@@ -227,10 +235,11 @@
                         item.innerHTML = `
                       <a href="/details/${idx}">
                         <figure>
-                          <img src="${img}" alt="">
+                          <img src="${img}" alt="" class="galleryImg">
                           <figcaption>
                             <div class="title">${tit}</div>
                             <div class="detail">${cont}</div>
+                            <img src="imgs/like.png" class="heartImg"></img>
                             <div class="heart">${heart}</div>
                           </figcaption>
                         </figure>

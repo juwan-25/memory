@@ -267,6 +267,10 @@ body::-webkit-scrollbar {
     transform: translateY(60%);
 }
 
+#addMemory {
+    color: #363636;
+}
+
 
 /* 게시판 갤러리 */
 .postGallery {
@@ -321,7 +325,8 @@ body::-webkit-scrollbar {
 /* item 설정 */
 .postGallery .item figcaption .title {
     position: absolute;
-    width: 88%;
+    /* width: 88%; */
+    width: 60%;
     height: 28px;
     margin-left: 6%;
     top: 28px;
@@ -366,7 +371,8 @@ body::-webkit-scrollbar {
 /* itemLarge 설정 */
 .postGallery .itemLarge figcaption .title {
     position: absolute;
-    width: 92%;
+    /* width: 92%; */
+    width: 70%;
     height: 28px;
     margin-left: 3.5%;
     top: 28px;
@@ -410,21 +416,57 @@ body::-webkit-scrollbar {
     color: #F2F2F2;
 }
 
-.postGallery a:hover figcaption,
-.postGallery a:focus figcaption {
-    opacity: 1;
-    /* 마우스를 올리면 보이게 처리 */
-}
+@media(min-width: 480px) {
+    .postGallery a:hover figcaption,
+    .postGallery a:focus figcaption {
+        opacity: 1;
+        /* 마우스를 올리면 보이게 처리 */
+    }
 
-.postGallery img {
-    width: 100%;
-    height: 360px;
+    .postGallery .galleryImg {
+        width: 100%;
+        height: 360px;
 
-    object-fit: cover;
+        object-fit: cover;
 
-    background-color: #d3d3d3;
+        background-color: #d3d3d3;
 
-    border-radius: 5px
+        border-radius: 5px;
+    }
+
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 28px;
+        right: 28px;
+        top: 30px;
+
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        /* identical to box height, or 175% */
+
+
+        color: #F2F2F2;
+    }
+
+    .heartImg {
+        position: absolute;
+        width: 40px;
+        height: 37px;
+        right: 13%;
+        top: 26px;
+    }
+
+    .heartLargeImg{
+        position: absolute;
+        width: 40px;
+        height: 37px;
+        right: 6.5%;
+        top: 26px;
+    }
 }
 
 /* 더보기 버튼 */
