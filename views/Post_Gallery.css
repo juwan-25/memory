@@ -267,6 +267,10 @@ body::-webkit-scrollbar {
     transform: translateY(60%);
 }
 
+#addMemory {
+    color: #363636;
+}
+
 
 /* 게시판 갤러리 */
 .postGallery {

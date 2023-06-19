@@ -262,8 +262,6 @@
         border-radius: 200px;
 
         pointer-events: none;
-
-        cursor: pointer;
     }
 
     .addMemory::before {
@@ -278,6 +276,10 @@
         /* transform: translate(-50%, -54%); */
 
         color: #363636;
+    }
+
+    #addMemory {
+        pointer-events: none;
     }
 }
 
