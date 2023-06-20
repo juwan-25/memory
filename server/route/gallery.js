@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     con.query(sql, (err, result1) => {
         if (err) throw err;
         else {
-            let sql2 = "SELECT boardId, title, content, mimage FROM boardTbl ORDER BY boardId DESC;";
+            let sql2 = "SELECT boardId, title, content, mimage, reaction FROM boardTbl ORDER BY boardId DESC;";
             con.query(sql2, (err, result2) => {
             if (err) throw err;
             else {
