@@ -368,54 +368,6 @@ body::-webkit-scrollbar {
     color: #F2F2F2;
 }
 
-/* itemLarge 설정 */
-.postGallery .itemLarge figcaption .title {
-    position: absolute;
-    /* width: 92%; */
-    width: 70%;
-    height: 28px;
-    margin-left: 3.5%;
-    top: 28px;
-
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: #F2F2F2;
-}
-
-.postGallery .itemLarge figcaption .detail {
-    position: absolute;
-    /* width: 788px; */
-    width: 92%;
-    height: 84px;
-    /* margin-left: 28px; */
-    margin-left: 3.5%;
-    top: 68px;
-
-    text-overflow: ellipsis;
-    word-break: break-word;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    /* 세 줄 기준 생략 */
-
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-
-    color: #F2F2F2;
-}
-
 @media(min-width: 480px) {
     .postGallery a:hover figcaption,
     .postGallery a:focus figcaption {
