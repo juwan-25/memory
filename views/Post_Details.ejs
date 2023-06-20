@@ -15,7 +15,7 @@
 	<!-- 여기부터 -->
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/"> <img src="../imgs/main_lg.png"></a>
+			<a class="navbar-brand" href="/"><img src="../imgs/main_lg.png"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
 				style="border:none">
@@ -50,10 +50,10 @@
 
       <!-- 이미지 -->
       <div id="container" style="white-space:nowrap; z-index: 0;">
-        <%if(data1.length=1){%>
+        <%if(data1[0]?.simage == null){%>
           <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img" style="margin-left: 50%;"></button>
         <%}%>
-        <%if(data1.length>1){%>
+        <%if(data1[0]?.simage != null){%>
           <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img"></button>
           <button id="btn-modal"><img src="<%= data1[0]?.simage %>" width="100%" height="20.93%" class="write_img"></button>
         <%}%>
@@ -63,7 +63,7 @@
       <div id="modal" class="modal-overlay">
         <div class="slideshow-container"> 
           <img class="slide" src="<%= data1[0]?.mimage %>" alt="Image 1">
-          <%if(data1.length>1){%>
+          <%if(data1[0]?.simage != null){%>
             <img class="slide" src="<%= data1[0]?.simage %>" alt="Image 2">
           <%}%>
         </div>
