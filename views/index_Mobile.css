@@ -1,7 +1,21 @@
 @media(max-width:479px) {
+	body {
+		width: 100svw;
+		height: 100svh;
+	}
+
+	.background {
+		width: 100%;
+		height: 100%;
+		z-index: -9999;
+		src: url("imgs/back2.png");
+	}
+
 	/* navbar */
 	.navbar {
+		width: 100%;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
 	}
 
 	.navbar::before {
@@ -28,11 +42,10 @@
 		height: 100%;
 		background-color: #fff;
 		transition: right 0.3s ease;
-		z-index: 9999;
 	}
 
 	.navbar-collapse.show {
-		right: 0;
+		right: 100%;
 		box-shadow: none;
 		border: none;
 		outline: none;
@@ -82,5 +95,231 @@
 
 	/* navbar */
 
+	/* content */
+	.background{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100svw;
+		height: 100svh;
+		content: url('imgs/back2.png');
+	}
+
+	.content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -9999;
+	}
+
+	/* swiper */
+	.swiper {
+		height: 100%;
+	}
+
+	video::-webkit-media-controls-fullscreen-button {
+		display: none !important;
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.slide1 .main_txt{
+		position: absolute;
+		top: 22%;
+		right: 11%;
+		z-index: 100;
+	}
+
+	.slide2 .main_txt{
+		position: absolute;
+		top: 22%;
+		left: 6%;
+		z-index: 100;
+	}
+		
+	.slide2 .main_txt br{
+		display:none !important;
+	}
+
+	.slide3 .main_txt{
+		position: absolute;
+		top: 22%;
+		right: 6%;
+		z-index: 100;
+	}
+		
+	.slide3 .main_txt br{
+		display:none !important;
+	}
+
+	.slide4 .main_txt{
+		position: absolute;
+		top: 22%;
+		left: 8%;
+		z-index: 100;
+		text-align: right !important;
+	}
+
+	.slide5 .main_txt{
+		position: absolute;
+		bottom: 15%;
+		right: 11%;
+		z-index: 100;
+		text-align: right;
+	}
+
+	.slide6 .main_txt{
+		position: absolute;
+		bottom: 15%;
+		left: 11%;
+		z-index: 100;
+	}
+
+	.main_txt span {
+		font-family: 'Pretendard';
+		font-weight: 900;
+		font-size: 6.6vmin;
+		line-height: 40%;
+		display:table-cell;
+		color: #74748C;
+	}
+	
+	.main_txt span:nth-child(1) {
+		animation-delay:0s;
+	}
+	.main_txt span:nth-child(2) {
+		animation-delay:0.1s;  
+	}
+	.main_txt span:nth-child(3) {
+		animation-delay:0.2s;
+	}
+	.main_txt span:nth-child(4) {
+		animation-delay:0.3s;  
+	}
+	.main_txt span:nth-child(5) {
+		animation-delay:0.4s;
+	}
+	.main_txt span:nth-child(6) {
+		animation-delay:0.5s;  
+	}
+	.main_txt span:nth-child(7) {
+		animation-delay:0.6s;
+	}
+	.main_txt span:nth-child(8) {
+		animation-delay:0.7s;
+	}
+	.main_txt span:nth-child(9) {
+		animation-delay:0.8s;  
+	}
+	.main_txt span:nth-child(10) {
+		animation-delay:0.9s;
+	}
+	.main_txt span:nth-child(11) {
+		animation-delay:1.0s;  
+	}
+	.main_txt span:nth-child(12) {
+		animation-delay:1.1s;
+	}
+	.main_txt span:nth-child(13) {
+		animation-delay:1.2s;
+	}
+	.main_txt span:nth-child(14) {
+		animation-delay:1.3s;
+	}
+	.main_txt span:nth-child(15) {
+		animation-delay:1.4s;  
+	}
+	.main_txt span:nth-child(16) {
+		animation-delay:1.5s;
+	}
+	.main_txt span:nth-child(17) {
+		animation-delay:1.6s;
+	}
+	.main_txt span:nth-child(18) {
+		animation-delay:1.7s;  
+	}
+	.main_txt span:nth-child(19) {
+		animation-delay:1.8s;
+	}
+	.main_txt span:nth-child(20) {
+		animation-delay:1.9s;
+	}
+	.main_txt span:nth-child(21) {
+		animation-delay:2.0s;
+	}
+	.main_txt span:nth-child(22) {
+		animation-delay:2.1s;  
+	}
+	.main_txt span:nth-child(23) {
+		animation-delay:2.2s;
+	}
+	.main_txt span:nth-child(24) {
+		animation-delay:2.3s;
+	}
+
+	.sub_txt1 {
+		display: none;
+	}	
+
+	.sub_txt2 {
+		display: none;
+	}	
+
+	.num_txt1 {
+		display: none;
+	}	
+
+	.num_txt2 {
+		display: none;
+
+	}	
+
+	.btn_gallery {
+		display: none;
+	}
+
+	.btn_pause {
+		display: none;
+	}
+
+	.swiper-scrollbar {
+		display: none;
+	}
+
+	.bottom_content {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: 200px;
+		width: 100svw;
+		background-image: url(./imgs/back3.png);
+	}
+
+	.bottom_txt {
+		position: absolute !important;
+		font-family: 'Pretendard';
+		font-weight: 500;
+		font-size: 4.44vmin;
+		line-height: 160%;
+		top: 27%;
+		left: 4.4%;
+		color: #74748C;
+		z-index: 100;
+		margin: 0;
+	}
+
+	.btn_gallery_b {
+		position: absolute;
+		width: 10.27vmin;
+		height: auto;
+		right: 4.4%;
+		top: 42%;
+		z-index: 100;
+	}
 }
 
