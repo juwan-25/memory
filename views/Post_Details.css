@@ -145,14 +145,14 @@ main {
 .slideshow-container {
   position: relative;
   width: 40%;
-  height: 400px; /* 슬라이드 쇼 컨테이너의 높이를 조정 */
+  height: 4700px; /* 슬라이드 쇼 컨테이너의 높이를 조정 */
   overflow: hidden;
-  margin-top: -600%;
+  margin-top: 0%;
 }
 
 @media screen and (max-width: 479px) {
   .slideshow-container {
-    height: 202px;
+    height: 4000px;
     margin-top: -1300px;
     width: 312px;
   }
@@ -163,8 +163,14 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 648px;
   opacity: 0;
+}
+
+@media screen and (max-width: 479px) {
+  .slide {
+    height: 202px;
+  }
 }
 
 .slide.active {
@@ -173,7 +179,7 @@ main {
 
 .button-container {
   position: absolute;
-  top: 24%;
+  top: 16%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
@@ -184,7 +190,8 @@ main {
 
 @media screen and (max-width: 479px) {
   .button-container {
-    top: 18.5%;
+    /* top: 450px; */
+    top: 7.5%;
     width: 95%;
     padding: 0 17%;
   }
@@ -234,7 +241,6 @@ main {
 .comment_txt {
   margin-right: 42.33px;
 }
-
 
 .heart_img {
   margin-right: 10.33px;
