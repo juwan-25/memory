@@ -201,10 +201,10 @@
       <!-- 등록된 댓글 -->
       <% for(let i=0;i<data2.length;i++){ %>
       <div class="e_comment">
-        <div class="e_nickname"><%= data2[i].writer %></div>
+        <div class="e_nickname"><%= data2[i]?.writer %></div>
         <hr style="color:#BABABA; border: 1px solid" />
         <div class="e_content">
-          <%= data2[i].content %>
+          <%= data2[i]?.content %>
         </div>
       </div>
       <% } %>
