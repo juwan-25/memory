@@ -306,12 +306,6 @@
     }
 
     .postGallery .item {
-        /* width: 160px; */
-        width: 100%;
-        margin: 0;
-    }
-
-    .postGallery .itemLarge {
         grid-column: span 2;
         /* width: 328px; */
         width: 100%;
@@ -348,51 +342,6 @@
     /* item 설정 */
     .postGallery .item figcaption .title {
         position: absolute;
-        width: 88%;
-        height: 28px;
-        margin-left: 6.8%;
-        top: 10px;
-
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-
-        font-family: 'Pretendard';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 28px;
-
-        color: #F2F2F2;
-    }
-
-    .postGallery .item figcaption .detail {
-        position: absolute;
-        width: 88%;
-        height: 60px;
-        margin-left: 6.8%;
-        top: 40px;
-
-        text-overflow: ellipsis;
-        word-break: break-word;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        /* 세 줄 기준 생략 */
-
-        font-family: 'Pretendard';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 20px;
-
-        color: #F2F2F2;
-    }
-
-    /* itemLarge 설정 */
-    .postGallery .itemLarge figcaption .title {
-        position: absolute;
         width: 92%;
         height: 28px;
         margin-left: 3.5%;
@@ -411,7 +360,7 @@
         color: #F2F2F2;
     }
 
-    .postGallery .itemLarge figcaption .detail {
+    .postGallery .itemL figcaption .detail {
         position: absolute;
         /* width: 788px; */
         width: 92%;
