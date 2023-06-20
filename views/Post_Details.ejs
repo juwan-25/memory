@@ -55,7 +55,7 @@
         <%}%>
         <%if(data1.length>1){%>
           <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img"></button>
-          <button id="btn-modal"><img src="<%= data1[0].simage %>" width="100%" height="20.93%" class="write_img"></button>
+          <button id="btn-modal"><img src="<%= data1[0]?.simage %>" width="100%" height="20.93%" class="write_img"></button>
         <%}%>
       </div>
 
@@ -64,7 +64,7 @@
         <div class="slideshow-container"> 
           <img class="slide" src="<%= data1[0]?.mimage %>" alt="Image 1">
           <%if(data1.length>1){%>
-            <img class="slide" src="<%= data1[0].simage %>" alt="Image 2">
+            <img class="slide" src="<%= data1[0]?.simage %>" alt="Image 2">
           <%}%>
         </div>
         

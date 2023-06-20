@@ -310,10 +310,6 @@
                     <p class="num_txt2">
                         06
                     </p>  
-                    <div class="swiper-navigation">
-                       <div class="swiper-button-prev"></div>
-                       <div class="swiper-button-next"></div>
-                    </div>
                     <img src="./imgs/play_btn.png" class="btn_pause"/>
                 </div>
             </div>
@@ -354,6 +350,11 @@
 	</footer> -->
     <!-- footer -->
     <script>
+        // 애니메이션 적용시 글자 겹쳐짐 문제 해결을 위한 새로고침
+        window.onload = function(){
+            if (location.href.indexOf('reloaded')==-1) location.replace(location.href+'?reloaded');
+        }
+
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             loop: true,
