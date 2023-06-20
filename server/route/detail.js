@@ -51,7 +51,7 @@ router.get('/:idx', (req, res) => {
                     res.render('Post_Details', {
                         data1: result1,
                         data2: result2,
-                        hearted: cook.substring(begin, end)
+                        hearted: cook.substring(begin, end),
                     });
                 }
             });
