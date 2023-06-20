@@ -146,11 +146,6 @@
   
         
         <div class="heart_comment">
-          <!-- 댓글 수 -->
-          <p class="comment_txt">
-            <input class="comment_img" type="image" src="../imgs/comment.png">
-            <%= data1[0]?.cnt %>
-          </p>
 
           <!-- 좋아요 기능 -->
           <form action="/details/<%= data1[0]?.boardId %>/heart" method="post" class="heart">
