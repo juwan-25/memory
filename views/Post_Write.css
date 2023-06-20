@@ -31,6 +31,11 @@ textarea::placeholder {
   outline: none;
 }
 
+body {
+  position: relative;
+  background-color: #f2f2f2;
+}
+
 /* 제목 */
 #title {
   margin-top: 5%;
@@ -60,7 +65,7 @@ textarea::placeholder {
 
 .Post_Img li {
   list-style: none;
-  display: flex;
+  display: block;
 }
 
 .Post_Img img {
@@ -82,6 +87,7 @@ textarea::placeholder {
   height: 10%;
   border: 1px;
   float: left;
+  display: block;
 }
 
 .image-preview {
@@ -92,7 +98,6 @@ textarea::placeholder {
   border: 1px;
   flex-direction: row;
   display: flex;
-  flex-wrap: wrap;
 }
 
 /* 게시 button */
@@ -148,6 +153,7 @@ textarea::placeholder {
   }
 }
 
+@media(min-width:479px){
 /* 푸터 */
 #footer {
   position: relative;
@@ -157,6 +163,8 @@ textarea::placeholder {
 
   background: #F6F6FA;
 }
+}
+
 
 @media(min-width:479px) {
   .logo-bottom {

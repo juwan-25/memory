@@ -33,25 +33,24 @@ router.get('/:idx', (req, res) => {
     cook = cook.substring(sidx, cook.length);     // 문자열 “키2=값2; 키3=값3;” 을 추출한다.
     begin = cook.indexOf('=', 0) + 1;     // 첫번째 “=” 의 위치값 + 1 함으로써                                                                                    //얻고자 하는 값의 시작위치를 가져온다.
     end = cook.indexOf(';', begin);
+    console.log(cook.substring(begin, end))
 
-    let sql = `SELECT boardTbl.boardId, title, boardTbl.content, mimage, simage, reaction, COUNT(commentId) cnt
-                FROM boardTbl 
-                    JOIN commentTbl
-                    ON boardTbl.boardId = commentTbl.boardId
-                WHERE boardTbl.boardId = ?`;
+    console.log(req.params.idx);
+    let sql = `SELECT boardTbl.boardId, title, boardTbl.content, mimage, simage, reaction FROM boardTbl WHERE boardTbl.boardId = ?`;
     let params = [req.params.idx];
     con.query(sql, params, (err, result1) => {
         if (err) throw err;
         else {
-            sql = "SELECT commentId, writer, content FROM commentTbl WHERE boardId = ?  ORDER BY 1 DESC";
-            params = [req.params.idx];
+            console.log(result1);
+            sql = "SELECT commentId, writer, content FROM commentTbl WHERE boardId = ?  ORDER BY 1 DESC";s
             con.query(sql, params, (err, result2) => {
                 if (err) throw err;
                 else {
+                    console.log(result2);
                     res.render('Post_Details', {
                         data1: result1,
                         data2: result2,
-                        hearted: cook.substring(begin, end)
+                        hearted: cook.substring(begin, end),
                     });
                 }
             });

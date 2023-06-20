@@ -9,13 +9,14 @@ router.get('/', (req, res) => {
     con.query(sql, (err, result1) => {
         if (err) throw err;
         else {
-            sql = "SELECT boardId, title, content, mimage, reaction FROM boardTbl ORDER BY boardId DESC;";
-            con.query(sql, (err, result2) => {
+            let sql2 = "SELECT boardId, title, content, mimage, reaction FROM boardTbl ORDER BY boardId DESC;";
+            con.query(sql2, (err, result2) => {
             if (err) throw err;
             else {
+                console.log(result2);
                 res.render('Post_Gallery', {
                     data1: result1,
-                    data2:result2
+                    data2: result2,
                 });
             }
             });

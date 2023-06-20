@@ -59,26 +59,66 @@
 
     <!-- content -->
     <div class="content">
-        <img src="./imgs/back.png" class="backgorund"/>
+        <img src="./imgs/Frame 3.png" class="background"/>
+
+        <!-- swiper -->
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-
                 <!-- 메인 텍스트 변수 -->
-                <% let arr = [['W','A','T','E','R','G','U','N',' ','G','A','M','E'], 
-                    ['C','L','A','S','S','I','C','A','L',' ','C','O','N','C','E','R','T'],
-                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
-                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
-                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
-                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E'],
-                    ['W','A','T','E','R','G','U','N',' ','G','A','M','E']];%>
+                <% let arr = [['C','L','A','S','S','I','C','A','L','br','C','O','N','C','E','R','T'],
+                    ['W','A','T','E','R','G','U','N',' ','br','G','A','M','E'], 
+                    ['D','E','L','I','G','H','T','F','U','L',' ','br','S','P','R','I','N','G'],
+                    ['D','A','N','C','E',' ','A','L','L','br','N','I','G','H','T',' ','A','W','A','Y'],
+                    ['C','H','E','E','R',' ','O','N','br','A','T',' ','T','H','E',' ','S','H','O','W'],
+                    ['A',' ','S','E','C','R','E','T','br','M','A','F','I','A',' ','G','A','M','E']];%>
 
-                <% for(let i=0; i<7; i++) { %>
-                <div class="swiper-slide">
+                <!-- slide1 -->
+                <div class="swiper-slide slide1">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_video.mp4" type="video/mp4">
+                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                     </video>
+                    
+                     <p class="sub_txt1">
+                        미림인의 낭만이 모인<br>
+                        기억 전시 바로가기
+                    </p>
+                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    
+                    <p class="sub_txt2">
+                        MSG 동아리 부원들이<br>
+                        학교에서 모은 소중한 기억들
+                    </p>            
+                    
+                    <div class="main_txt">
+                        <% for(let j=0; j<arr[0].length; j++) { %>
+                            <%if(arr[0][j]=='br') {%>
+                                <br>
+                            <% } else if(arr[0][j]==' ') {%>
+                                <span>&nbsp;</span>
+                            <% } else {%>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[0][j] %></span>
+                            <% }%>
+                        <% }%>
+                    </div>
+
+                    <p class="num_txt1">
+                        01
+                    </p>
+                    <p class="num_txt2">
+                        06
+                    </p>
+
+                    <img src="./imgs/play_btn.png" class="btn_pause"/>
+                </div>
+
+                <!-- slide2 -->
+                <div class="swiper-slide slide2">
+                    <!-- 배경 3D 비디오 -->
+                    <video class="video" autoplay loop muted playsinline preload="auto">
+                        <source src="./video/test_vedio1.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -93,31 +133,201 @@
                     </p>            
                     
                     <span class="main_txt">
-                        <% for(let j=0; j<arr[i].length; j++) { %>
-                            <%if(arr[i][j]==' ') {%>
+                        <% for(let j=0; j<arr[1].length; j++) { %>
+                            <%if(arr[1][j]=='br') {%>
                                 <br>
+                            <% } else if(arr[1][j]==' ') {%>
+                                <span>&nbsp;</span>
                             <% } else {%>
-                                <span class="animate__animated animate__fadeInUp"><%= arr[i][j] %></span>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[1][j] %></span>
                             <% }%>
                         <% }%>
                     </span>
 
                     <p class="num_txt1">
-                        0<%= i+1 %>
+                        02
                     </p>
                     <p class="num_txt2">
-                        07
+                        06
                     </p>
 
                     <img src="./imgs/play_btn.png" class="btn_pause"/>
                 </div>
-                <% } %>
+
+                <!-- slide3 -->
+                <div class="swiper-slide slide3">
+                    <!-- 배경 3D 비디오 -->
+                    <video class="video" autoplay loop muted playsinline preload="auto">
+                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                     </video>
+                    
+                     <p class="sub_txt1">
+                        미림인의 낭만이 모인<br>
+                        기억 전시 바로가기
+                    </p>
+                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    
+                    <p class="sub_txt2">
+                        MSG 동아리 부원들이<br>
+                        학교에서 모은 소중한 기억들
+                    </p>            
+                    
+                    <span class="main_txt">
+                        <% for(let j=0; j<arr[2].length; j++) { %>
+                            <%if(arr[2][j]=='br') {%>
+                                <br>
+                            <% } else if(arr[2][j]==' ') {%>
+                                <span>&nbsp;</span>
+                            <% } else {%>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[2][j] %></span>
+                            <% }%>
+                        <% }%>
+                    </span>
+
+                    <p class="num_txt1">
+                        03
+                    </p>
+                    <p class="num_txt2">
+                        06
+                    </p>
+
+                    <img src="./imgs/play_btn.png" class="btn_pause"/>
+                </div>
+
+                <!-- slide4 -->
+                <div class="swiper-slide slide4">
+                    <!-- 배경 3D 비디오 -->
+                    <video class="video" autoplay loop muted playsinline preload="auto">
+                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                     </video>
+                    
+                     <p class="sub_txt1">
+                        미림인의 낭만이 모인<br>
+                        기억 전시 바로가기
+                    </p>
+                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    
+                    <p class="sub_txt2">
+                        MSG 동아리 부원들이<br>
+                        학교에서 모은 소중한 기억들
+                    </p>            
+                    
+                    <span class="main_txt">
+                        <% for(let j=0; j<arr[3].length; j++) { %>
+                            <%if(arr[3][j]=='br') {%>
+                                <br>
+                            <% } else if(arr[3][j]==' ') {%>
+                                <span>&nbsp;</span>
+                            <% } else {%>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[3][j] %></span>
+                            <% }%>
+                        <% }%>
+                    </span>
+
+                    <p class="num_txt1">
+                        04
+                    </p>
+                    <p class="num_txt2">
+                        06
+                    </p>
+
+                    <img src="./imgs/play_btn.png" class="btn_pause"/>
+                </div>
+
+                <!-- slide5 -->
+                <div class="swiper-slide slide5">
+                    <!-- 배경 3D 비디오 -->
+                    <video class="video" autoplay loop muted playsinline preload="auto">
+                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                     </video>
+                    
+                     <p class="sub_txt1">
+                        미림인의 낭만이 모인<br>
+                        기억 전시 바로가기
+                    </p>
+                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    
+                    <p class="sub_txt2">
+                        MSG 동아리 부원들이<br>
+                        학교에서 모은 소중한 기억들
+                    </p>            
+                    
+                    <span class="main_txt">
+                        <% for(let j=0; j<arr[4].length; j++) { %>
+                            <%if(arr[4][j]=='br') {%>
+                                <br>
+                            <% } else if(arr[4][j]==' ') {%>
+                                <span>&nbsp;</span>
+                            <% } else {%>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[4][j] %></span>
+                            <% }%>
+                        <% }%>
+                    </span>
+
+                    <p class="num_txt1">
+                        05
+                    </p>
+                    <p class="num_txt2">
+                        06
+                    </p>
+
+                    <img src="./imgs/play_btn.png" class="btn_pause"/>
+                </div>
+
+                <!-- slide6 -->
+                <div class="swiper-slide slide6">
+                    <!-- 배경 3D 비디오 -->
+                    <video class="video" autoplay loop muted playsinline preload="auto">
+                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                     </video>
+                    
+                     <p class="sub_txt1">
+                        미림인의 낭만이 모인<br>
+                        기억 전시 바로가기
+                    </p>
+                    <a href="/gallery"><img src="./imgs/gallery_btn.png" class="btn_gallery"/></a>
+                    
+                    <p class="sub_txt2">
+                        MSG 동아리 부원들이<br>
+                        학교에서 모은 소중한 기억들
+                    </p>            
+                    
+                    <span class="main_txt">
+                        <% for(let j=0; j<arr[5].length; j++) { %>
+                            <%if(arr[5][j]=='br') {%>
+                                <br>
+                            <% } else if(arr[5][j]==' ') {%>
+                                <span>&nbsp;</span>
+                            <% } else {%>
+                                <span class="animate__animated animate__fadeInUp"><%= arr[5][j] %></span>
+                            <% }%>
+                        <% }%>
+                    </span>
+
+                    <p class="num_txt1">
+                        06
+                    </p>
+                    <p class="num_txt2">
+                        06
+                    </p>  
+                    <img src="./imgs/play_btn.png" class="btn_pause"/>
+                </div>
             </div>
 
             <!-- swiper scrollbar -->
             <div class="swiper-scrollbar"></div>
+            <div class="swiper-pagination"></div>
         </div>
+        <!-- swiper -->
 
+        <div class="bottom_content">                     
+            <p class="bottom_txt">
+                미림인의 낭만이 모인<br>
+                기억 전시 바로가기
+            </p>
+            <a href="/gallery"><img class="btn_gallery_b" src="imgs/gallery_btn2.png"></a>
+           
+        </div>
     </div>
     <!-- content -->    
 
@@ -140,21 +350,37 @@
 	</footer> -->
     <!-- footer -->
     <script>
+        // 애니메이션 적용시 글자 겹쳐짐 문제 해결을 위한 새로고침
+        window.onload = function(){
+            if (location.href.indexOf('reloaded')==-1) location.replace(location.href+'?reloaded');
+        }
+
         const swiper = new Swiper('.swiper', {
-          // Optional parameters
-            slidesPerView: 1,
-            direction: 'horizontal',
+            // Optional parameters
             loop: true,
-            loopedSlides: 1,
             slideToClickedSlide : true,
             allowTouchMove : true,
-            mousewheel: true,
-            speed : 1000,
             threshold:100,
+            mousewheel: {
+                invert: false,
+            },
+            grabCursor: true,
 
             autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-                delay : 11000,   // 시간 설정
+                delay : 7000,   // 시간 설정
                 disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+            },
+
+            breakpoints: {
+                0:{
+                    slidesPerView: 2,
+                    direction: 'vertical',
+                },
+                479:{
+                    slidesPerView: 1,
+                    direction: 'horizontal',        
+
+                }, 
             },
 
             scrollbar: {
@@ -162,8 +388,8 @@
                 draggable: true,
                 clickable: true,
             },
-            
-            
+
+
             on :{
                 slideChange: function(){
                     var target = $('.animate__animated');
@@ -171,7 +397,7 @@
                     target.removeClass("animate__fadeInUp"),
                     void target.outerWidth(),
                     target.addClass("animate__fadeInUp");
-                }
+                },
             },
         });
 
@@ -188,7 +414,13 @@
                 sw = 0;
             }
         });
-    
+
+        // window.addEventListener('wheel', function (event) {
+        //     if (event.deltaY < 0) {
+        //     swiper.mousewheel.enable();
+        //     } else if (event.deltaY > 0) {
+        //     }
+        // });
     </script>
 </body>
 </html>

@@ -48,12 +48,13 @@ body::-webkit-scrollbar {
 	/* navbar */
 	
 	/* content */
-	.backgorund{
+	.background{
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
+		background-color: #FFF;
 	}
 
 	.content {
@@ -150,6 +151,18 @@ body::-webkit-scrollbar {
 	.main_txt span:nth-child(20) {
 		animation-delay:1.9s;
 	}
+	.main_txt span:nth-child(21) {
+		animation-delay:2.0s;
+	}
+	.main_txt span:nth-child(22) {
+		animation-delay:2.1s;  
+	}
+	.main_txt span:nth-child(23) {
+		animation-delay:2.2s;
+	}
+	.main_txt span:nth-child(24) {
+		animation-delay:2.3s;
+	}
 
 	.sub_txt1 {
 		position: absolute !important;
@@ -214,6 +227,10 @@ body::-webkit-scrollbar {
 		right: 16.4%;
 	}
 
+	.swiper-navigation {
+		z-index: 9999;
+	}
+
 	.swiper-scrollbar {
 		position: absolute;
 		width: 13.59% !important;
@@ -224,6 +241,9 @@ body::-webkit-scrollbar {
 		background-color: #dbdbe6 !important;
 	}
 
+	.bottom_content {
+		display: none;
+	}
 
 	/* content */
 	
