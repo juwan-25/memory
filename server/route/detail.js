@@ -42,8 +42,7 @@ router.get('/:idx', (req, res) => {
         if (err) throw err;
         else {
             console.log(result1);
-            sql = "SELECT commentId, writer, content FROM commentTbl WHERE boardId = ?  ORDER BY 1 DESC";
-            params = [req.params.idx];
+            sql = "SELECT commentId, writer, content FROM commentTbl WHERE boardId = ?  ORDER BY 1 DESC";s
             con.query(sql, params, (err, result2) => {
                 if (err) throw err;
                 else {
