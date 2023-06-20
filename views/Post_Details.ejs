@@ -40,31 +40,31 @@
 
     <main>
       <hr style="color: #464646; border: 2px solid" id="title_line1"/>
-      <div class="title" style="font-size: 20px;"><%= data1[0]?.title %></div>
+      <div class="title" style="font-size: 20px;"><%= data1[0].title %></div>
       <hr style="color: #e0e0e0; border: 1px solid" />
 
       <!-- 글 내용 -->
       <div class="detail_content" style="font-size: 16px;">
-        <%= data1[0]?.content %>
+        <%= data1[0].content %>
       </div>
 
       <!-- 이미지 -->
       <div id="container" style="white-space:nowrap; z-index: 0;">
-        <%if(data1[0]?.simage == null){%>
-          <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img" style="margin-left: 50%;"></button>
+        <%if(data1[0].simage == null){%>
+          <button id="btn-modal"><img src="<%= data1[0].mimage %>" width="100%" height="20.93%" class="write_img" style="margin-left: 50%;"></button>
         <%}%>
-        <%if(data1[0]?.simage != null){%>
-          <button id="btn-modal"><img src="<%= data1[0]?.mimage %>" width="100%" height="20.93%" class="write_img"></button>
-          <button id="btn-modal"><img src="<%= data1[0]?.simage %>" width="100%" height="20.93%" class="write_img"></button>
+        <%if(data1[0].simage != null){%>
+          <button id="btn-modal"><img src="<%= data1[0].mimage %>" width="100%" height="20.93%" class="write_img"></button>
+          <button id="btn-modal"><img src="<%= data1[0].simage %>" width="100%" height="20.93%" class="write_img"></button>
         <%}%>
       </div>
 
       <!-- 오버레이 -->
       <div id="modal" class="modal-overlay">
         <div class="slideshow-container"> 
-          <img class="slide" src="<%= data1[0]?.mimage %>" alt="Image 1">
-          <%if(data1[0]?.simage != null){%>
-            <img class="slide" src="<%= data1[0]?.simage %>" alt="Image 2">
+          <img class="slide" src="<%= data1[0].mimage %>" alt="Image 1">
+          <%if(data1[0].simage != null){%>
+            <img class="slide" src="<%= data1[0].simage %>" alt="Image 2">
           <%}%>
         </div>
         
@@ -148,14 +148,14 @@
         <div class="heart_comment">
 
           <!-- 좋아요 기능 -->
-          <form action="/details/<%= data1[0]?.boardId %>/heart" method="post" class="heart">
+          <form action="/details/<%= data1[0].boardId %>/heart" method="post" class="heart">
             <p class="heart_txt">
               <% if( hearted == 'true' ) {%>
                 <input class="heart_img" type="image" src="../imgs/heart.png">
               <% } else { %>
                 <input class="heart_img" type="image" src="../imgs/emptyheart.png">
               <% } %>
-              <%= data1[0]?.reaction %>
+              <%= data1[0].reaction %>
             </p>
           
           </form>
@@ -167,7 +167,7 @@
 
       <!-- 댓글 -->
       <div>
-        <form method="post" action="/details/<%= data1[0]?.boardId %>/insert">
+        <form method="post" action="/details/<%= data1[0].boardId %>/insert">
         <div class="comment_enter">
           <input class="nickname" type="text" id="name" name="name" placeholder="닉네임"/><br />
           <hr
@@ -201,10 +201,10 @@
       <!-- 등록된 댓글 -->
       <% for(let i=0;i<data2.length;i++){ %>
       <div class="e_comment">
-        <div class="e_nickname"><%= data2[i]?.writer %></div>
+        <div class="e_nickname"><%= data2[i].writer %></div>
         <hr style="color:#BABABA; border: 1px solid" />
         <div class="e_content">
-          <%= data2[i]?.content %>
+          <%= data2[i].content %>
         </div>
       </div>
       <% } %>
