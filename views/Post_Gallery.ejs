@@ -171,15 +171,15 @@
             var totalElements = $(".postGallery>div").length;   //div 총 개수
 
             if (window.innerWidth <= 479) {
-                index = 8;
+                index = 4;
                 status = 1;
             } else {
-                index = 7;
+                index = 9;
                 status = 0;
             }
             $(document).ready(function () {
                 $(".postGallery>div").hide();   //div를 모두 숨김
-                $(".postGallery>div").slice(0, index).show();   //처음에 0번째부터 6번째까지 보여줌
+                $(".postGallery>div").slice(0, index).show();   //처음에 0번째부터 8번째까지 보여줌
 
                 //div 개수가 index보다 적거나 같으면 더보기 버튼 안 보이게
                 if (totalElements <= index) {
@@ -190,10 +190,10 @@
 
             function more() {
                 if (status == 0) {
-                    add = 8;
+                    add = 4;
                     status = 1;
                 } else if (status == 1) {
-                    add = 7;
+                    add = 9;
                     status = 0;
                 }
 
