@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 	@media(min-width:479px){
 		.every {
 			text-align: center;
-			margin-top: 15%;
+			margin-top: 5%;
 		}
 	}
 
@@ -199,6 +199,7 @@ body::-webkit-scrollbar {
  .pagination-container {
     display: flex;
     justify-content: center;
+	margin-bottom: 50px;
 }
 }
 
@@ -232,7 +233,7 @@ body::-webkit-scrollbar {
 #footer {
     position: relative;
     transform: translatY(100%);
-	margin-top: 5%;
+	/* margin-top: 5%; */
     height: 213px;
 
     background: #F6F6FA;

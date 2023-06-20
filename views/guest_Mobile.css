@@ -1,7 +1,7 @@
 /* body */
 @media(max-width:479px) {
 	body {
-		background-color: #f2f2f2;
+		background-color: #e1e1e1;
 		/* padding-bottom: 10%; */
 	}
 
@@ -111,16 +111,17 @@
 	.write .submit-button {
 		background-color: rgba(124, 124, 124, 0);
 		color: #979797;
-		padding: 5px 10px;
+		padding: 5px 15px;
 		border: 1px solid #cccccc;
 		/* 테두리 두께와 색상 지정 */
-		border-radius: 6svh;
+		border-radius: 3svh;
 		cursor: pointer;
 	}
 
 	/* button 위치 */
 	.write .submit-button-container {
 		position: absolute;
+		font-size: 3vmin;
 		bottom: 10px;
 		right: 1svh;
 		text-align: right;

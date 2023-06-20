@@ -159,7 +159,7 @@ body::-webkit-scrollbar {
     height: 56px;
     margin: 12px 0 0 0;
     text-overflow: ellipsis;
-    word-break: break-word;
+    display: -webkit-box;
     overflow: hidden;
     /* 넘치는 요소 숨기기 */
     -webkit-line-clamp: 2;
@@ -385,7 +385,7 @@ body::-webkit-scrollbar {
         position: absolute;
         width: 20px;
         height: 28px;
-        right: 28px;
+        right: 6%;
         top: 29px;
 
         font-family: 'Pretendard';
