@@ -143,8 +143,15 @@ body::-webkit-scrollbar {
 }
 
 #slides li .preview .title {
+    height: 28px;
     margin-top: 0;
     margin-bottom: 0;
+
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 
     font-family: 'Pretendard';
     font-style: normal;
