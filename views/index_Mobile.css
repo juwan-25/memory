@@ -125,47 +125,47 @@
 
 	video {
 		position: absolute;
-		width: 140%;
-		height: 140%;
+		width: 130%;
+		height: 130%;
 	}
 	
 	.slide1 video {
-		width: 180%;
-		height: 180%;
+		width: 170%;
+		height: 170%;
 		left: -50%;
 		top: -35%;
 	}
 
 	.slide2 video {
-		left: -15%;
-		top: -15%;
-	}
-
-	.slide3 video {
-		left: -20%;
+		left: -10%;
 		top: -10%;
 	}
 
-	.slide4 video {
-		width: 130%;
-		height: 130%;
-		left: -10%;
+	.slide3 video {
+		left: -15%;
 		top: -5%;
 	}
 
+	.slide4 video {
+		width: 120%;
+		height: 120%;
+		left: -5%;
+		top: 0%;
+	}
+
 	.slide5 video {
-		width: 150%;
-		height: 150%;
+		width: 140%;
+		height: 140%;
 		left: -35%;
-		top: -35%;
+		top: -20%;
 	}
 
 	
 	.slide6 video {
-		width: 125%;
-		height: 125%;
+		width: 115%;
+		height: 115%;
 		left: -5%;
-		top: -15%;
+		top: -20%;
 	}
 
 

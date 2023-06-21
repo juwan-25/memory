@@ -403,6 +403,12 @@
                     slidesPerView: 2,
                     direction: 'vertical', 
                     loop: false,
+                    slideToClickedSlide : true,
+                    allowTouchMove : true,
+                    threshold:100,
+                    watchOverflow : true,
+                    mousewheel: true,
+                    grabCursor: true,
                 },
                 479:{
                     slidesPerView: 1,
@@ -457,6 +463,7 @@
                 window.scrollTo(0, 1000);
             }, 1000);
         });
+
 
         // window.addEventListener('wheel', function (event) {
         //     if (event.deltaY < 0) {
