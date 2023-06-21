@@ -152,8 +152,8 @@ main {
 
 @media screen and (max-width: 479px) {
   .slideshow-container {
-    height: 4000px;
-    margin-top: -1300px;
+    height: 202px;
+    margin-top: -1070px;
     width: 312px;
   }
 }
@@ -191,9 +191,9 @@ main {
 @media screen and (max-width: 479px) {
   .button-container {
     /* top: 450px; */
-    top: 7.5%;
+    top: 17.5%;
     width: 95%;
-    padding: 0 16%;
+    padding: 0 9%;
   }
 }
 
