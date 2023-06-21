@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>MEMORY</title> 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index_Mobile.css">
@@ -70,7 +70,7 @@
                 <% let arr = [['C','L','A','S','S','I','C','A','L','br','C','O','N','C','E','R','T'],
                     ['W','A','T','E','R','G','U','N',' ','br','G','A','M','E'], 
                     ['D','E','L','I','G','H','T','F','U','L',' ','br','S','P','R','I','N','G'],
-                    ['D','A','N','C','E',' ','A','L','L','br','N','I','G','H','T',' ','A','W','A','Y'],
+                    ['D','A','N','C','E',' ','A','L','L','br','N','I','G','H','T',' ','L','O','N','G'],
                     ['C','H','E','E','R',' ','O','N','br','A','T',' ','T','H','E',' ','S','H','O','W'],
                     ['A',' ','S','E','C','R','E','T','br','M','A','F','I','A',' ','G','A','M','E']];%>
 
@@ -78,7 +78,7 @@
                 <div class="swiper-slide slide1">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                        <source src="./video/video1.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -118,7 +118,7 @@
                 <div class="swiper-slide slide2">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                        <source src="./video/video2.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -158,7 +158,7 @@
                 <div class="swiper-slide slide3">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                        <source src="./video/video3.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -198,7 +198,7 @@
                 <div class="swiper-slide slide4">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                        <source src="./video/video4.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -238,7 +238,7 @@
                 <div class="swiper-slide slide5">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                        <source src="./video/video5.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -278,7 +278,7 @@
                 <div class="swiper-slide slide6">
                     <!-- 배경 3D 비디오 -->
                     <video class="video" autoplay loop muted playsinline preload="auto">
-                        <source src="./video/test_vedio1.mp4" type="video/mp4">
+                        <source src="./video/video6.mp4" type="video/mp4">
                      </video>
                     
                      <p class="sub_txt1">
@@ -320,14 +320,19 @@
         </div>
         <!-- swiper -->
 
-        <div class="bottom_content">                     
+        <a href="/gallery"><div class="typing"></div></a>
+        <a href="/gallery">
+        <div class="bottom_content">
             <p class="bottom_txt">
                 미림인의 낭만이 모인<br>
-                기억 전시 바로가기
+                기억 전시 바로가기  
             </p>
-            <a href="/gallery"><img class="btn_gallery_b" src="imgs/gallery_btn2.png"></a>
-           
+        </a>
+        <p class="typing-txt">상단 화살표 버튼을 클릭해주세요.</p>
+        <a href="/gallery"><img class="btn_gallery_b" alt="기억 전시 버튼" src="imgs/gallery_btn2.png"></a>
+        <a class="scroll"><span></span></a>
         </div>
+
     </div>
     <!-- content -->    
 
@@ -350,20 +355,42 @@
 	</footer> -->
     <!-- footer -->
     <script>
-        // 애니메이션 적용시 글자 겹쳐짐 문제 해결을 위한 새로고침
-        window.onload = function(){
-            if (location.href.indexOf('reloaded')==-1) location.replace(location.href+'?reloaded');
-        }
+        window.scrollTo(0, 0);
+        
+        $('.typing-txt').hide();
+        var typingBool = false; 
+        var typingIdx=0; 
+
+        var typingImg = ['imgs/기.png', 'imgs/억.png', 'imgs/쉼표.png', ]
+
+        if(typingBool==false){ 
+            // 타이핑이 진행되지 않았다면 
+            typingBool=true;     
+            var tyInt = setInterval(typing,200); // 반복동작 
+        } 
+            
+        function typing(){ 
+            if(typingIdx<3){
+                const img = new Image();
+                img.src = `${typingImg[typingIdx]}`;
+
+                $(".typing").append(img);
+            
+                typingIdx++; 
+            } else{ 
+                //끝나면 반복종료 
+                clearInterval(tyInt); 
+            } 
+        }  
+
 
         const swiper = new Swiper('.swiper', {
             // Optional parameters
-            loop: true,
             slideToClickedSlide : true,
             allowTouchMove : true,
             threshold:100,
-            mousewheel: {
-                invert: false,
-            },
+            watchOverflow : true,
+            mousewheel: true,
             grabCursor: true,
 
             autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
@@ -374,11 +401,19 @@
             breakpoints: {
                 0:{
                     slidesPerView: 2,
-                    direction: 'vertical',
+                    direction: 'vertical', 
+                    loop: false,
+                    slideToClickedSlide : true,
+                    allowTouchMove : true,
+                    threshold:100,
+                    watchOverflow : true,
+                    mousewheel: true,
+                    grabCursor: true,
                 },
                 479:{
                     slidesPerView: 1,
-                    direction: 'horizontal',        
+                    direction: 'horizontal',  
+                    loop: true,      
 
                 }, 
             },
@@ -399,8 +434,16 @@
                     target.addClass("animate__fadeInUp");
                 },
             },
+            
+        
         });
 
+        swiper.on('reachEnd', function () {
+            setTimeout(function() {
+                $('.typing-txt').show();
+                window.scrollTo(0, 0);
+            }, 2000);
+        });
 
         var sw = 0;
         $('.btn_pause').click(function(){
@@ -414,6 +457,13 @@
                 sw = 0;
             }
         });
+
+        $('.scroll').click(function(){
+            setTimeout(function() {
+                window.scrollTo(0, 1000);
+            }, 1000);
+        });
+
 
         // window.addEventListener('wheel', function (event) {
         //     if (event.deltaY < 0) {
