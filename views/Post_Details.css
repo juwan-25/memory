@@ -184,7 +184,7 @@ main {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 350px;
+  padding: 0 25%;
   box-sizing: border-box;
 }
 
@@ -193,7 +193,7 @@ main {
     /* top: 450px; */
     top: 7.5%;
     width: 95%;
-    padding: 0 17%;
+    padding: 0 16%;
   }
 }
 
