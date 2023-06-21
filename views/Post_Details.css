@@ -64,7 +64,7 @@ main {
   width: 100%;
   padding: 140px 21.61% 0px 21.61%;
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   main {
     z-index: 1;
     width: 100%;
@@ -74,7 +74,7 @@ main {
 
 /* 글 제목 */
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   #title_line1 {
     display: none;
   }
@@ -84,8 +84,9 @@ main {
   text-align: left;
   padding: 44px 20px 43px 0px;
   size: 20px;
+  font-family: "Pretendard";
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .title {
     padding: 24px 0px 20px 0px;
     font-size: 16px;
@@ -97,7 +98,7 @@ main {
   font-family: "Pretendard";
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .detail_content {
     padding: 20px 0px 18px 0px;
     font-size: 14px;
@@ -108,7 +109,7 @@ main {
   margin-top: 75px;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   #main_line {
     margin-top: 28px;
   }
@@ -144,14 +145,14 @@ main {
 .slideshow-container {
   position: relative;
   width: 40%;
-  height: 400px; /* 슬라이드 쇼 컨테이너의 높이를 조정 */
+  height: 4700px; /* 슬라이드 쇼 컨테이너의 높이를 조정 */
   overflow: hidden;
-  margin-top: -70%;
+  margin-top: 0%;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .slideshow-container {
-    height: 202px;
+    height: 4000px;
     margin-top: -1300px;
     width: 312px;
   }
@@ -162,8 +163,14 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 648px;
   opacity: 0;
+}
+
+@media screen and (max-width: 479px) {
+  .slide {
+    height: 202px;
+  }
 }
 
 .slide.active {
@@ -172,7 +179,7 @@ main {
 
 .button-container {
   position: absolute;
-  top: 24%;
+  top: 16%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
@@ -181,22 +188,23 @@ main {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .button-container {
-    top: 18.5%;
+    /* top: 450px; */
+    top: 7.5%;
     width: 95%;
     padding: 0 17%;
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   #prevButton {
     margin-left: -4px;
     background: rgba(0, 0, 0, 0.3);
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   #nextButton {
     margin-right: -4px;
     background: rgba(0, 0, 0, 0.3);
@@ -234,7 +242,6 @@ main {
   margin-right: 42.33px;
 }
 
-
 .heart_img {
   margin-right: 10.33px;
 }
@@ -247,7 +254,7 @@ main {
   font-size: 16px;
   width: 100%;
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .nickname {
     font-size: 14px;
   }
@@ -264,7 +271,7 @@ input::placeholder {
   font-size: 16px;
   width: 100%;
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .comment_content {
     font-size: 14px;
   }
@@ -279,7 +286,7 @@ input::placeholder {
   box-shadow: 1px 1px 2px 2px #f1f1f1;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .comment_enter {
     margin-top: 28px;
     padding: 16px 16px 16px;
@@ -298,7 +305,7 @@ input::placeholder {
   font-family: "Pretendard";
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .enter_btn {
     margin-top: 20px;
     font-size: 12px;
@@ -319,7 +326,7 @@ input::placeholder {
   font-family: "Pretendard";
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .e_comment {
     margin-top: 50px;
     padding: 16px 16px 16px;
@@ -331,7 +338,7 @@ input::placeholder {
   margin: 87.52px 0% 0% 50%;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 479px) {
   .page {
     display: none;
   }
