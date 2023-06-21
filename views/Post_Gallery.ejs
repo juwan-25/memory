@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
     <link rel="stylesheet" href="Post_Gallery.css">
     <link rel="stylesheet" href="Post_Gallery_Mobile.css">
     <!-- Pretendard 폰트 -->
@@ -26,6 +28,10 @@
 				navbarCollapse.classList.toggle("show");
 			});
 		});
+
+        document.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        }, { passive: false });
 
 	</script>
     <title>게시물 나열 페이지</title>
