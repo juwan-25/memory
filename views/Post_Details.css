@@ -147,7 +147,7 @@ main {
 .slideshow-container {
   position: relative;
   width: 40%;
-  height: 4700px; /* 슬라이드 쇼 컨테이너의 높이를 조정 */
+  height: 1700px; /* 슬라이드 쇼 컨테이너의 높이를 조정 */
   overflow: hidden;
   margin-top: 0%;
 }
@@ -181,7 +181,7 @@ main {
 
 .button-container {
   position: absolute;
-  top: 16%;
+  top: 24%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
@@ -326,6 +326,7 @@ input::placeholder {
   padding: 24px 30px 54px;
   border-radius: 5px;
   font-family: "Pretendard";
+  margin-bottom: 20%;
 }
 
 @media screen and (max-width: 479px) {
