@@ -13,32 +13,33 @@ body {
   scrollbar-width: none; /* 파이어폭스 */
 }
 
-/* navbar */
 @media (min-width: 479px) {
+  /* navbar */
+  .navbar {
+    position: absolute !important;
+    width: 100%;
+    z-index: 100;
+  }
+
   .navbar-nav {
     margin-left: auto;
     font-family: "Pretendard";
   }
-}
-@media (min-width: 479px) {
+
   .navbar-collapse {
     margin-right: 10%;
   }
-}
-@media (min-width: 479px) {
+
   .nav-link {
     margin-right: 100px;
     margin-left: 50px;
     font-family: "Pretendard";
   }
-}
-@media (min-width: 479px) {
+
   .navbar-brand {
     margin-left: 17%;
   }
-}
 
-@media (min-width: 479px) {
   .closep {
     display: none;
   }
@@ -47,6 +48,7 @@ body {
     display: none;
   }
 }
+/* navbar */
 /* .navbar-brand {
   margin-left: 7%;
 } */
@@ -409,4 +411,72 @@ input::placeholder {
   .navbar-bottom-bottom {
     margin-top: 1%;
   }
+}
+
+@media (max-width:479px){
+  /* navbar  다 복사해주세요*/
+	.navbar-toggler {
+		margin-left: auto;
+	}
+
+	.navbar-collapse {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 50%;
+		height: 100%;
+		background-color: #fff;
+		transition: right 0.3s ease;
+		z-index: 9999;
+	}
+
+	.navbar-collapse.show {
+		right: 0;
+		box-shadow: none;
+		border: none;
+		outline: none;
+	}
+
+	.navbar-nav {
+		display: flex;
+		text-decoration: underline;
+		text-underline-offset: 1svh;
+		border-bottom: 10svh;
+		margin-left: 2svh;
+		padding: 5svh;
+		height: 100%;
+	}
+
+	.nav-link {
+		font-family: 'Pretendard';
+		color: #000;
+		margin-top: 8svh;
+		transition: color 0.3s ease;
+	}
+
+	.nav-link:hover,
+	.nav-link:focus {
+		color: #ff0000;
+	}
+
+	/* 반응형일때 로고 숨기기 */
+	.navbar-brand {
+		display: none;
+	}
+
+	.closep {
+		width: 4svh;
+		height: 4svh;
+		background: none;
+	}
+
+	.closeclose {
+		float: right;
+	}
+
+	.collapsed {
+		transition: right 0.3s ease;
+		right: 0%;
+	}
+
 }
