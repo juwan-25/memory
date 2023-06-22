@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- , maximum-scale=1, user-scalable=no -->
+    <!-- <meta content="yes" name="apple-mobile-web-app-capable" /> -->
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
     <link rel="stylesheet" href="Post_Gallery.css">
     <link rel="stylesheet" href="Post_Gallery_Mobile.css">
@@ -68,152 +70,160 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
 
-    <div class="line"></div>
-    <p class="rankingTitle">BEST MEMORY</p>
-
-    <div class="swiper-container" id="ranking">
-        <ul class="swiper-wrapper" id="slides">
-            <% for(let i=0; i < data1.length; i++) { %>
-                <li class="swiper-slide">
-                    <a href="/details/<%= data1[i].boardId %>">
-                        <div class="numberRectangle">
-                            <%= i + 1 %>
-                        </div>
-                        <img src="<%= data1[i].mimage %>" alt=""/>
-                        <div class="preview">
-                            <p class="title"><%= data1[i].title %></p>
-                            <p class="detail"><%= data1[i].content %></p>
-                        </div>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        //화면 크기 변경 시 새로고침 해야 됨
-        new Swiper('#ranking', {
-            slidesPerView: window.innerWidth <= 479 ? 1.5 : 4,
-            freeMode: true, // 스냅 이동 효과 비활성화
-            pagination: {
-                clickable: true,
-            }
-        });
-    </script>
-
-    <div class="galleryTitle">· 기억 저장소 ·</div>
-    <a id="addMemory" href="/write"><div class="addMemory"></div></a>
-    <script>
-        var addButton = document.querySelector('.addMemory');
-        var link = addButton.getAttribute('href'); // 링크 URL 저장
-
-        if (window.innerWidth > 479) {  //PC화면에서의 설정
-            window.onscroll = function () {
-                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > 100) { // 스크롤이 일정 위치 이상 내려갔을 때
-                    addButton.style.position = 'fixed';
-                    addButton.style.bottom = '30px';
-                } else {
-                    addButton.style.position = 'absolute';
-                    addButton.style.bottom = '-78px';
-                }
-            }
-        } else {    //모바일 화면에서의 설정
-            window.onscroll = function () {
-                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > 0.01) {
-                    addButton.style.position = 'fixed';
-                    addButton.style.bottom = '30px';
-                } else {
-                    addButton.style.position = 'absolute';
-                    addButton.style.bottom = '-78px';
-                }
-            }
-        }
-        addButton.addEventListener('click', function (event) {
-            if (addButton.style.pointerEvents == 'none') {
-                event.preventDefault(); // 기본 클릭 이벤트 중지
-                window.location.href = link; // 링크로 이동
-            }
-        });
-        addButton.addEventListener('mouseover', function () {
-            this.classList.add('hovered');
-        });
-
-        addButton.addEventListener('mouseout', function () {
-            this.classList.remove('hovered');
-        });
-    </script>
-
-    <div class="postGallery">
-        <% for(let i=0; i < data1.length; i++) { %>
-            <div class="item">
-                <a href="/details/<%= data2[i].boardId %>">
-                    <figure>
-                        <img src="<%= data2[i].mimage %>" alt="" class="galleryImg">
-                        <figcaption>
-                            <div class="title">
-                                <%= data2[i].title %>
+    <div class="content">
+        <div class="line"></div>
+        <p class="rankingTitle">BEST MEMORY</p>
+    
+        <div class="swiper-container" id="ranking">
+            <ul class="swiper-wrapper" id="slides">
+                <% for(let i=0; i < data1.length; i++) { %>
+                    <li class="swiper-slide">
+                        <a href="/details/<%= data1[i].boardId %>">
+                            <div class="numberRectangle">
+                                <%= i + 1 %>
                             </div>
-                            <div class="detail">
-                                <%= data2[i].content %>
+                            <img src="<%= data1[i].mimage %>" alt="" />
+                            <div class="preview">
+                                <p class="title">
+                                    <%= data1[i].title %>
+                                </p>
+                                <p class="detail">
+                                    <%= data1[i].content %>
+                                </p>
                             </div>
-                            <img src="imgs/like.png" class="heartImg"></img>
-                            <div class="heart">
-                                <%= data2[i].reaction %>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-        <% } %>
-
+                        </a>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
-            var status; //추가할 개수 임시 판별 변수
-            var add = 0;    //index에 추가할 개수
-            var totalElements = $(".postGallery>div").length;   //div 총 개수
-
-            if (window.innerWidth <= 479) {
-                index = 4;
-                status = 1;
-            } else {
-                index = 9;
-                status = 0;
-            }
-            $(document).ready(function () {
-                $(".postGallery>div").hide();   //div를 모두 숨김
-                $(".postGallery>div").slice(0, index).show();   //처음에 0번째부터 8번째까지 보여줌
-
-                //div 개수가 index보다 적거나 같으면 더보기 버튼 안 보이게
-                if (totalElements <= index) {
-                    $(".more").hide();
+            //화면 크기 변경 시 새로고침 해야 됨
+            new Swiper('#ranking', {
+                slidesPerView: window.innerWidth <= 479 ? 1.5 : 4,
+                freeMode: true, // 스냅 이동 효과 비활성화
+                pagination: {
+                    clickable: true,
                 }
-
-            })
-
-            function more() {
-                if (status == 0) {
-                    add = 4;
-                    status = 1;
-                } else if (status == 1) {
-                    add = 9;
-                    status = 0;
-                }
-
-                $(".postGallery>div").slice(index, index + add).show();
-
-                index += add;
-
-                //div 개수가 index보다 적거나 같으면 더보기 버튼 안 보이게
-                if (index >= totalElements) {
-                    $(".more").hide();
-                }
-            }
+            });
         </script>
-        <button class="more" onclick="more()">더보기</button>
+    
+        <div class="galleryTitle">· 기억 저장소 ·</div>
+        <a id="addMemory" href="/write">
+            <div class="addMemory"></div>
+        </a>
+        <script>
+            var addButton = document.querySelector('.addMemory');
+            var link = addButton.getAttribute('href'); // 링크 URL 저장
+
+            if (window.innerWidth > 479) {  //PC화면에서의 설정
+                window.onscroll = function () {
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                    if (scrollTop > 100) { // 스크롤이 일정 위치 이상 내려갔을 때
+                        addButton.style.position = 'fixed';
+                        addButton.style.bottom = '30px';
+                    } else {
+                        addButton.style.position = 'absolute';
+                        addButton.style.bottom = '-78px';
+                    }
+                }
+            } else {    //모바일 화면에서의 설정
+                window.onscroll = function () {
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                    if (scrollTop > 0.01) {
+                        addButton.style.position = 'fixed';
+                        addButton.style.bottom = '30px';
+                    } else {
+                        addButton.style.position = 'absolute';
+                        addButton.style.bottom = '-78px';
+                    }
+                }
+            }
+            addButton.addEventListener('click', function (event) {
+                if (addButton.style.pointerEvents == 'none') {
+                    event.preventDefault(); // 기본 클릭 이벤트 중지
+                    window.location.href = link; // 링크로 이동
+                }
+            });
+            addButton.addEventListener('mouseover', function () {
+                this.classList.add('hovered');
+            });
+
+            addButton.addEventListener('mouseout', function () {
+                this.classList.remove('hovered');
+            });
+        </script>
+    
+        <div class="postGallery">
+            <% for(let i=0; i < data1.length; i++) { %>
+                <div class="item">
+                    <a href="/details/<%= data2[i].boardId %>">
+                        <figure>
+                            <img src="<%= data2[i].mimage %>" alt="" class="galleryImg">
+                            <figcaption>
+                                <div class="title">
+                                    <%= data2[i].title %>
+                                </div>
+                                <div class="detail">
+                                    <%= data2[i].content %>
+                                </div>
+                                <img src="imgs/like.png" class="heartImg"></img>
+                                <div class="heart">
+                                    <%= data2[i].reaction %>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <% } %>
+    
+                    <script>
+                        var status; //추가할 개수 임시 판별 변수
+                        var add = 0;    //index에 추가할 개수
+                        var totalElements = $(".postGallery>div").length;   //div 총 개수
+
+                        if (window.innerWidth <= 479) {
+                            index = 4;
+                            status = 1;
+                        } else {
+                            index = 9;
+                            status = 0;
+                        }
+                        $(document).ready(function () {
+                            $(".postGallery>div").hide();   //div를 모두 숨김
+                            $(".postGallery>div").slice(0, index).show();   //처음에 0번째부터 8번째까지 보여줌
+
+                            //div 개수가 index보다 적거나 같으면 더보기 버튼 안 보이게
+                            if (totalElements <= index) {
+                                $(".more").hide();
+                            }
+
+                        })
+
+                        function more() {
+                            if (status == 0) {
+                                add = 4;
+                                status = 1;
+                            } else if (status == 1) {
+                                add = 9;
+                                status = 0;
+                            }
+
+                            $(".postGallery>div").slice(index, index + add).show();
+
+                            index += add;
+
+                            //div 개수가 index보다 적거나 같으면 더보기 버튼 안 보이게
+                            if (index >= totalElements) {
+                                $(".more").hide();
+                            }
+                        }
+                    </script>
+                    <button class="more" onclick="more()">더보기</button>
+        </div>
     </div>
     <footer id="footer">
         <nav class="navbar navbar-expand-lg">
