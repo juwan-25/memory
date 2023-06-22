@@ -45,7 +45,7 @@
 	.form-group-2 {
 		/* 흰 배경 */
 		/* margin-left: 3svh; */
-		width: 40svh;
+		width: 45svh;
 		height: 11svh;
 		background-color: #fff;
 		border-radius: 5px;
@@ -67,7 +67,7 @@
 
 	.form-group-2 textarea {
 		/* 텍스트 사이즈 */
-		width: 40svh;
+		width: 45svh;
 		height: 11svh;
 		font-size: 13px;
 		font-family: 'Pretendard';
@@ -76,10 +76,10 @@
 	.write {
 		/* 흰 배경 */
 		/* margin-left: 3svh; */
-		width: 40svh;
+		width: 45svh;
 		height: 16svh;
 		background-color: #fff;
-		border-radius: 5px;
+		border-radius: 8px;
 		display: inline-block;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 		margin-bottom: 30px;
@@ -91,7 +91,7 @@
 	.write input[type="text"],
 	.write textarea {
 		/* 텍스트 */
-		width: 40svh;
+		width: 45svh;
 		height: 16svh;
 		padding: 10px;
 		border: 0px solid #ccc;
@@ -101,7 +101,7 @@
 
 	.write textarea {
 		/* 텍스트 사이즈 */
-		width: 40svh;
+		width: 45svh;
 		height: 16svh;
 		font-size: 12px;
 		font-family: 'Pretendard';
