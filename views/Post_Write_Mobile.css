@@ -537,8 +537,8 @@
     }
 
     .Post_Img img {
-        width: 1500%;
-        height: 1000%;
+        width: 500%;
+        height: 500%;
         display: flex;
     }
 
@@ -554,8 +554,8 @@
         width: 30%;
         height: 15%;
         border: 1px;
-        float: left;
-        display: block;
+        flex-direction: row;
+        display: flex;
     }
 
     .image-preview {

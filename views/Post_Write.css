@@ -66,14 +66,20 @@ body {
 .Post_Img li {
   list-style: none;
   display: block;
-  margin-left: auto;
+  margin-left: 10%;
 }
 
+.Post_Img ul {
+  list-style: none;
+  margin-left: 25.5%;
+  box-sizing:initial;
+}
+ 
 .Post_Img img {
   width: 130%;
   height: 100%;
   display: flex;
-  /* display: block; */
+  margin: auto;
 }
 
 
