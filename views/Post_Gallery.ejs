@@ -99,7 +99,7 @@
         <script>
             //화면 크기 변경 시 새로고침 해야 됨
             new Swiper('#ranking', {
-                slidesPerView: window.innerWidth <= 479 ? 1.5 : 4,
+                slidesPerView: window.innerWidth <= 479 ? 1.2 : 4,
                 freeMode: true, // 스냅 이동 효과 비활성화
                 pagination: {
                     clickable: true,
@@ -108,12 +108,10 @@
         </script>
     
         <div class="galleryTitle">· 기억 저장소 ·</div>
-        <a id="addMemory" href="/write">
-            <div class="addMemory"></div>
-        </a>
+        <div class="addMemory"><a id="addMemory" href="/write"></a></div>
+        
         <script>
             var addButton = document.querySelector('.addMemory');
-            var link = addButton.getAttribute('href'); // 링크 URL 저장
 
             if (window.innerWidth > 479) {  //PC화면에서의 설정
                 window.onscroll = function () {
@@ -127,6 +125,7 @@
                         addButton.style.bottom = '-78px';
                     }
                 }
+
             } else {    //모바일 화면에서의 설정
                 window.onscroll = function () {
                     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -135,24 +134,23 @@
                         addButton.style.position = 'fixed';
                         addButton.style.bottom = '30px';
                     } else {
-                        addButton.style.position = 'absolute';
+                        addButton.style.position = 'fixed';
                         addButton.style.bottom = '-78px';
                     }
                 }
             }
-            addButton.addEventListener('click', function (event) {
-                if (addButton.style.pointerEvents == 'none') {
-                    event.preventDefault(); // 기본 클릭 이벤트 중지
-                    window.location.href = link; // 링크로 이동
-                }
+            document.querySelector('.addMemory').addEventListener('click', function (event) {
+                event.preventDefault(); // 기본 동작을 막음
+                var link = this.querySelector('a').getAttribute('href');
+                window.location.href = link; // 링크 주소로 이동
             });
             addButton.addEventListener('mouseover', function () {
-                this.classList.add('hovered');
-            });
+                    this.classList.add('hovered');
+                });
 
-            addButton.addEventListener('mouseout', function () {
-                this.classList.remove('hovered');
-            });
+                addButton.addEventListener('mouseout', function () {
+                    this.classList.remove('hovered');
+                });
         </script>
     
         <div class="postGallery">

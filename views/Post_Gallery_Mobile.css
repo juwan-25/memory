@@ -245,15 +245,13 @@
 }
 
 @media(max-width:479px) {
-
     /* 게시물 추가 */
-    .addMemory {
+    .addMemory{
         position: fixed;
         width: 46px;
         height: 46px;
         right: 10%;
-        top: 682px;
-        z-index: 100;
+        top: 650px;
 
         margin-top: 0;
 
@@ -261,7 +259,15 @@
         box-shadow: 8px 8px 12px rgba(174, 174, 192, 0.4);
         border-radius: 200px;
 
-        pointer-events: none;
+        cursor: pointer; /* 클릭 가능한 커서로 변경합니다. */
+    }
+
+    .addMemory:hover {
+        width: 46px;
+        height: 46px;
+
+        box-shadow: 8px 8px 12px rgba(174, 174, 192, 0.4);
+        border-radius: 200px;
     }
 
     .addMemory::before {
@@ -270,16 +276,26 @@
         font-weight: 400;
 
         position: absolute;
-        left: 27%;
-        bottom: 7%;
-        /* bottom: 20.83%; */
-        /* transform: translate(-50%, -54%); */
+        width: 46px;
+        height: 46px;
+        /* margin-right: 45%; */
+        bottom: 6%;
+        left: 30%;
 
         color: #363636;
     }
 
-    #addMemory {
-        pointer-events: none;
+    .addMemory.hovered::after {
+        display: none;
+    }
+
+    .addMemory:hover::before {
+        content: "+";
+        font-size: 30px;
+        font-weight: 400;
+        position: absolute;
+        bottom: 6%;
+        left: 30%;
     }
 }
 
@@ -290,6 +306,7 @@
         position: relative;
         /* width: 328px; */
         width: 92%;
+        /* width: 70%; */
 
         left: 16px;
         right: 16px;

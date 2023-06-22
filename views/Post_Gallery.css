@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
   }
 
   .content {
-    max-width: 100%;
+    max-width: 100svw;
     overflow-x: hidden;
   }
   
