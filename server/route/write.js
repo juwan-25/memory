@@ -4,6 +4,9 @@ const con = require('../db/index');
 const multer = require('multer');
 const path = require("path");
 
+router.use(express.json({ limit: '100mb' }));
+router.use(express.urlencoded({ limit: '100mb', extended: false }));
+
 router.get('/', (req, res) => {
     res.render('Post_Write', {});
 
